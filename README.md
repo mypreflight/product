@@ -18,7 +18,7 @@ Point your Claude at `CLAUDE.md` in this repo by its raw GitHub URL:
 https://raw.githubusercontent.com/mypreflight/product/main/CLAUDE.md
 ```
 
-Every code repo already has a small `CLAUDE.md` that does this.
+Code repos point here from a small `CLAUDE.md` of their own, built from `templates/code-repo-CLAUDE.md`.
 
 ## Contributing
 
