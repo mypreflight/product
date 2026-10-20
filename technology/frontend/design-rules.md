@@ -4,7 +4,7 @@ Rules that make dozens of views, modals and components look like one app.
 
 Last reviewed: 2026-10-20
 
-Sources: the brief, the frontend repo's `DESIGN.md` and `PRODUCT.md`, the Flowbite theme (`app/styles/theme.ts`) and the frontend OpenSpec UI specs. Colours, fonts and the logo live in `../brand/identity.md`.
+Sources: the brief, the frontend repo's `DESIGN.md` and `PRODUCT.md`, the Flowbite theme (`app/styles/theme.ts`) and the frontend OpenSpec UI specs. Colours, fonts and the logo live in `../../product/brand/identity.md`.
 
 ## Goal for launch
 

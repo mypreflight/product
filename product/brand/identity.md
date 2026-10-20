@@ -4,7 +4,7 @@ How MyPreflight looks.
 
 Last reviewed: 2026-10-20
 
-Values below were read from the mypreflight.io CSS and the app's stylesheets on 2026-10-20. UI rules built on them are in `../frontend/design-rules.md`.
+Values below were read from the mypreflight.io CSS and the app's stylesheets on 2026-10-20. UI rules built on them are in `../../technology/frontend/design-rules.md`.
 
 ## Character
 

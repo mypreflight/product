@@ -12,17 +12,17 @@ Reading this by URL? Every path below resolves under `https://raw.githubusercont
 
 | If you're… | Read |
 | --- | --- |
-| Building or changing a feature | `product/overview.md`, `product/decisions.md`, `features/catalogue.md`, then `frontend/` or `backend/` |
+| Building or changing a feature | `product/overview.md`, `product/decisions.md`, `features/catalogue.md`, then `technology/frontend/` or `technology/backend/` |
 | Touching the briefing (loadsheet, manifest, cargo, NOTOC, weather) | `product/briefing-content.md`, `product/decisions.md` |
 | Touching roles, flight states, delays, Discord or sign-in | `product/platform-rules.md`, `product/accounts-and-privacy.md` |
 | Touching points, timing or penalties | `product/scoring.md`, `product/flight-lifecycle.md` |
-| Working on the Transponder or tracking | `product/transponder.md`, `product/flight-lifecycle.md`, `backend/architecture.md` |
+| Working on the Transponder or tracking | `product/transponder.md`, `product/flight-lifecycle.md`, `technology/backend/architecture.md` |
 | Adding or refreshing data (airports, aircraft, weather, procedures) | `product/data-sources.md`, `product/platform-rules.md` |
-| Doing frontend UI work | `frontend/standards.md`, `frontend/design-rules.md`, `brand/identity.md` |
-| Doing backend work in any backend repo | `backend/standards.md`, `backend/architecture.md` |
-| Working on infra, deploys or backups | `infrastructure/overview.md` |
+| Doing frontend UI work | `technology/frontend/standards.md`, `technology/frontend/design-rules.md`, `product/brand/identity.md` |
+| Doing backend work in any backend repo | `technology/backend/standards.md`, `technology/backend/architecture.md` |
+| Working on infra, deploys or backups | `technology/infrastructure/overview.md` |
 | Touching accounts, privacy, emails or moderation | `product/accounts-and-privacy.md` |
-| Writing a social post, release note or marketing copy | `brand/voice.md`, `brand/marketing.md`, `brand/screenshots.md`, `features/catalogue.md` |
+| Writing a social post, release note or marketing copy | `product/brand/voice.md`, `product/brand/marketing.md`, `product/brand/screenshots.md`, `features/catalogue.md` |
 | Proposing something new | `ideas-parking-lot.md` first; it may already be there |
 | Looking for a code repo | `repos.md` |
 

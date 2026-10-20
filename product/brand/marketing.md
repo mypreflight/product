@@ -10,7 +10,7 @@ Oskar has no social media or app marketing experience and wants a researched, do
 
 ## Before any post
 
-1. Check the feature is **Live** in `../features/catalogue.md`. Never advertise Partial, Planned or brief-only features.
+1. Check the feature is **Live** in `../../features/catalogue.md`. Never advertise Partial, Planned or brief-only features.
 2. Follow `voice.md`.
 3. Use real screenshots, set up as in `screenshots.md`.
 4. Oskar reviews every post before it goes out.

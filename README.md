@@ -18,7 +18,7 @@ Point your Claude at `CLAUDE.md` in this repo by its raw GitHub URL:
 https://raw.githubusercontent.com/mypreflight/product/main/CLAUDE.md
 ```
 
-Code repos point here from a small `CLAUDE.md` of their own, built from `templates/code-repo-CLAUDE.md`.
+Code repos point here from a small `CLAUDE.md` of their own, built from `technology/templates/code-repo-CLAUDE.md`.
 
 ## Contributing
 
@@ -30,6 +30,6 @@ Code repos point here from a small `CLAUDE.md` of their own, built from `templat
 ## Licence
 
 - The text of this knowledge base is licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0). See `LICENSE`.
-- The MyPreflight name, logo and everything in `brand/assets/` are not covered by that licence. All rights reserved.
+- The MyPreflight name, logo and everything in `product/brand/assets/` are not covered by that licence. All rights reserved.
 
 For flight simulation use only.

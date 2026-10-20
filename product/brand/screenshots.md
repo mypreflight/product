@@ -11,7 +11,7 @@ Last reviewed: 2026-10-20
 - Show both themes across a set; don't mix themes within one post.
 - No real users' names or data in screenshots unless they agreed. The seeded development data (fake pilots, fake passengers) is safe.
 - Never fake the UI or invent numbers. If seeded data makes a panel look broken, fix the data and let the app render it.
-- Only **Live** features from `../features/catalogue.md`.
+- Only **Live** features from `../../features/catalogue.md`.
 - For the website's feature slots: component crops, not full views, rendered at 1920×1080 (a 960×540 stage at 2× scale), one file per theme.
 
 ## How to get there
