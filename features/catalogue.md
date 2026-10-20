@@ -14,7 +14,7 @@ Last reviewed: 2026-10-20
 
 Repos are named by their short name from `../repos.md`: `app`, `api`, `transponder`, `adsb`, `osm`, `aerolopa`, `postcard`, `landing`. API paths are under `src/modules/` unless stated; app paths under `app/`. "Decision" points to the matching section of `../product/decisions.md`.
 
-Before advertising anything, check its status here. Only **Live** features go in marketing.
+Before advertising anything, check its status here. Only **Live** features go in marketing: advertising something unbuilt breaks the "Trust first" hard line in `../product/overview.md`.
 
 ## Briefing
 
