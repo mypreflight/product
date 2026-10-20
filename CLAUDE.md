@@ -13,9 +13,11 @@ Reading this by URL? Every path below resolves under `https://raw.githubusercont
 | If you're… | Read |
 | --- | --- |
 | Building or changing a feature | `product/overview.md`, `product/decisions.md`, `features/catalogue.md`, then `frontend/` or `backend/` |
+| Touching the briefing (loadsheet, manifest, cargo, NOTOC, weather) | `product/briefing-content.md`, `product/decisions.md` |
+| Touching roles, flight states, delays, Discord or sign-in | `product/platform-rules.md`, `product/accounts-and-privacy.md` |
 | Touching points, timing or penalties | `product/scoring.md`, `product/flight-lifecycle.md` |
 | Working on the Transponder or tracking | `product/transponder.md`, `product/flight-lifecycle.md`, `backend/architecture.md` |
-| Adding or refreshing data (airports, aircraft, weather, procedures) | `product/data-sources.md` |
+| Adding or refreshing data (airports, aircraft, weather, procedures) | `product/data-sources.md`, `product/platform-rules.md` |
 | Doing frontend UI work | `frontend/standards.md`, `frontend/design-rules.md`, `brand/identity.md` |
 | Doing backend work in any backend repo | `backend/standards.md`, `backend/architecture.md` |
 | Working on infra, deploys or backups | `infrastructure/overview.md` |
