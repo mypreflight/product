@@ -4,7 +4,7 @@ How MyPreflight's frontend is built and how new code should be written.
 
 Last reviewed: 2026-10-20
 
-Covers the web app (`app` in `../repos.md`) and the website (`landing`). Visual rules are in `design-rules.md`; repo-specific commands stay in each repo's `CLAUDE.md`.
+Covers the web app (`app` in `../../repos.md`) and the website (`landing`). Visual rules are in `design-rules.md`; repo-specific commands stay in each repo's `CLAUDE.md`.
 
 ## Web app: stack
 

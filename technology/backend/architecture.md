@@ -59,7 +59,7 @@ flowchart LR
 | Web app | The SPA at app.mypreflight.io: dispatch, briefing, tracking, history, airport library. A PWA, static files only. | `app` |
 | Main API | Accounts, flights and their lifecycle, loadsheets, manifests, cargo, weather, NOTAMs, airports, statistics, Discord bot, email, scheduled jobs. REST plus a Socket.IO event stream. | `api` |
 | ADS-B receiver | In-memory ground station. Accepts position reports over HTTP per callsign and serves each callsign's track in time order. No database, to keep costs down; it restarts empty, like a power-cycled receiver. | `adsb` |
-| Transponder | Windows console app with a tray icon on the sim PC. Reads MSFS 2024 through SimConnect, publishes positions under the current flight's callsign, mirrors Discord rich presence and checks for updates. See `../product/transponder.md`. | `transponder` |
+| Transponder | Windows console app with a tray icon on the sim PC. Reads MSFS 2024 through SimConnect, publishes positions under the current flight's callsign, mirrors Discord rich presence and checks for updates. See `../../product/transponder.md`. | `transponder` |
 | OSM provider | Function reading one airport's boundary, runways, terminals, stands and gates from OpenStreetMap, in the platform's airport format | `osm` |
 | AeroLOPA provider | Functions extracting seat maps, cabin configurations and the layout index from AeroLOPA | `aerolopa` |
 | Postcard generator | Function drawing one travel poster per city with the OpenAI image API and storing it in object storage | `postcard` |

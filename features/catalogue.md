@@ -134,7 +134,7 @@ None of these is built. Don't advertise them.
 | MSFS 2020 support in the Transponder (it reads MSFS 2024 only) | `../product/overview.md` |
 | Transponder download page | `../product/transponder.md` |
 | Public pilot profiles, following, view counts | `../product/decisions.md` → Social |
-| In-app "What's new" and a public changelog | `../brand/marketing.md` |
+| In-app "What's new" and a public changelog | `../product/brand/marketing.md` |
 | "For flight simulation use only" label in the app | `../product/overview.md` → Hard lines |
 | Automatic creation of unknown aircraft | `../product/decisions.md` → Aircraft |
 | Payments and paid features | `../product/business.md` |
