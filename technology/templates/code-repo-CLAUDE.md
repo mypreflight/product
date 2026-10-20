@@ -7,8 +7,8 @@ Last reviewed: {date}
 This repo is part of MyPreflight. Product decisions, standards and architecture live in the knowledge base. Read it by URL before working here:
 
 - Start: <https://raw.githubusercontent.com/mypreflight/product/main/CLAUDE.md>
-- Standards: `https://raw.githubusercontent.com/mypreflight/product/main/{frontend or backend}/standards.md`
-- Architecture: <https://raw.githubusercontent.com/mypreflight/product/main/backend/architecture.md>
+- Standards: `https://raw.githubusercontent.com/mypreflight/product/main/technology/{frontend or backend}/standards.md`
+- Architecture: <https://raw.githubusercontent.com/mypreflight/product/main/technology/backend/architecture.md>
 
 ## Repo-specific notes
 

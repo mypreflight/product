@@ -4,7 +4,7 @@ Conventions shared by every MyPreflight backend repo.
 
 Last reviewed: 2026-10-20
 
-Applies to the API (`api`), the ADS-B receiver (`adsb`) and the provider functions (`osm`, `aerolopa`, `postcard`); see `../repos.md`. Repo-specific detail stays in each repo's `CLAUDE.md`.
+Applies to the API (`api`), the ADS-B receiver (`adsb`) and the provider functions (`osm`, `aerolopa`, `postcard`); see `../../repos.md`. Repo-specific detail stays in each repo's `CLAUDE.md`.
 
 ## Principles
 
@@ -20,7 +20,7 @@ Applies to the API (`api`), the ADS-B receiver (`adsb`) and the provider functio
 - **Semantic versioning.** The version in `package.json` must be bumped in every PR; CI fails when the version is already tagged. Merging to `main` tags the version and creates a GitHub release.
 - **CI on every PR** checks line endings (no CRLF), file permission changes and the version, then runs format, lint, and unit and functional tests inside the compose stack. The receiver also runs `npm audit`.
 - **Tests:** Jest for unit tests beside the code (`*.spec.ts`); cucumber-js for functional tests in `features/`, written in Gherkin by domain.
-- **Specs:** OpenSpec, with current capabilities in `openspec/specs/` and proposals in `openspec/changes/`. The product rules distilled from them are in `../product/briefing-content.md` and `../product/platform-rules.md`.
+- **Specs:** OpenSpec, with current capabilities in `openspec/specs/` and proposals in `openspec/changes/`. The product rules distilled from them are in `../../product/briefing-content.md` and `../../product/platform-rules.md`.
 - **No comments that explain a decision, a workaround or a policy.** Put the reasoning in the PR. Keep comments a tool requires.
 - **No secrets in the repo.** Configuration comes from the environment; `.env.dist` holds development placeholders only.
 

@@ -123,7 +123,7 @@ Last reviewed: 2026-10-20
 ## UI library
 
 - Flowbite React (chosen about two years ago), heavily extended with a custom theme file.
-- Stay on Flowbite through launch. Tighten the theme and write design rules (`../frontend/design-rules.md`). Revisit shadcn/ui after launch, possibly gradually. Switching now would be a big change for little gain.
+- Stay on Flowbite through launch. Tighten the theme and write design rules (`../technology/frontend/design-rules.md`). Revisit shadcn/ui after launch, possibly gradually. Switching now would be a big change for little gain.
 
 ## Code licence
 
