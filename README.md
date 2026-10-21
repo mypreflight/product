@@ -1,5 +1,7 @@
 # MyPreflight knowledge base
 
+[![product](.github/image/banner.png)](https://mypreflight.io)
+
 What MyPreflight is, how it's built and how we decide things. Written for contributors and the agents they work with.
 
 Last reviewed: 2026-10-20
