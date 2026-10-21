@@ -20,7 +20,7 @@ Point your Claude at `CLAUDE.md` in this repo by its raw GitHub URL:
 https://raw.githubusercontent.com/mypreflight/product/main/CLAUDE.md
 ```
 
-Code repos point here from a small `CLAUDE.md` of their own, built from `technology/templates/code-repo-CLAUDE.md`.
+Code repos point here from a small `AGENTS.md` of their own, built from `technology/templates/code-repo-AGENTS.md`. It names this repo as their primary source of truth.
 
 ## Contributing
 

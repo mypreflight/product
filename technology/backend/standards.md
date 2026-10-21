@@ -4,7 +4,7 @@ Conventions shared by every MyPreflight backend repo.
 
 Last reviewed: 2026-10-20
 
-Applies to the API (`api`), the ADS-B receiver (`adsb`) and the provider functions (`osm`, `aerolopa`, `postcard`); see `../../repos.md`. Repo-specific detail stays in each repo's `CLAUDE.md`.
+Applies to the API (`api`), the ADS-B receiver (`adsb`) and the provider functions (`osm`, `aerolopa`, `postcard`); see `../../repos.md`. Repo-specific detail stays in each repo's `AGENTS.md`.
 
 ## Principles
 
