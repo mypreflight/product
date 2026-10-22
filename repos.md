@@ -4,7 +4,7 @@ Every MyPreflight code repo and what it does.
 
 Last reviewed: 2026-10-20
 
-All code repos are public on GitHub. Short names are used across this knowledge base. Each repo also has its own `README.md`; most have a `CLAUDE.md`.
+All code repos are public on GitHub. Short names are used across this knowledge base. Each repo also has its own `README.md`; most have an `AGENTS.md`.
 
 | Short name | Repo | Purpose | Stack |
 | --- | --- | --- | --- |
