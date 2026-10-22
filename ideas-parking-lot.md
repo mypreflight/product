@@ -140,3 +140,8 @@ Every item in this section is labelled **Claude suggestion** and is not decided.
 - Watch disk space, SSL expiry and database connections.
 - Check whether the managed database offers point-in-time recovery.
 - A weekly off-site database dump (e.g. Backblaze).
+- Infrastructure as code. Today the App Platform app spec lives only in DigitalOcean, each provider function's spec fragment is merged in by hand, and the database and Spaces bucket aren't in code. Two options:
+  - commit the full app spec to one repo and let the deploy action apply it on release (the smallest step; the database and Spaces stay manual);
+  - describe the app, database, Spaces and domains in Terraform or OpenTofu with DigitalOcean's official provider, importing what already exists.
+
+  Either way, secrets come from GitHub secrets at deploy time, never from the files, because the repos are public.
