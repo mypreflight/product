@@ -72,7 +72,7 @@ flowchart LR
 
 1. Operations import a flight from SimBrief. The API stores the plan, its NOTAMs, the crew roster and waypoints.
 2. Airports the plan names that don't exist yet are created from SkyLink, at the lowest data-quality grade.
-3. Writing the preliminary loadsheet generates the passenger manifest (against the pinned AeroLOPA layout revision), the cargo manifest and the first NOTOC.
+3. Writing the preliminary loadsheet, including the one the import writes, generates the passenger manifest (against the pinned AeroLOPA layout revision), the cargo manifest and the first NOTOC.
 
 ### Check-in to on-block
 
