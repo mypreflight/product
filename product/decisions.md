@@ -10,6 +10,7 @@ Last reviewed: 2026-10-20
 - From SimBrief we take passenger count, payload, cargo weights, scheduled times, departure runway and registration. Everything else is generated on the platform: names, infants, PNR records, cargo contents.
 - Fuel is shown in tonnes **and** in minutes, far more clearly than SimBrief shows it.
 - SimBrief registrations are user-entered and not checked against the aircraft type, so they can't be trusted on their own.
+- An imported plan never carries more passengers than the aircraft's seat map: the count is capped at the seats. SimBrief plans against a generic cabin, while the seat map is the airline's real configuration, so the import keeps working instead of being refused.
 
 ## Passengers and cargo
 

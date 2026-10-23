@@ -22,6 +22,7 @@ This file describes what is built. The decisions behind it live in `decisions.md
 
 - The planned passenger mass comes from the flight plan itself: SimBrief configures it per airframe. A new revision inherits it.
 - Weights imported from a flight plan keep kilogram precision; rounding to tenths of a tonne manufactured shortfalls of up to 100 kg.
+- An imported plan with more passengers than the cabin layout has seats is capped at the seat count. The mass of the passengers left behind, at the planned passenger mass, comes off the payload and the zero fuel weight; cargo and fuel stay as planned. A loadsheet typed by operations is refused instead.
 - An optional passenger split per cabin class must add up to the total.
 - The form is an operational weight build-up: dry operating → zero fuel → take-off → landing, with structural limits. A passenger count above capacity is warned about in the app before the API refuses it.
 
