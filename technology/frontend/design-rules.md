@@ -35,6 +35,7 @@ Rejected: the flashy gamer or sci-fi HUD (neon, glows, aggressive dark mode, fak
 | `alternative` | Secondary |
 | `subtle` | Low-emphasis links ("History", "View all") |
 | `light` | Neutral chip-like action |
+| `warning` | A step the pilot must do by hand because automation can't, e.g. reporting takeoff while automatic detection is unavailable |
 | `red` | Destructive only |
 
 | Badge `color` | Meaning |
@@ -83,6 +84,8 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 - Every control ships default, hover, focus, active and disabled states. Focus is a visible indigo ring.
 - Motion only conveys state: 150–250 ms transitions, and `prefers-reduced-motion` is honoured.
 - Inputs use floating labels. Errors appear as a message below the field, never as a red border alone.
+- **Confirm before a step that can't be undone.** The dialog names what happens next ("AA4912 moves to Taxiing in"), its confirm button repeats the action by name rather than "OK", focus doesn't start on the confirm button, and a failed request keeps the dialog open with the error. A step that already opens its own form gets no second confirmation.
+- **A blocked action says why, next to it.** Keep the button visible but disabled, and put the reason and a link to the fix beside it. Never hide the only explanation in a tooltip on a disabled button.
 - Tabs use the underline variant; an overflowing tablist scrolls horizontally rather than wrapping.
 - Light and dark themes both ship and follow the operating system automatically.
 
@@ -105,7 +108,10 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
   | Route | `FRA → MUC` | Airport names |
   | Trailing | Block time (finished) or status (upcoming, live) | Air time (`air 1:32`) |
 
-- **Loadsheet form.** An operational weight build-up (dry operating → zero fuel → take-off → landing) with limit-aware validation, shared by the preliminary and final flows.
+- **Loadsheet form.** An operational weight build-up (dry operating → zero fuel → take-off → landing) with limit-aware validation, shared by the preliminary and final flows. The final flow opens with what changed since the preliminary loadsheet, as before → after with the difference ("Passengers 296 → 294 −2"), updating as the pilot types.
+- **Lifecycle track.** The flight page shows every stage from check-in to close on one track, each with its time. The current stage takes the most width and fills as it progresses.
+- **Next-step panel.** The next action on the flight page is a question with one button ("Is boarding complete?", "Airborne?"). While automation is watching, the panel says what for, and the manual button steps down to an outline.
+- **Deviation in words.** A time compared with its schedule reads "+20 min late", "5 min early" or "On time", never a signed number alone.
 - **Documents.** The NOTOC also renders as a printable document, legible without colour, carrying the standard hazard marks.
 - **Bad example to fix:** cargo types and cold-chain details are currently shown poorly. High-value information gets prominent, clear treatment.
 

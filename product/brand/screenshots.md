@@ -20,6 +20,18 @@ Run the app against a local API with seeded data (see the frontend and backend r
 
 Set-up for most shots: an imported SimBrief flight on a wide-body, long-haul sector (e.g. London Heathrow to New York JFK on an A350 or 777), with a cabin layout and hold variant assigned to the aircraft, and a preliminary loadsheet written so manifests exist.
 
+The seeded flights are dated January and June 2025. Captured on today's date, every time carries a date and the countdowns run to thousands of hours. Set the browser's clock to the flight's own day instead, and say so in the caption ("Seeded demo flights, shown on the day they fly").
+
+## Before and after graphics
+
+Release posts about a redesign compare the previous release with the new one:
+
+- One change per graphic, at 1920×1080: a claim headline, two or three lines of explanation, a Before and an After line, then the two crops side by side.
+- Both crops are real captures. Run the previous release next to the new one against the same seeded data, with the same clock, theme and viewport.
+- A dashed amber ring marks what changed in the Before crop, a solid indigo ring in the After crop.
+- When a crop shows a value typed for the shot, the footer says so, and that nothing was submitted. Open dialogs and cancel; never move a seeded flight on.
+- Alternate light and dark across the set.
+
 ## Shot list
 
 | Feature | Route or view | State to set up | Device | Theme |
@@ -34,9 +46,9 @@ Set-up for most shots: an imported SimBrief flight on a wide-body, long-haul sec
 | Loadsheet | `/track/:id/fuel-and-crew` | Preliminary and final both present | Tablet | Dark |
 | OFP viewer | `/track/:id/ofp` | SimBrief OFP, first page visible | Tablet | Light |
 | Runway analysis | `/track/:id/runway-analysis` | SimBrief flight | Tablet | Dark |
-| Flight progress | `/track/:id` (overview) | Boarding finished or taxiing out, automatic detection available | Phone | Dark |
+| Flight progress | `/track/:id` (phase card: lifecycle track and next-step panel) | Boarding finished or taxiing out, automatic detection available | Phone | Dark |
 | Automatic detection | `/track/:id/progress` | After takeoff, with automatic off-block and takeoff shown in the timeline | Tablet | Light |
-| Live map tracking | `/track/:id` (map) | In cruise with live telemetry in the top bar | Tablet | Dark |
+| Live map tracking | `/track/:id` (Monitor view) | In cruise with live telemetry in the top bar | Tablet | Dark |
 | Pilots in the air now | `/map` | Several ongoing public flights | Desktop | Dark |
 | Public flight page | `/map/:id` | A public flight in cruise, scheduled vs actual off-block visible | Phone | Light |
 | Flight history | `/flight-history/:id` | Closed long-haul flight with its full track | Tablet | Dark |
