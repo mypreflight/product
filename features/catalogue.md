@@ -68,6 +68,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Diversions | Divert, ending the flight at the diversion airport | Live | api `flights/…/diversion/`; app `features/diversion/` | Emergencies |
 | Delays | Allocate a late off-block to delay codes | Live | api `flights/…/delay/`, `automations/`; app `features/delay/` | — |
 | Discord rich presence | Show your flight as your Discord activity | Live | api `users/…/get-discord-presence`; transponder `src/infrastructure/discord/` | — |
+| Pilot dashboard | Your current, next and last flight, and your last 7 days in block time | Live | app `routes/common/DashboardRoute.tsx`, `features/flight/components/Dashboard/Main/`, `features/stats/components/Dashboard/RecentActivityBox.tsx` | — |
 | Current flight summary | Richer current-flight card on the dashboard | Planned | [app#294](https://github.com/oskarbarcz/flight-tracker-app/issues/294) | — |
 
 ## Pilot profile and collectibles
