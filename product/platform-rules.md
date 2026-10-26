@@ -25,16 +25,18 @@ The role name `CabinCrew` is historical: it is the pilot role.
 | Transition | Who | Notes |
 | --- | --- | --- |
 | Mark ready | Operations | Needs a preliminary loadsheet |
-| Check in | Pilot | Acknowledges the preliminary NOTOC; starts weather monitoring; sends the Discord briefing |
+| Check in | Pilot | Records the pilot's estimated off-block, takeoff, arrival and on-block times; acknowledges the preliminary NOTOC; starts weather monitoring; sends the Discord briefing. The departure stand can't be set or changed after check-in; the arrival stand can until on-block. |
 | Start / finish boarding | Pilot | Finish-boarding writes the final loadsheet and reconciles manifests |
 | Off-block | Pilot or automatic | Automatic: first stored position above 3 kt while boarding is finished |
 | Takeoff | Pilot or automatic | Automatic: first stored position outside the departure airport's boundary |
 | Arrival | Pilot or automatic | Automatic: inside the destination boundary below 50 kt |
 | On-block | Pilot | Not detected |
-| Offboarding, close | Pilot | Close captures the actual fuel burn; blocked until any delay is settled |
+| Offboarding, close | Pilot | Close captures the actual fuel burn; blocked until any delay is settled and any emergency is resolved |
 
 - Each automatic report happens at most once, only from its own state, and is flagged as automatic in the timeline. Detection needs an airport boundary; without one, the pilot reports manually.
 - Every lifecycle event is stored and streamed to subscribers of the flight over a WebSocket.
+- In the app, the pilot confirms each of these steps in a dialog before it's sent: start boarding, the off-block, takeoff, arrival and on-block reports, and start and finish offboarding. The dialog names the phase the flight moves to and warns when automatic detection is already watching for that event. Check-in, finish-boarding and close open their own forms instead, with no second confirmation.
+- A reported time is the moment the pilot confirms. There's no typed time.
 
 ## Tracking
 
@@ -49,6 +51,22 @@ The role name `CabinCrew` is historical: it is the pilot role.
   | `disabled` | Sees nothing |
 
   New flights default to `private`. Operations change the mode.
+
+- The pilot's flight page (`/track/:id`) has two views. **Briefing** shows the data tabs; **Monitor** shows a full-width live map. The page shows Briefing until off-block, Monitor until on-block, then Briefing again. A view the pilot picks holds until the next of those switch points, and a link to a tab always opens Briefing.
+
+## Flight times
+
+- A flight's timesheet holds up to four sets of off-block, takeoff, arrival and on-block times:
+
+  | Set | Source |
+  | --- | --- |
+  | Scheduled | The plan, from Operations or the SimBrief import |
+  | Estimated | The pilot, at check-in |
+  | Predicted | Sent to the API while the flight runs; each time is frozen once its actual event is reported. Nothing sends predictions yet. |
+  | Actual | The lifecycle reports, manual or automatic |
+
+- Wherever the app shows an event's time it takes the first that exists: actual, predicted, estimated, scheduled. Countdowns run to that same time, so a page never shows two different arrival times.
+- Scheduled and estimated times carry distinct icons (a calendar for scheduled, a timer for estimated), each with a tooltip and a screen-reader label.
 
 ## Delays
 
