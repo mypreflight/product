@@ -74,6 +74,14 @@ The role name `CabinCrew` is historical: it is the pilot role.
 - Legs are ordered by off-block time and must connect when the rotation is marked ready.
 - A rotation starts on the first check-in and finishes when its last flight closes. Pilots see their released rotations read-only.
 
+## Pilot dashboard
+
+- **Current flight:** the card shows off-block until off-block, then on-block. A time that isn't actual is marked Est. or Sched., and carries a date when it isn't today in UTC. A missed event says how late it is ("Off-block overdue: 41m", or "overdue since 01JAN 2025" after a day).
+- **Next scheduled flight:** the earliest ready flight by scheduled off-block, leaving out the current flight.
+- **Last flight:** the flight with the latest actual on-block, with any delay in minutes ("+30 min late").
+- **Your activity:** lifetime block time to the minute, fuel burned and distance flown, and one bar per day for the last 7 days, scaled to the busiest day.
+- A card that fails to load says so and asks for a reload. It never falls back to an empty state.
+
 ## Airport data
 
 - Airports a SimBrief import mentions but we don't hold are created automatically, at the lowest data-quality grade.
