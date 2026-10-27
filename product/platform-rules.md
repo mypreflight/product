@@ -37,6 +37,8 @@ The role name `CabinCrew` is historical: it is the pilot role.
 - Every lifecycle event is stored and streamed to subscribers of the flight over a WebSocket.
 - In the app, the pilot confirms each of these steps in a dialog before it's sent: start boarding, the off-block, takeoff, arrival and on-block reports, and start and finish offboarding. The dialog names the phase the flight moves to and warns when automatic detection is already watching for that event. Check-in, finish-boarding and close open their own forms instead, with no second confirmation.
 - A reported time is the moment the pilot confirms. There's no typed time.
+- While automatic detection is watching for off-block, takeoff or arrival, the app keeps the manual report behind "See details", together with the conditions detection relies on. When detection is unavailable, both show straight away, because the pilot has to report by hand.
+- Cargo flights load and unload instead of boarding and offboarding. Their finished states read "Loading cargo finished" and "Unloading cargo finished".
 
 ## Tracking
 
@@ -94,7 +96,7 @@ The role name `CabinCrew` is historical: it is the pilot role.
 
 ## Pilot dashboard
 
-- **Current flight:** the card shows off-block until off-block, then on-block. A time that isn't actual is marked Est. or Sched., and carries a date when it isn't today in UTC. A missed event says how late it is ("Off-block overdue: 41m", or "overdue since 01JAN 2025" after a day).
+- **Current flight:** a map strip across the top shows the route. While the aircraft is taxiing or airborne it adds the flown track and the aircraft's position, and opening the map goes to the flight's Tracking view. Below it come the route with its block time, the flight's phase and the pilot's next step. The card shows off-block until off-block, then on-block. A time that isn't actual is marked Est. or Sched., and carries a date when it isn't today in UTC. A missed event says how late it is ("Off-block overdue: 41m", or "overdue since 01JAN 2025" after a day).
 - **Next scheduled flight:** the earliest ready flight by scheduled off-block, leaving out the current flight.
 - **Last flight:** the flight with the latest actual on-block, with any delay in minutes ("+30 min late").
 - **Your activity:** lifetime block time to the minute, fuel burned and distance flown, and one bar per day for the last 7 days, scaled to the busiest day.
