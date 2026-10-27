@@ -40,7 +40,7 @@ index.ts         barrel export
 ```
 
 - Cross-feature building blocks live in `app/shared/` (`api/`, `ui/`, `hooks/`, `lib/`, `models/`, `validator/`, `pwa/`).
-- Global state lives in `app/app-state/`. `app/components/` holds only the public landing page.
+- Global state lives in `app/app-state/`. The app has no landing page: the marketing site is the `landing` repo.
 - Import with the `~/` alias for `app/`.
 
 ## Routing
@@ -58,6 +58,7 @@ index.ts         barrel export
   | `ReviewLayout` | The data-change review queue, for Operations and Admin |
 
 - `AuthGuard` takes `allowOnly` (one role or a list).
+- `/` is the dashboard, the index of `AppLayout`, so signed-out visitors go to sign-in. The old `/dashboard` address redirects to `/`, because iOS home-screen installs keep the start URL they were installed with.
 - Route modules are the only default exports.
 
 ## Data and state
