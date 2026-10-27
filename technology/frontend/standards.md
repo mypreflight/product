@@ -104,7 +104,7 @@ index.ts         barrel export
 
 - No unit test framework is configured.
 - Components are documented in Storybook (`npm run storybook`). Stories live in `stories/`, outside `app/`, because story files need a default export. Each component page states its anatomy and rules, and each story says when its state occurs. Stories never call a live ADS-B receiver.
-- Pull requests run a version check, lint, typecheck and build.
+- Pull requests run a version check, lint, typecheck, the app build and the Storybook build.
 - The version in `package.json` must be bumped before merging; CI fails otherwise.
 - A push to `main` builds, tags the version, creates a GitHub release and deploys to GitHub Pages.
 - The dev server mounts routes twice, so API calls fire about twice. Check network volume on a build, not in dev.
