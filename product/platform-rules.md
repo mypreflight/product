@@ -52,7 +52,7 @@ The role name `CabinCrew` is historical: it is the pilot role.
 
   New flights default to `private`. Operations change the mode.
 
-- The pilot's flight page (`/track/:id`) has two views. **Briefing** shows the data tabs; **Monitor** shows a full-width live map. The page shows Briefing until off-block, Monitor until on-block, then Briefing again. A view the pilot picks holds until the next of those switch points, and a link to a tab always opens Briefing.
+- The pilot's flight page has two views, each with its own address. **Briefing** (`/track/:id/briefing`, and `/track/:id/briefing/:tab` for each data tab) shows the data tabs; **Tracking** (`/track/:id/tracking`) shows a full-page live map behind the flight and phase cards. A bare `/track/:id` opens Briefing before off-block and Tracking from off-block on, including after landing. When off-block is reported while the page is open on Briefing, it moves to Tracking by itself; otherwise the view stays where the pilot put it. Older links (`/track/:id/:tab`, `/track/:id/monitor`) redirect to their new addresses.
 
 ## Flight times
 

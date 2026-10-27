@@ -31,33 +31,34 @@ Release posts about a redesign compare the previous release with the new one:
 - A dashed amber ring marks what changed in the Before crop, a solid indigo ring in the After crop.
 - When a crop shows a value typed for the shot, the footer says so, and that nothing was submitted. Open dialogs and cancel; never move a seeded flight on.
 - Alternate light and dark across the set.
+- The app repo carries an agent skill for this, `.claude/skills/app-screenshots`: it serves `main` next to the branch on port 5174, drives a local Chrome with the clock set to the flight's day, and renders the slides from a template. Each set goes to a new `~/Desktop/mypreflight-<topic>-update/` folder.
 
 ## Shot list
 
 | Feature | Route or view | State to set up | Device | Theme |
 | --- | --- | --- | --- | --- |
-| Passenger manifest | `/track/:id/passengers` | Seated wide-body, a few SSR passengers (infant, wheelchair, unaccompanied minor), a couple of no-shows after finish-boarding | Tablet | Light |
-| Seat maps | `/track/:id/passengers` (cabin drawing) | Layout whose geometry matches; premium cabins visible | Tablet | Dark |
-| Cargo manifest | `/track/:id/cargo` | Belly cargo with a perishable shipment (salmon out of Keflavik, or tulips out of Amsterdam in season), containers in positions | Tablet | Light |
-| Cold chain | `/track/:id/cargo` (advisories) | A temperature-controlled shipment with a connection, so the risk reason reads in full | Phone | Dark |
-| Cargo in the hold | `/track/:id/cargo` (hold drawing) | Containerised wide-body, some positions empty | Desktop | Light |
+| Passenger manifest | `/track/:id/briefing/passengers` | Seated wide-body, a few SSR passengers (infant, wheelchair, unaccompanied minor), a couple of no-shows after finish-boarding | Tablet | Light |
+| Seat maps | `/track/:id/briefing/passengers` (cabin drawing) | Layout whose geometry matches; premium cabins visible | Tablet | Dark |
+| Cargo manifest | `/track/:id/briefing/cargo` | Belly cargo with a perishable shipment (salmon out of Keflavik, or tulips out of Amsterdam in season), containers in positions | Tablet | Light |
+| Cold chain | `/track/:id/briefing/cargo` (advisories) | A temperature-controlled shipment with a connection, so the risk reason reads in full | Phone | Dark |
+| Cargo in the hold | `/track/:id/briefing/cargo` (hold drawing) | Containerised wide-body, some positions empty | Desktop | Light |
 | NOTOC | Finish-boarding modal (final loadsheet), and its document view | At least one dangerous goods consignment plus a notifiable load | Desktop | Light |
-| Fuel ladder | `/track/:id/fuel-and-crew` | SimBrief fuel breakdown with an ETOPS or extra-fuel addition | Phone | Light |
-| Loadsheet | `/track/:id/fuel-and-crew` | Preliminary and final both present | Tablet | Dark |
-| OFP viewer | `/track/:id/ofp` | SimBrief OFP, first page visible | Tablet | Light |
-| Runway analysis | `/track/:id/runway-analysis` | SimBrief flight | Tablet | Dark |
-| Flight progress | `/track/:id` (phase card: lifecycle track and next-step panel) | Boarding finished or taxiing out, automatic detection available | Phone | Dark |
-| Automatic detection | `/track/:id/progress` | After takeoff, with automatic off-block and takeoff shown in the timeline | Tablet | Light |
-| Live map tracking | `/track/:id` (Monitor view) | In cruise with live telemetry in the top bar | Tablet | Dark |
+| Fuel ladder | `/track/:id/briefing/fuel-and-crew` | SimBrief fuel breakdown with an ETOPS or extra-fuel addition | Phone | Light |
+| Loadsheet | `/track/:id/briefing/fuel-and-crew` | Preliminary and final both present | Tablet | Dark |
+| OFP viewer | `/track/:id/briefing/ofp` | SimBrief OFP, first page visible | Tablet | Light |
+| Runway analysis | `/track/:id/briefing/runway-analysis` | SimBrief flight | Tablet | Dark |
+| Flight progress | `/track/:id/briefing` (phase card: lifecycle track and next-step panel) | Boarding finished or taxiing out, automatic detection available | Phone | Dark |
+| Automatic detection | `/track/:id/briefing/progress` | After takeoff, with automatic off-block and takeoff shown in the timeline | Tablet | Light |
+| Live map tracking | `/track/:id/tracking` | In cruise with the whole route fitted below the cards and live telemetry in the bottom bar | Tablet | Dark |
 | Pilots in the air now | `/map` | Several ongoing public flights | Desktop | Dark |
 | Public flight page | `/map/:id` | A public flight in cruise, scheduled vs actual off-block visible | Phone | Light |
 | Flight history | `/flight-history/:id` | Closed long-haul flight with its full track | Tablet | Dark |
-| Gate, stand and runway | `/track/:id` (stand and runway box) | Stand and runway assigned at a well-mapped airport (e.g. Frankfurt) | Phone | Light |
+| Gate, stand and runway | `/track/:id/briefing` (stand and runway box) | Stand and runway assigned at a well-mapped airport (e.g. Frankfurt) | Phone | Light |
 | Weather | `/airports-library/:id` (weather) | Airport monitored by an active flight; ATIS from SayIntentions | Phone | Dark |
 | NOTAMs | `/airports-library/:id/notams` | Airport from a recent import | Tablet | Light |
 | Airport library | `/airports-library/:id/parking-positions` | A flagship-grade airport with terminals, stands and gates | Tablet | Dark |
-| Emergencies and diversions | `/track/:id/emergencies` | A declared medical emergency with a diversion | Tablet | Light |
-| Delays | `/track/:id/delays` | Late off-block, minutes allocated to codes | Phone | Light |
+| Emergencies and diversions | `/track/:id/briefing/emergencies` | A declared medical emergency with a diversion | Tablet | Light |
+| Delays | `/track/:id/briefing/delays` | Late off-block, minutes allocated to codes | Phone | Light |
 | Statistics | `/stats` | A pilot with months of flying: heatmap filled, type breakdown | Tablet | Dark |
 | Aircraft history | `/aircraft-history` | Several airframes flown, real registrations | Phone | Light |
 | Travel log | `/travels` | Mix of flights and dead-head trips | Phone | Dark |

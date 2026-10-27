@@ -12,7 +12,7 @@ Last reviewed: 2026-10-20
 | 4 | Off-block | Detected automatically from the first position report with ground speed above **3 knots**; below that the aircraft counts as standing. See "Why 3 knots" below. The pilot can also report off-block by hand and confirm it in a dialog; the time recorded is the moment they confirm. There's no typed time. |
 | 5 | Taxi and takeoff | The actual takeoff runway is compared with the selected one (bonus if they match). Takeoff punctuality is appreciated, never punished. |
 | 6 | Cruise | Position reports roughly every 15 to 30 seconds. |
-| 7 | Live view | Planned for launch, partly built. Built: the flight page's Monitor view, a full-width live map from off-block to on-block. See "Live view" below. |
+| 7 | Live view | Planned for launch, partly built. Built: the flight page's Tracking view, a full-page live map from off-block on. See "Live view" below. |
 | 8 | Emergency or diversion | Pilot-declared. A diversion ends the flight at the diversion airport. |
 | 9 | Landing | Detected automatically. The target is zero missed landings. |
 | 10 | On-block | The pilot reports it (chocks on) and confirms it in a dialog. It isn't reliably detectable, and a real tablet wouldn't know either. |

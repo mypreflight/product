@@ -57,7 +57,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Auto standby | The Transponder switches on at boarding and off at on-block | Live | transponder `src/domain/` | Transponder |
 | Transponder updates | One key saves the new version to Downloads, checksum verified | Live | transponder `src/application/updater.ts`, OpenSpec `release-updates` | Transponder |
 | Live map tracking | Your aircraft moving on the map with live telemetry | Live | adsb; api `src/core/provider/adsb/`; app `features/adsb/`, `features/flight/components/Map/` | Tracking, maps and flight pages |
-| Briefing and Monitor views | Your flight data at the gate, a full-width live map from off-block to on-block, switching by itself | Live | app `features/flight/lib/trackingView.ts`, `features/flight/hooks/useTrackingView.ts` | Tracking, maps and flight pages |
+| Briefing and Tracking views | Your flight data at the gate and a full-page live map from off-block on, each with its own link | Live | app `features/flight/lib/trackingView.ts`, `features/flight/hooks/useTrackingView.ts` | Tracking, maps and flight pages |
 | Predicted times | Arrival and on-block predictions used across the flight page | Partial (nothing sends them yet) | api `flights/…/timesheet/update-predicted-timesheet.action.ts`; app `features/flight/lib/blockEvents.ts` | — |
 | Pilots in the air now | Public map of ongoing flights | Live | app `routes/public/MapIndexRoute.tsx` | Tracking, maps and flight pages |
 | Public flight page | Share a flight by link; map with a data panel | Live | app `routes/public/MapRoute.tsx`; api `flights/…/flight/get-flight.action.ts` | Tracking, maps and flight pages |
