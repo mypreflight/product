@@ -85,6 +85,8 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 - Motion only conveys state: 150–250 ms transitions, and `prefers-reduced-motion` is honoured.
 - Inputs use floating labels. Errors appear as a message below the field, never as a red border alone.
 - **Confirm before a step that can't be undone.** The dialog names what happens next ("AA4912 moves to Taxiing in"), its confirm button repeats the action by name rather than "OK", focus doesn't start on the confirm button, and a failed request keeps the dialog open with the error. A step that already opens its own form gets no second confirmation.
+- **Icon-only buttons say what they do.** A visible tooltip on hover and focus, not a `title` attribute; a copy action confirms in the same tooltip ("Tracking link copied"). On touch screens an icon link styled as a button needs its own 44 px size, because the global touch rule only grows real buttons.
+- **Views switch in place.** Moving between Briefing and Tracking cross-fades what lies beneath the flight cards while the cards hold still and the switch slides across; the map stays loaded between visits so it never redraws from blank.
 - **A blocked action says why, next to it.** Keep the button visible but disabled, and put the reason and a link to the fix beside it. Never hide the only explanation in a tooltip on a disabled button.
 - Tabs use the underline variant; an overflowing tablist scrolls horizontally rather than wrapping.
 - Light and dark themes both ship and follow the operating system automatically.
@@ -133,5 +135,7 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 - **Runways:** a real-scale asphalt ribbon built from the runway's real width.
 - **Routes:** the planned great-circle line is thin, dashed and beneath the altitude-coloured flown track.
 - **Order:** the aircraft marker always sits above every label and marker.
-- **Telemetry:** altitude, ground speed, track and vertical rate as compact small caps centred in the map top bar; hidden when there's no room.
+- **Telemetry:** altitude, ground speed, track and vertical rate as compact small caps; in the map's bottom bar on the Tracking view, centred in the map top bar elsewhere, hidden when there's no room.
+- **Maps under cards:** a map that runs behind floating cards centres within the part left visible below them. In cruise the Tracking view fits the whole filed route and the aircraft into that space.
+- **Recentring:** corrections from data arriving or layout settling are instant; the map glides only when what it follows changes (a new phase, a different follow choice), and after the pilot pans or zooms it waits 7.5 s before returning.
 - **Tiles:** CARTO raster basemaps; vector tiles cap at zoom 14, too low for aprons.
