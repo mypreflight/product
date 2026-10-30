@@ -37,4 +37,4 @@ The full flight plan is already shown well. Coming:
 - The Transponder isn't working. The pilot can still track progress and sort out the Transponder later.
 - The Transponder was started at the same moment as pushback, to speed things up.
 
-The button sends a timestamp, nothing more. Someone could still fake it through the API, so manual off-blocks are compared with the movement the Transponder later reports.
+The button records a time, nothing more. Someone could still fake it, so manual off-blocks are compared with the movement the Transponder later reports.

@@ -61,4 +61,4 @@ The one deliberate exception to "no generated content" is postcards: AI-generate
 | Language | English |
 | mypreflight.io | Static homepage, product page, documentation, sign-in links |
 | app.mypreflight.io | The app |
-| Code | All open source; see `../repos.md` |
+| Licence | Open source; see `decisions.md` |

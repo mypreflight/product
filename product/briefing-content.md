@@ -1,10 +1,10 @@
 # Briefing content
 
-What the briefing contains today and the rules the code follows to build it. Migrated from the backend and frontend OpenSpec specs.
+What the briefing contains today and the rules it follows.
 
 Last reviewed: 2026-10-20
 
-This file describes what is built. The decisions behind it live in `decisions.md`; where the two disagree, the decision wins and the gap is a bug or open work. The full requirement text, with scenarios, stays in the code repos (`openspec/specs/`) and their tests.
+This file describes what is built. The decisions behind it live in `decisions.md`; where the two disagree, the decision wins and the gap is a bug or open work.
 
 ## Loadsheets
 
@@ -18,13 +18,13 @@ This file describes what is built. The decisions behind it live in `decisions.md
   | Passengers | No more than the seats in the aircraft's cabin layout (skipped when no layout is assigned) |
   | Cargo | No more than the resolved hold variant can carry by weight or volume, baggage included (skipped for uncurated types) |
   | Payload | At least cargo plus passengers at the planned passenger mass |
-  | Block fuel | Must equal the `block` figure of the fuel breakdown |
+  | Block fuel | Must equal the block figure of the fuel breakdown |
 
 - The planned passenger mass comes from the flight plan itself: SimBrief configures it per airframe. A new revision inherits it.
 - Weights imported from a flight plan keep kilogram precision; rounding to tenths of a tonne manufactured shortfalls of up to 100 kg.
 - An imported plan with more passengers than the cabin layout has seats is capped at the seat count. The mass of the passengers left behind, at the planned passenger mass, comes off the payload and the zero fuel weight; cargo and fuel stay as planned. A loadsheet typed by operations is refused instead.
 - An optional passenger split per cabin class must add up to the total.
-- The form is an operational weight build-up: dry operating → zero fuel → take-off → landing, with structural limits. A passenger count above capacity is warned about in the app before the API refuses it.
+- The form is an operational weight build-up: dry operating → zero fuel → take-off → landing, with structural limits. A passenger count above capacity gets a warning in the app before it's refused.
 
 ## Fuel
 
@@ -48,7 +48,7 @@ This file describes what is built. The decisions behind it live in `decisions.md
 ## Seat maps
 
 - Cabin layouts come from AeroLOPA. The catalogue is mirrored locally; layouts withdrawn upstream are retired, never deleted.
-- Seat data is fetched on first use and stored as immutable revisions; a refresh writes a new revision only when the content changed.
+- Seat data is fetched on first use and kept as revisions that never change; a refresh writes a new revision only when the content changed.
 - Operations assign a layout to each aircraft by hand, helped by ranked suggestions. Any airline's layout may be assigned to any aircraft; a mismatch is flagged, never refused.
 - The seat drawing is schematic and says so. It's readable without a pointer, has a list equivalent, and stays legible in both themes.
 
@@ -63,7 +63,7 @@ This file describes what is built. The decisions behind it live in `decisions.md
 
 The rule behind it all: cargo comes from the departure's context, never at random. Tulips from Amsterdam, salmon from Keflavik.
 
-- **Catalogue:** 100 curated commodities, stored as data, not code. Each declares IATA handling codes, density, piece weight and count ranges, offload priority, seasons and where it comes from.
+- **Catalogue:** 100 curated commodities. Each declares IATA handling codes, density, piece weight and count ranges, offload priority, seasons and where it comes from.
 - **Selection:**
   1. Prefer commodities naming the departure airport.
   2. Then its country.
@@ -104,7 +104,7 @@ The rule behind it all: cargo comes from the departure's context, never at rando
 
 - Raw ATIS, METAR and TAF per airport and per source: aviationweather.gov (METAR, TAF) and SayIntentions (ATIS, METAR, TAF). Each pilot picks a default source.
 - An airport is monitored from check-in until on-block of any flight using it, and refreshed on a schedule. A failure at one source doesn't affect the other.
-- The weather endpoint is public and returns an empty list rather than an error when nothing is stored.
+- Weather is public. An airport with nothing stored shows an empty list, not an error.
 
 ## NOTAMs
 
@@ -113,7 +113,7 @@ The rule behind it all: cargo comes from the departure's context, never at rando
 
 ## Crew
 
-- The first officer, purser and cabin crew come from the SimBrief roster as operator-owned background characters. They never sign in. The import is idempotent.
+- The first officer, purser and cabin crew come from the SimBrief roster as operator-owned background characters. They never sign in. Importing a roster again creates no duplicates.
 - Operations can also assign crew from the operator's pool.
 
 ## Discord briefing

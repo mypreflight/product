@@ -27,4 +27,4 @@ If it would be a commercial passenger or cargo operation in real life, it's in s
 ## Later, only on demand
 
 - **X-Plane**, if user demand justifies it.
-- **Translations.** English is the aviation and add-on standard, and translations would slow shipping. The platform is i18n-capable; German (friends translate professionally) and Polish are the likely first languages.
+- **Translations.** English is the aviation and add-on standard, and translations would slow shipping. The platform can be translated; German (friends translate professionally) and Polish are the likely first languages.

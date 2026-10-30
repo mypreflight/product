@@ -2,7 +2,7 @@
 
 [![product](.github/image/banner.png)](https://mypreflight.io)
 
-What MyPreflight is, how it's built and how we decide things. Written for contributors and the agents they work with.
+What MyPreflight is, who it's for and how we decide things. Product and business only. Written for contributors and the agents they work with.
 
 Last reviewed: 2026-10-20
 
@@ -10,7 +10,7 @@ MyPreflight turns a SimBrief flight plan into a full airline-style briefing (pas
 
 - App: app.mypreflight.io
 - Website and docs: mypreflight.io
-- All MyPreflight code is open source. See `repos.md`.
+- MyPreflight is open source.
 
 ## Using this with Claude
 
@@ -20,14 +20,12 @@ Point your Claude at `CLAUDE.md` in this repo by its raw GitHub URL:
 https://raw.githubusercontent.com/mypreflight/product/main/CLAUDE.md
 ```
 
-Code repos point here from a small `AGENTS.md` of their own, built from `technology/templates/code-repo-AGENTS.md`. It names this repo as their primary source of truth.
-
 ## Contributing
 
 - Found something wrong or out of date? Open an issue or, better, a PR with the fix.
 - Have an idea? Check `ideas-parking-lot.md`, then open an issue.
 - Product decisions are made by the product owner. A PR can propose a decision; merging it is his call.
-- CI runs markdownlint on every PR, with the rules in `.markdownlint-cli2.jsonc`.
+- Every PR gets an automatic Markdown style check.
 
 ## Licence
 

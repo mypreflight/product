@@ -4,7 +4,7 @@ How MyPreflight looks.
 
 Last reviewed: 2026-10-20
 
-Values below were read from the mypreflight.io CSS and the app's stylesheets on 2026-10-20. UI rules built on them are in `../../technology/frontend/design-rules.md`.
+Values below were read from mypreflight.io and the app on 2026-10-20. UI rules built on them are in `design-rules.md`.
 
 ## Character
 
@@ -37,18 +37,18 @@ The name, the logo and everything in `assets/` are not covered by this repo's CC
 
 ## Colour
 
-| Role | Token | Value |
+| Role | Name | Value |
 | --- | --- | --- |
-| Primary accent | `indigo-500` | `#6875f5` |
-| Accent hover, pressed | `indigo-600` | `#5850ec` |
-| Accent tint | `indigo-50` | `#f0f5ff` |
-| Brand background (splash, icons) | `gray-50` | `#f9fafb` |
-| App shell background (light) | `gray-100` | `#f3f4f6` |
-| Dark background | `gray-950` | Tailwind default |
-| Body text (light) | `gray-800` | `#1f2937` |
-| Muted text | `gray-500` | `#6b7280` |
+| Primary accent | Indigo 500 | `#6875f5` |
+| Accent hover, pressed | Indigo 600 | `#5850ec` |
+| Accent tint | Indigo 50 | `#f0f5ff` |
+| Brand background (splash, icons) | Gray 50 | `#f9fafb` |
+| App shell background (light) | Gray 100 | `#f3f4f6` |
+| Dark background | Gray 950 | `#030712` |
+| Body text (light) | Gray 800 | `#1f2937` |
+| Muted text | Gray 500 | `#6b7280` |
 
-- The indigo ramp is Flowbite's, inherited by the app from `flowbite-react` and copied by the website. Stock Tailwind indigo is a different, visibly wrong hue next to the mark.
+- The app and the website use exactly this indigo. Other indigos are a visibly wrong hue next to the mark.
 - Semantic colours (success, warning, info, danger) are for status only and always come with a word or icon.
 - The website body is white in light mode.
 
@@ -59,7 +59,7 @@ The name, the logo and everything in `assets/` are not covered by this repo's CC
 | Everything: headings, labels, body, controls | **Noto Sans** | 400 and 700 (the app also uses 600 for titles) |
 | Figures people compare or sum: weights, fuel, times | **Roboto Mono**, tabular figures | 500 |
 
-The website self-hosts Noto Sans (variable, Latin and Latin Extended, so Polish diacritics are covered) and ships its OFL licence beside it. The app loads Noto Sans and Roboto Mono from Google Fonts.
+Noto Sans covers Latin and Latin Extended, so Polish diacritics work. Its OFL licence ships with the website.
 
 ## Imagery
 

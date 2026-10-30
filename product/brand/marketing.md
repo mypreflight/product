@@ -53,7 +53,7 @@ Oskar reviews every post and refines the agent instructions until the text doesn
 
 - **Discord #releases:** every feature announced with screenshots, sometimes a full showcase. A redesign gets one before and after graphic per change, each with a one- or two-sentence caption; see `screenshots.md`.
 - **In-app "What's new":** planned; not built yet.
-- **Public changelog:** planned. Until then, each code repo publishes GitHub release notes for every version.
+- **Public changelog:** planned. Until then, every version gets release notes on GitHub.
 - **Screens to capture per feature:** see `screenshots.md`.
 
 ## Why automate
