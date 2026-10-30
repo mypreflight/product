@@ -52,17 +52,17 @@ Every item in this section is labelled **Idea**.
 - Native mobile apps. Far future at most.
 - X-Plane, German and Polish: only on demand.
 
-### From GitHub issues
+### From the backlog
 
-Open issues that aren't in progress on the [development board](https://github.com/users/oskarbarcz/projects/12). Work already in progress is tracked in `features/catalogue.md`.
+Open requests that aren't in progress. Work already in progress is tracked in `features/catalogue.md`.
 
-- **Aircraft technical logbook** (OpenSpec change `add-aircraft-technical-logbook` in the backend). Informational only; nothing blocks dispatch.
-  - [api#151](https://github.com/oskarbarcz/flight-tracker-api/issues/151) ATA chapter reference data: a curated ATA-chapter taxonomy used when a defect is filed.
-  - [api#153](https://github.com/oskarbarcz/flight-tracker-api/issues/153) Aircraft utilization ledger: total time since new, block time and cycles per airframe, accrued as flights complete.
-  - [api#155](https://github.com/oskarbarcz/flight-tracker-api/issues/155) Defect reporting: pilots who have flown an aircraft report defects against the ATA taxonomy.
-  - [api#156](https://github.com/oskarbarcz/flight-tracker-api/issues/156) Defect triage: operations confirm, reject or resolve reported defects, with a classification tied to the aircraft's ETOPS threshold.
-  - [api#157](https://github.com/oskarbarcz/flight-tracker-api/issues/157) Technical status and logbook feed: whether the aircraft is serviceable and ETOPS-ready, plus a chronological logbook.
-- [app#189](https://github.com/oskarbarcz/flight-tracker-app/issues/189) Move airport management to the admin user.
+- **Aircraft technical logbook.** Informational only; nothing blocks dispatch.
+  - ATA chapter reference data: a curated ATA-chapter taxonomy used when a defect is filed.
+  - Aircraft utilization ledger: total time since new, block time and cycles per airframe, accrued as flights complete.
+  - Defect reporting: pilots who have flown an aircraft report defects against the ATA taxonomy.
+  - Defect triage: operations confirm, reject or resolve reported defects, with a classification tied to the aircraft's ETOPS threshold.
+  - Technical status and logbook feed: whether the aircraft is serviceable and ETOPS-ready, plus a chronological logbook.
+- Move airport management to the admin user.
 
 ## Claude's suggestions (not confirmed by Oskar)
 
@@ -70,9 +70,9 @@ Every item in this section is labelled **Claude suggestion** and is not decided.
 
 ### Transponder and download page
 
-- Code-sign the .exe, publish checksums, and put "open source, read the code" next to the download button.
+- Sign the .exe, publish checksums, and put "open source, anyone can inspect it" next to the download button.
 - The updater verifies the new file's signature or checksum before telling the user to run it.
-- The Transponder sends its version with every request, so the server can refuse very old versions once a breaking change comes.
+- We know which Transponder version each pilot runs, so very old versions can be refused once a breaking change comes.
 - Tell users that old versions in Downloads can be deleted.
 - Keep "Transponder" as the public name and use it everywhere (download page, app, support, file name), with a one-line explanation for non-geeks. Download-page line: "Your own transponder, running on your PC."
 - Three distinct connection states:
@@ -85,7 +85,7 @@ Every item in this section is labelled **Claude suggestion** and is not decided.
 - Download page plan:
   - a hero line such as "Track your flights. Zero impact on your sim.";
   - one download button showing version, size and Windows 10/11, free, no installer;
-  - trust badges: about 20 MB, not Electron, open source, dependencies kept updated;
+  - trust badges: about 20 MB, lightweight, open source, kept up to date;
   - **the most important part:** a plain "what it reads / what it doesn't read" block;
   - three setup steps with a real console screenshot;
   - checksum and signing info;
@@ -96,7 +96,7 @@ Every item in this section is labelled **Claude suggestion** and is not decided.
 
 - Let pilots choose flight visibility during onboarding; never flip existing flights silently when the default changes to public.
 - Warn on the delete screen that the email address can't be reused.
-- Use a keyed hash (HMAC) for deleted emails, not a plain hash.
+- Make the stored hash of a deleted email harder to reverse than a plain hash.
 - Generated avatars instead of photo uploads.
 - A display name or callsign option, with the real name optional.
 - Nickname guards: reject URLs, multilingual blocklists (Polish included), block registration-shaped names, a report button.
@@ -108,9 +108,9 @@ Every item in this section is labelled **Claude suggestion** and is not decided.
 - Cargo realism mix: iconic loads (iPhones out of Zhengzhou) plus everyday ones, so it doesn't feel like a theme park.
 - Keep sponsored points off the main leaderboard.
 - "For flight simulation use only" in the footer, on briefings and in the terms.
-- NOTAM translation as the first post-launch feature, cached per NOTAM ID, with rules for the common patterns before any AI call.
+- NOTAM translation as the first post-launch feature, translating each NOTAM only once, with rules for the common patterns before any AI call.
 - SIDs: on a runway change show a dashed direct line; after takeoff the real track replaces the planned SID; build a library of runway and SID pairs from imports, expiring per AIRAC.
-- Ingest FAA CIFP (a zip per AIRAC cycle in ARINC 424 format) the same way the OSM updater works.
+- Bring in FAA CIFP once per AIRAC cycle, the same way airport data is refreshed.
 - The SimBrief navlog may include SID and STAR fixes with coordinates; check before building a procedure database.
 - Seed registrations from the OpenSky Network database; take type and operator from open data, not SimBrief; reject mismatches.
 - For curfews and noise abatement, start from AIP sections AD 2.20 and AD 2.21; do the top 50 airports semi-manually.
@@ -119,7 +119,7 @@ Every item in this section is labelled **Claude suggestion** and is not decided.
 
 ### Business
 
-- Licence: AGPL for the code plus a registered trademark on the name.
+- Licence: AGPL plus a registered trademark on the name.
 - Check Stripe Tax or a merchant of record for EU VAT; offer Przelewy24 and BLIK for Polish users.
 - A founding-member badge for early subscribers.
 
@@ -131,17 +131,3 @@ Every item in this section is labelled **Claude suggestion** and is not decided.
 - OFP explainer posts as a marketing series.
 - One release note per release, from which agents generate the in-app note, the changelog, the Discord post and social posts. Keep replies to people personal.
 - If the Discord bot ever needs interaction, use buttons and slash commands, no AI (e.g. "I'm back, all good" on a monitoring alert).
-- Use the SunCalc library for the daylight theme.
-
-### Operations
-
-- Free uptime checks on health endpoints (DigitalOcean, UptimeRobot or Better Stack).
-- A Healthchecks.io heartbeat on the 5-minute position backup job.
-- Watch disk space, SSL expiry and database connections.
-- Check whether the managed database offers point-in-time recovery.
-- A weekly off-site database dump (e.g. Backblaze).
-- Infrastructure as code. Today the App Platform app spec lives only in DigitalOcean, each provider function's spec fragment is merged in by hand, and the database and Spaces bucket aren't in code. Two options:
-  - commit the full app spec to one repo and let the deploy action apply it on release (the smallest step; the database and Spaces stay manual);
-  - describe the app, database, Spaces and domains in Terraform or OpenTofu with DigitalOcean's official provider, importing what already exists.
-
-  Either way, secrets come from GitHub secrets at deploy time, never from the files, because the repos are public.

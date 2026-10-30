@@ -101,7 +101,7 @@ Last reviewed: 2026-10-20
   1. **Discord**, written as a message from dispatch ("Hey, what's going on?").
   2. **Web Push** on the PWA. iOS 16.4+ supports it for apps added to the home screen; to be tested on an iPhone, with friends testing Android.
   3. **SMS** last, if ever, because it costs money and work.
-- No native apps. PWA only. Native would mean store fees (Google about $25 once, Apple about $99 a year), native code and app reviews; far future at most.
+- No native apps. PWA only. Native would mean store fees (Google about $25 once, Apple about $99 a year), separate apps to build and app reviews; far future at most.
 
 ## Discord bot
 
@@ -118,16 +118,11 @@ Last reviewed: 2026-10-20
 ## Accessibility and theming
 
 - No dedicated colour-blind mode: the cost to build and maintain it isn't worth it now, and the current UI has been checked.
-- Warnings and errors are never colour-only: bold text, icons, modals. Few components rely on red versus green. Flowbite covers basic accessibility.
+- Warnings and errors are never colour-only: bold text, icons, modals. Few components rely on red versus green.
 - Light and dark themes follow the operating system automatically.
 
-## UI library
-
-- Flowbite React (chosen about two years ago), heavily extended with a custom theme file.
-- Stay on Flowbite through launch. Tighten the theme and write design rules (`../technology/frontend/design-rules.md`). Revisit shadcn/ui after launch, possibly gradually. Switching now would be a big change for little gain.
-
-## Code licence
+## Licence
 
 - Currently The Unlicense (public domain). Switch to a protective licence before users and contributors arrive, after a quick legal check.
-- The aim is to stop someone forking the code and rebranding it as a competing platform. The risk is very low but not zero.
+- The aim is to stop someone copying MyPreflight and rebranding it as a competing platform. The risk is very low but not zero.
 - **Open:** which licence.

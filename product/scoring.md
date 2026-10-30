@@ -47,4 +47,4 @@ Later, only with trusted data: landing below a type-specific minimum fuel thresh
 
 - Paid features never affect score. Plain boxes score the same as premium salmon if flown equally well.
 - Sponsored events are tied to an aircraft **type**, so free aircraft qualify too. Example: an A380 event is open to both the iniBuilds payware A380 and the FlyByWire freeware A380. Nobody is forced to buy.
-- The Transponder API could be spoofed. The incentive is low because points have no money value; checks will be added. Manual off-blocks are compared with Transponder movement.
+- Transponder data could be spoofed. The incentive is low because points have no money value; checks will be added. Manual off-blocks are compared with Transponder movement.

@@ -32,4 +32,4 @@ A self-funded project. Get the most out of free sources first. Spend money, even
 
 ## Team
 
-Solo for now; Oskar works as product owner and codes less thanks to agentic development. A team of 5 to 8 community volunteers is expected, people who feel the product is made for them. Paid hires only if revenue ever allows, which is unlikely.
+Solo for now; Oskar works as product owner, with agents taking on more of the development. A team of 5 to 8 community volunteers is expected, people who feel the product is made for them. Paid hires only if revenue ever allows, which is unlikely.

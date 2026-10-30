@@ -33,7 +33,7 @@ Order of work: polish, then a round of first-user feedback, then new features.
 - [ ] UI polish: one consistent look across dozens of views, modals and components; high-value information shown well (e.g. cargo types and cold-chain details are currently shown poorly); mobile improvements in places; small, easy sign-up bugs
 - [ ] Outstanding map history (faster) and flight page
 - [ ] In-flight live view
-- [ ] Code licence change
+- [ ] Licence change
 - [ ] Marketing materials
 
 ## Onboarding flow
@@ -56,4 +56,4 @@ Funnel analysis (import → flight started → completed, and where users get st
 
 ## Feedback
 
-GitHub issues (contributors ideally propose fixes in code) and Discord. An in-app feedback system maybe later; it would slow development now.
+GitHub issues and Discord. An in-app feedback system maybe later; it would slow development now.

@@ -16,9 +16,9 @@ Last reviewed: 2026-10-20
 | Data | Used for | Source | Licence / attribution | Refresh | Status |
 | --- | --- | --- | --- | --- | --- |
 | Flight plans | Import, OFP, weights, times, runway, crew roster, waypoints, ETOPS points | SimBrief API (the pilot's own account) | SimBrief terms | Per import | Live |
-| Airports, runways, terminals, stands, gates, boundaries | Briefing, maps, automatic takeoff and landing detection | OpenStreetMap through the OSM provider function | ODbL, attribution required | On demand: operations pull a proposal per airport and apply the changes they accept. Pulls are cached for an hour. | Live |
+| Airports, runways, terminals, stands, gates, boundaries | Briefing, maps, automatic takeoff and landing detection | OpenStreetMap | ODbL, attribution required | On demand: operations pull a proposal per airport and apply the changes they accept. | Live |
 | Basic airport records | Creating an airport a SimBrief import mentions but we don't hold yet; operations look-up by IATA code | SkyLink API | **Open:** confirm terms | Once, when the airport is created; OpenStreetMap enrichment follows | Live |
-| Seat maps | Manifests, seating, cabin capacity | AeroLOPA through the AeroLOPA provider function | **Open:** confirm licence | Catalogue mirrored when operations sync it; seat data fetched on first use and stored as revisions, refreshed on request | Live |
+| Seat maps | Manifests, seating, cabin capacity | AeroLOPA | **Open:** confirm licence | Catalogue mirrored when operations sync it; seat data fetched on first use and stored as revisions, refreshed on request | Live |
 | METAR, TAF | Weather briefing | aviationweather.gov | **Open:** confirm terms | While any flight using the airport is active (checked in through taxiing in) | Live (raw text) |
 | ATIS, METAR, TAF | Weather briefing, second source | SayIntentions | **Open:** confirm terms | Same as above | Live (raw text) |
 | NOTAMs | Briefing | SimBrief OFP | SimBrief terms | Import time only | Live (raw) |
@@ -36,11 +36,11 @@ Last reviewed: 2026-10-20
 | --- | --- | --- | --- | --- |
 | Passenger manifests | Briefing | Generated, deterministic, fake names, IATA special service request codes | Per loadsheet | Live |
 | Cargo | Briefing | Generated, deterministic, origin-aware (tulips from Amsterdam, salmon from Keflavik), from a curated catalogue of 100 commodities with origins and seasons | Per loadsheet | Live |
-| Cargo hold layouts | Loading cargo into holds and ULD positions | Curated per airframe type, in the backend repo | With code releases | Live |
-| Airframe types | Aircraft records, freighter vs passenger | Curated, in the backend repo | With code releases | Live |
-| Countries | Country of every airport, passport stamps | ISO 3166-1 alpha-2 list, curated | With code releases | Live |
+| Cargo hold layouts | Loading cargo into holds and ULD positions | Curated per airframe type | With product releases | Live |
+| Airframe types | Aircraft records, freighter vs passenger | Curated | With product releases | Live |
+| Countries | Country of every airport, passport stamps | ISO 3166-1 alpha-2 list, curated | With product releases | Live |
 | Crew | A plausible roster around the pilot (first officer, purser, cabin crew) | Imported from the SimBrief roster; they never sign in | Per import | Live |
-| Postcards | Collectibles | AI-generated artwork, one per city, through the postcard generator (OpenAI image API) | Once per new city; operations can redraw | Partial |
+| Postcards | Collectibles | AI-generated artwork, one per city, with the OpenAI image API | Once per new city; operations can redraw | Partial |
 
 ## Searched, nothing usable yet
 

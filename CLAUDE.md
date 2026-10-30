@@ -1,6 +1,6 @@
 # MyPreflight knowledge base
 
-The operating manual for MyPreflight: product decisions, standards, architecture and brand. Start here, then read only the files your task needs.
+The operating manual for MyPreflight: product decisions, business and brand. Start here, then read only the files your task needs.
 
 Last reviewed: 2026-10-20
 
@@ -12,31 +12,30 @@ Reading this by URL? Every path below resolves under `https://raw.githubusercont
 
 | If you're… | Read |
 | --- | --- |
-| Building or changing a feature | `product/overview.md`, `product/decisions.md`, `features/catalogue.md`, then `technology/frontend/` or `technology/backend/` |
+| Changing what a feature does | `product/overview.md`, `product/decisions.md`, `features/catalogue.md` |
 | Touching the briefing (loadsheet, manifest, cargo, NOTOC, weather) | `product/briefing-content.md`, `product/decisions.md` |
 | Touching roles, flight states, delays, Discord or sign-in | `product/platform-rules.md`, `product/accounts-and-privacy.md` |
 | Touching points, timing or penalties | `product/scoring.md`, `product/flight-lifecycle.md` |
-| Working on the Transponder or tracking | `product/transponder.md`, `product/flight-lifecycle.md`, `technology/backend/architecture.md` |
+| Working on the Transponder or tracking | `product/transponder.md`, `product/flight-lifecycle.md` |
 | Adding or refreshing data (airports, aircraft, weather, procedures) | `product/data-sources.md`, `product/platform-rules.md` |
-| Doing frontend UI work | `technology/frontend/standards.md`, `technology/frontend/design-rules.md`, `product/brand/identity.md` |
-| Doing backend work in any backend repo | `technology/backend/standards.md`, `technology/backend/architecture.md` |
-| Working on infra, deploys or backups | `technology/infrastructure/overview.md` |
+| Working on how the product looks | `product/brand/design-rules.md`, `product/brand/identity.md` |
 | Touching accounts, privacy, emails or moderation | `product/accounts-and-privacy.md` |
+| Working on pricing, competitors or the launch | `product/business.md`, `product/competition.md`, `product/launch.md` |
 | Writing a social post, release note or marketing copy | `product/brand/voice.md`, `product/brand/marketing.md`, `product/brand/screenshots.md`, `features/catalogue.md` |
 | Proposing something new | `ideas-parking-lot.md` first; it may already be there |
-| Looking for a code repo | `repos.md` |
 
 ## Rules for every agent
 
-1. Decisions here beat assumptions. If code contradicts a decision, flag it. Don't silently change either side.
-2. Everything in `product/` is decided unless marked **Open:**. Ideas and Claude's suggestions live only in `ideas-parking-lot.md` and are not decided.
-3. Never turn an idea or suggestion into a decision. Ask Oskar.
-4. This repo is public. No secrets, tokens, internal URLs, IPs, user data or open security weaknesses.
-5. When your code change alters product behaviour, update the matching file here in a separate PR as part of the same work.
-6. Flight simulation use only. Never write anything suggesting MyPreflight is for real-world training or operations.
-7. Determinism first. User-facing aviation data comes from open or properly licensed datasets and deterministic rules. Don't add AI-generated content to it without a decision in `product/decisions.md`.
-8. Never judge a pilot on data we can't trust.
-9. Plain English, short sentences, aviation terms used correctly.
+1. **Product and business only.** Never add code, code links, file paths, repo names, routes, API or database details, the tech stack, issue links or infrastructure. Say what the product does and why, in words a pilot could follow. Links between documents in this repo are fine.
+2. Decisions here beat assumptions. If the built product contradicts a decision, flag it. Don't silently change either side.
+3. Everything in `product/` is decided unless marked **Open:**. Ideas and Claude's suggestions live only in `ideas-parking-lot.md` and are not decided.
+4. Never turn an idea or suggestion into a decision. Ask Oskar.
+5. This repo is public. No secrets, tokens, internal URLs, IPs, user data or open security weaknesses.
+6. When product behaviour changes, update the matching file here in a separate PR as part of the same work.
+7. Flight simulation use only. Never write anything suggesting MyPreflight is for real-world training or operations.
+8. Determinism first. User-facing aviation data comes from open or properly licensed datasets and deterministic rules. Don't add AI-generated content to it without a decision in `product/decisions.md`.
+9. Never judge a pilot on data we can't trust.
+10. Plain English, short sentences, aviation terms used correctly.
 
 ## Glossary
 
@@ -45,7 +44,7 @@ Reading this by URL? Every path below resolves under `https://raw.githubusercont
 | OFP | Operational flight plan, imported from SimBrief. The first 2 or 3 pages matter most. |
 | Off-block / on-block | Aircraft leaves / arrives at its parking position. Off-block is the only scored time. |
 | Transponder | MyPreflight's Windows connector that streams sim data (working name; public name not final) |
-| ADS-B over HTTP | Our tracking design: the Transponder sends position reports over HTTP to an in-memory receiver |
+| ADS-B over HTTP | Our tracking idea: the Transponder sends position reports over the internet to our own receiver |
 | Weight on wheels | Whether the aircraft is on the ground; one of the fields the Transponder sends |
 | Gate / stand | Gate is the passenger side, parking stand the aircraft and crew side. The terminal is derived from them. |
 | Registration | The real airframe a pilot flies, e.g. SP-LRC (a LOT 787-9) |
