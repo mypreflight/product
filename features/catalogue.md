@@ -2,7 +2,7 @@
 
 Every MyPreflight feature and its build status, taken from what's actually built, not from the brief.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-01
 
 ## How to read this
 
@@ -107,7 +107,8 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Password reset and change | Reset by email link; change from your account page | Live | Notifications and comms |
 | Email change | Move your account to a new address, confirmed by email | Live | Notifications and comms |
 | Discord message switches | Turn each Discord DM on or off | Live | Notifications and comms |
-| Transponder sign-in in the browser | Sign in to the Transponder without typing a password | Planned | Transponder |
+| Transponder sign-in in the browser | Sign in to the Transponder by approving it in the browser, without typing a password | Live | Transponder |
+| Signed-in sessions | See every browser and Transponder you're signed in on, and sign any of them out | Live | — |
 | GSX switches | Turn the GSX integration on or off, and choose whether boarding and deboarding start by themselves when you request them through GSX | Live | Transponder |
 
 ## Platform
