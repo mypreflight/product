@@ -65,15 +65,15 @@ Each pilot has three GSX switches in their settings:
 
 | Switch | Starts as | What it does |
 | --- | --- | --- |
-| GSX integration | Off | Master switch for the automatic starts. The Transponder reads GSX and shows the turnaround either way. |
+| GSX integration | Off | Master switch for the automatic steps. The Transponder reads GSX and shows the turnaround either way. |
 | Automatic boarding | On | Boarding starts by itself when the pilot requests it through GSX. |
-| Automatic deboarding | On | Deboarding starts by itself when the pilot requests it through GSX. |
+| Automatic deboarding | On | Deboarding starts by itself when the pilot requests it through GSX, and finishes by itself when GSX completes it. |
 
 The two automatic switches apply only while the integration is on. Turning the integration off keeps their positions, so turning it back on restores the pilot's choices.
 
-With the switches on, the Transponder starts boarding when the pilot requests it through GSX on a checked-in flight, and starts offboarding when they request deboarding on a flight that's on block. If deboarding is requested before on-block is reported, the Transponder waits, and starts offboarding once on-block is reported if GSX is still running it. Finishing boarding and offboarding stays with the pilot, and nothing is ever sent to GSX.
+With the switches on, the Transponder starts boarding when the pilot requests it through GSX on a checked-in flight, and starts offboarding when they request deboarding on a flight that's on block. If deboarding is requested before on-block is reported, the Transponder waits, and starts offboarding once on-block is reported if GSX is still running it. When GSX completes deboarding, the Transponder finishes offboarding, however it was started. A bypassed deboarding doesn't count, because passengers weren't seen off. Finishing boarding stays with the pilot, because it needs the final loadsheet, and nothing is ever sent to GSX.
 
-Pilots change the switches on their account page. The integration starts off, so nobody gets the automatic starts without asking for them. Only the flying role sees these switches.
+Pilots change the switches on their account page. The integration starts off, so nobody gets the automatic steps without asking for them. Only the flying role sees these switches.
 
 - **Open:** whether the integration starts on or off for a new pilot. It starts off for now, because not every pilot flies with GSX.
 
