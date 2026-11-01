@@ -47,6 +47,7 @@ Release posts about a redesign compare the previous release with the new one:
 | OFP viewer | Flight page, Briefing, OFP tab | SimBrief OFP, first page visible | Tablet | Light |
 | Runway analysis | Flight page, Briefing, runway analysis tab | SimBrief flight | Tablet | Dark |
 | Flight progress | Flight page, Briefing (phase card: lifecycle track and next-step panel) | Boarding finished or taxiing out, automatic detection available | Phone | Dark |
+| GSX switches | Account page, GSX section | Integration on, both drawings mid-loop | Phone | Dark |
 | Automatic detection | Flight page, Briefing, progress tab | After takeoff, with automatic off-block and takeoff shown in the timeline | Tablet | Light |
 | Live map tracking | Flight page, Tracking | In cruise with the whole route fitted below the cards and live telemetry in the bottom bar | Tablet | Dark |
 | Pilots in the air now | Public map | Several ongoing public flights | Desktop | Dark |

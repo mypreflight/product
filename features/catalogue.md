@@ -108,7 +108,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Email change | Move your account to a new address, confirmed by email | Live | Notifications and comms |
 | Discord message switches | Turn each Discord DM on or off | Live | Notifications and comms |
 | Transponder sign-in in the browser | Sign in to the Transponder without typing a password | Planned | Transponder |
-| GSX switches | Turn the GSX integration on or off, and choose whether boarding and deboarding start by themselves when you request them through GSX | Planned | Transponder |
+| GSX switches | Turn the GSX integration on or off, and choose whether boarding and deboarding start by themselves when you request them through GSX | Live | Transponder |
 
 ## Platform
 

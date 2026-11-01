@@ -8,6 +8,7 @@ Last reviewed: 2026-10-20
 
 - **Calm and professional, like a good airline dispatcher.** A monitoring alert reads "Hey, what's going on?", not "⚠️ ERROR".
 - **Plain English and short sentences.** Aviation terms used correctly.
+- **Say only what the reader needs in the product.** No text the interface can do without: no reminders of the obvious such as "keep the Transponder running", and no warning that repeats what the pilot just clicked through.
 - **Terse, exact and unit-aware in the product.** Tonnes, UTC times written with a `Z` (`06:20Z`), IATA and ICAO codes. Never chatty or gamified.
 - **A little flight-geek humour is welcome**, such as a connector called Transponder. Memes and hype are not.
 - **Never AI slop.** If a post could be about any product, rewrite it.
