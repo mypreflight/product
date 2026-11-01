@@ -2,7 +2,7 @@
 
 The Windows connector that streams flight data from the sim: what it does, how it updates, and how connection problems are shown.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-01
 
 ## Name and idea
 
@@ -58,6 +58,22 @@ Direction:
 ## Integrations
 
 - GSX Pro API for live boarding and deboarding passenger counts (not fully wired).
+
+### GSX switches
+
+Each pilot has three GSX switches in their settings:
+
+| Switch | Starts as | What it does |
+| --- | --- | --- |
+| GSX integration | Off | Master switch for the whole integration. |
+| Automatic boarding | On | Boarding starts by itself when the pilot requests it through GSX. |
+| Automatic deboarding | On | Deboarding starts by itself when the pilot requests it through GSX. |
+
+The two automatic switches apply only while the integration is on. Turning the integration off keeps their positions, so turning it back on restores the pilot's choices.
+
+The switches are stored, but nothing uses them yet: pilots can't change them in the app, and the Transponder doesn't act on them.
+
+- **Open:** whether the integration starts on or off for a new pilot. It starts off for now, because not every pilot flies with GSX.
 
 ## Planned
 
