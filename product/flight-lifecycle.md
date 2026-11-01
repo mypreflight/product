@@ -16,7 +16,7 @@ Last reviewed: 2026-10-20
 | 8 | Emergency or diversion | Pilot-declared. A diversion ends the flight at the diversion airport. |
 | 9 | Landing | Detected automatically. The target is zero missed landings. |
 | 10 | On-block | The pilot reports it (chocks on) and confirms it in a dialog. It isn't reliably detectable, and a real tablet wouldn't know either. |
-| 11 | Disembark | The pilot is prompted to disembark. With the GSX integration on, requesting deboarding through GSX starts it. Live passenger counts come from the GSX Pro API through the Transponder, like crew counting passengers off (not fully wired yet). |
+| 11 | Disembark | The pilot is prompted to disembark. With the GSX integration on, requesting deboarding through GSX starts it, and it finishes when GSX completes it. Live passenger counts come from the GSX Pro API through the Transponder, like crew counting passengers off (not fully wired yet). |
 | 12 | Finish | The pilot enters the actual fuel burn by hand. This is deliberate realism: a real EFB has no link to aircraft systems, even though the sim could provide the number. |
 | 13 | Not finished | Unfinished flights are penalised (laziness, skipping the post-flight steps). Planned: auto-finish about 24 hours after the scheduled time, so stale flights don't show as live. |
 
