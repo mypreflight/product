@@ -132,7 +132,7 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 - **Progressive detail by zoom:** boundary first, then terminals and runways, then gates and stands.
 - **Markers:** gates as orange chips with a mono designator; stands as green dots, filled for the assigned stand and hollow for the rest. Never teardrop pins.
 - **Runways:** a real-scale asphalt ribbon built from the runway's real width.
-- **Routes:** the planned great-circle line is thin, dashed and beneath the altitude-coloured flown track.
+- **Routes:** every route line follows the great circle, never a straight line between two points. That covers the planned route between its waypoints, oceanic tracks, rotation legs and diversions. A route stays one line across the date line, and a map fits the whole curve, not only the airports. The planned line is thin, dashed and beneath the altitude-coloured flown track.
 - **Order:** the aircraft marker always sits above every label and marker.
 - **Telemetry:** altitude, ground speed, track and vertical rate as compact small caps; in the map's bottom bar on the Tracking view, centred in the map top bar elsewhere, hidden when there's no room.
 - **Maps under cards:** a map that runs behind floating cards centres within the part left visible below them. In cruise the Tracking view fits the whole filed route and the aircraft into that space.
