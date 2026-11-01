@@ -130,6 +130,7 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 
 - Messages go to the captain, the pilot who checked in, never to whoever triggered them. A flight nobody checked in for sends no DMs.
 - Each DM type has its own switch, all on by default; the two delay messages share one switch.
+- Every message links into the app. The briefing and both loadsheets open the flight's Briefing view, both delay messages open its Delays tab, and the community announcements open the flight on the public map.
 - **Rich presence** shows the current flight as the pilot's Discord activity through the Transponder. It's off by default, because it publishes what the pilot is doing.
 - DMs only reach pilots who share the server with the bot. Linking can join the server in the same step. The account page shows membership, or "unknown" when it can't be established.
 - We keep no ongoing access to a pilot's Discord account.
