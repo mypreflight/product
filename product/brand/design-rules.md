@@ -80,7 +80,7 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 
 - WCAG 2.1 AA in both themes. Body text at 4.5:1; never Gray 400 or lighter for body text on near-white tints.
 - Every control ships default, hover, focus, active and disabled states. Focus is a visible indigo ring.
-- Motion only conveys state: 150–250 ms transitions, and the system's reduced-motion setting is honoured.
+- Motion only conveys state: 150–250 ms transitions, and the system's reduced-motion setting is honoured. The one exception is the GSX drawing, which loops while its switch takes effect.
 - Inputs use floating labels. Errors appear as a message below the field, never as a red border alone.
 - **Confirm before a step that can't be undone.** The dialog names what happens next ("AA4912 moves to Taxiing in"), its confirm button repeats the action by name rather than "OK", focus doesn't start on the confirm button, and a failed request keeps the dialog open with the error. A step that already opens its own form gets no second confirmation.
 - **Icon-only buttons say what they do.** A visible tooltip on hover and focus, not the browser's delayed hint; a copy action confirms in the same tooltip ("Tracking link copied"). On touch screens every icon button is 44 px, including a link styled as a button.
@@ -110,8 +110,9 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 
 - **Loadsheet form.** An operational weight build-up (dry operating → zero fuel → take-off → landing) with limit-aware validation, shared by the preliminary and final flows. The final flow opens with what changed since the preliminary loadsheet, as before → after with the difference ("Passengers 296 → 294 −2"), updating as the pilot types.
 - **Lifecycle track.** The flight page shows every stage from check-in to close on one track, each with its time. The current stage takes the most width and fills as it progresses.
-- **Next-step panel.** The next action on the flight page is a question with one button ("Is boarding complete?", "Airborne?"). While automation is watching, the panel says what for, and the manual button steps down to an outline.
+- **Next-step panel.** The next action on the flight page is a question with one button ("Is boarding complete?", "Airborne?"). While automation is watching, the panel says what for, and the manual button steps down to an outline. When GSX is set to start the step, the panel names it with no question and no button ("Board passengers"), and the manual start waits behind "Didn't work? Troubleshoot".
 - **Deviation in words.** A time compared with its schedule reads "+20 min late", "5 min early" or "On time", never a signed number alone.
+- **GSX drawing.** Each automatic GSX switch carries a schematic plan view of the aircraft at the gate: nose left, jet bridge on the left front door. Boarding fills the cabin from the rear as passengers reach their rows, and deboarding empties it from the front. It moves in indigo only while the switch takes effect, and otherwise holds still in gray.
 - **Documents.** The NOTOC also renders as a printable document, legible without colour, carrying the standard hazard marks.
 - **Bad example to fix:** cargo types and cold-chain details are currently shown poorly. High-value information gets prominent, clear treatment.
 

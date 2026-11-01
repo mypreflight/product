@@ -36,6 +36,7 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 - In the app, the pilot confirms each of these steps in a dialog before it's sent: start boarding, the off-block, takeoff, arrival and on-block reports, and start and finish offboarding. The dialog names the phase the flight moves to and warns when automatic detection is already watching for that event. Check-in, finish-boarding and close open their own forms instead, with no second confirmation.
 - A reported actual time is the moment the pilot confirms. There's no typed actual time; only predicted times are typed.
 - While automatic detection is watching for off-block, takeoff or arrival, the app keeps the manual report behind "See details", together with the conditions detection relies on. When detection is unavailable, both show straight away, because the pilot has to report by hand.
+- While GSX is set to start boarding or offboarding, the app doesn't offer the button. It names the step, says GSX will report it, and keeps a manual start behind "Didn't work? Troubleshoot", together with a link to the GSX switches. GSX can fail to start the step and the app can't tell, so the pilot must always have a way forward.
 - Cargo flights load and unload instead of boarding and offboarding. Their finished states read "Loading cargo finished" and "Unloading cargo finished".
 
 ## Tracking

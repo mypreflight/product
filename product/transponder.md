@@ -73,7 +73,7 @@ The two automatic switches apply only while the integration is on. Turning the i
 
 With the switches on, the Transponder starts boarding when the pilot requests it through GSX on a checked-in flight, and starts offboarding when they request deboarding on a flight that's on block. If deboarding is requested before on-block is reported, the Transponder waits, and starts offboarding once on-block is reported if GSX is still running it. Finishing boarding and offboarding stays with the pilot, and nothing is ever sent to GSX.
 
-Pilots can't change the switches in the app yet, and the integration starts off, so nobody gets the automatic starts until they can.
+Pilots change the switches on their account page. The integration starts off, so nobody gets the automatic starts without asking for them. Only the flying role sees these switches.
 
 - **Open:** whether the integration starts on or off for a new pilot. It starts off for now, because not every pilot flies with GSX.
 
