@@ -149,4 +149,4 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 - Statistics are recomputed from completed flights, never incremented, and count only the operating pilot. They cover lifetime totals, personal records, per type, airport and country, calendar periods in UTC (weeks run Monday to Sunday) and a flying-days heatmap.
 - **Passport:** one stamp per arrival in a country; a diversion stamps where the aircraft landed.
 - **Aircraft history:** every aircraft a pilot captained, recorded at check-in.
-- **Postcards:** one AI-generated image per city, earned the first time a pilot lands there. Operations draw missing ones and redraw unsuitable ones. The app screens are in progress.
+- **Postcards:** one AI-generated image per city, earned the first time a pilot lands there. Operations draw missing ones and redraw unsuitable ones. A postcard belongs to the pilot once earned: it can't be deleted while anyone holds it, so a collection never loses one silently. The app screens are in progress.
