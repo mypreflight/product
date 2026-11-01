@@ -2,7 +2,7 @@
 
 The rules the built platform follows outside the briefing: roles, the flight's states, automatic detection, delays, data review, Discord, accounts and collectibles.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-01
 
 This file describes what is built. The decisions behind it live in `decisions.md`; where the two disagree, the decision wins and the gap is a bug or open work.
 
@@ -143,6 +143,8 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 - Admins create accounts. There is no public sign-up today.
 - Sign-in: email and password, or Google or Discord **once linked** to an existing account. Third-party sign-in never creates an account and matches users by their Google or Discord account only, never by email.
 - Linking and unlinking Google or Discord never leaves an account without a way in.
+- The Transponder signs in only through the browser, approved by the pilot. See `transponder.md`.
+- Pilots see where they're signed in, every browser and every Transponder, on their account page and can sign any of them out. A browser stays signed in for 7 days from its last use, a Transponder for 90.
 - Passwords: changing proves the current one and signs out every other session. A reset link is single-use, expires in one hour and is never re-sent within five minutes. The reset form never reveals whether an address has an account.
 - Email change: the new address must be confirmed within 24 hours; the old address is told; confirming signs out every session.
 - Email is sent only for password reset and email change, in plain text. Flight messages go through Discord.

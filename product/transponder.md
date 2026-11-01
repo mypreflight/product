@@ -20,7 +20,16 @@ The same kinds of fields a real transponder sends: position, ground speed, verti
 - One portable .exe. No installer, by choice.
 - Console app running beside the sim, about 20 MB of RAM. Deliberately lightweight, so the sim isn't affected. This is a major selling point.
 - Runs on the sim PC.
-- Sign-in by email and password, or browser-based login (e.g. Google).
+- Sign-in through the browser only. See below.
+
+## Sign-in
+
+- The Transponder never asks for a password. It shows a short code and opens MyPreflight in the browser, where the pilot signs in the usual way (password, Google or Discord), checks that the code matches and approves. A pilot who didn't start the sign-in declines it instead.
+- The code can be typed on any device, so the browser doesn't have to run on the sim PC.
+- A code lasts 10 minutes and works once.
+- A Transponder sign-in lasts 90 days from its last use, so a pilot who flies regularly approves it once.
+- The Transponder can do only what it needs: read the pilot, their flight, the Discord presence and the GSX switches, and report boarding and deboarding. Everything else is refused, from account settings to approving another device. Only the Transponder can report a step as coming from GSX.
+- Pilots see each signed-in Transponder, named after its computer, on their account page and can sign it out there.
 
 ## Offline behaviour
 
