@@ -58,7 +58,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Transponder updates | One key saves the new version to Downloads, checksum verified | Live | Transponder |
 | Live map tracking | Your aircraft moving on the map with live telemetry | Live | Tracking, maps and flight pages |
 | Briefing and Tracking views | Your flight data at the gate and a full-page live map from off-block on, each with its own link | Live | Tracking, maps and flight pages |
-| Predicted times | Arrival and on-block predictions used across the flight page | Partial (nothing sends them yet) | — |
+| Predicted times | Type in the times your FMC shows or ATC gave you; they replace your estimates across the flight and on the public map | Live | — |
 | Pilots in the air now | Public map of ongoing flights | Live | Tracking, maps and flight pages |
 | Public flight page | Share a flight by link; map with a data panel | Live | Tracking, maps and flight pages |
 | Flight visibility | Public, link-only or hidden | Live | Tracking, maps and flight pages |

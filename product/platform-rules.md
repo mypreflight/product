@@ -34,7 +34,7 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 - Each automatic report happens at most once, only from its own state, and is flagged as automatic in the timeline. Detection needs an airport boundary; without one, the pilot reports manually.
 - Every lifecycle event is stored and appears straight away on any open screen following the flight.
 - In the app, the pilot confirms each of these steps in a dialog before it's sent: start boarding, the off-block, takeoff, arrival and on-block reports, and start and finish offboarding. The dialog names the phase the flight moves to and warns when automatic detection is already watching for that event. Check-in, finish-boarding and close open their own forms instead, with no second confirmation.
-- A reported time is the moment the pilot confirms. There's no typed time.
+- A reported actual time is the moment the pilot confirms. There's no typed actual time; only predicted times are typed.
 - While automatic detection is watching for off-block, takeoff or arrival, the app keeps the manual report behind "See details", together with the conditions detection relies on. When detection is unavailable, both show straight away, because the pilot has to report by hand.
 - Cargo flights load and unload instead of boarding and offboarding. Their finished states read "Loading cargo finished" and "Unloading cargo finished".
 
@@ -62,10 +62,11 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
   | --- | --- |
   | Scheduled | The plan, from Operations or the SimBrief import |
   | Estimated | The pilot, at check-in |
-  | Predicted | Sent while the flight runs; each time is frozen once its actual event is reported. Nothing sends predictions yet. |
+  | Predicted | The pilot, from the FMC or ATC, from check-in until on-block; each time is frozen once its actual event is reported |
   | Actual | The lifecycle reports, manual or automatic |
 
 - Wherever the app shows an event's time it takes the first that exists: actual, predicted, estimated, scheduled. Countdowns run to that same time, so a page never shows two different arrival times.
+- The pilot enters predicted times with the button on the Predicted timesheet card, in the Flight progress tab of Briefing. The form shows only the events not reported yet, filled with the current times, and saves only the times the pilot changes. Times must stay in order, so an arrival later than on-block needs the on-block moved too.
 - Scheduled and estimated times carry distinct icons (a calendar for scheduled, a timer for estimated), each with a tooltip and a screen-reader label.
 
 ## Delays
