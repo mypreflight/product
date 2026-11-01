@@ -24,14 +24,15 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 | --- | --- | --- |
 | Mark ready | Operations | Needs a preliminary loadsheet |
 | Check in | Pilot | Records the pilot's estimated off-block, takeoff, arrival and on-block times; acknowledges the preliminary NOTOC; starts weather monitoring; sends the Discord briefing. The departure stand can't be set or changed after check-in; the arrival stand can until on-block. |
-| Start / finish boarding | Pilot | Finish-boarding writes the final loadsheet and reconciles manifests |
+| Start / finish boarding | Pilot, or GSX for the start | Finish-boarding writes the final loadsheet and reconciles manifests |
 | Off-block | Pilot or automatic | Automatic: first stored position above 3 kt while boarding is finished |
 | Takeoff | Pilot or automatic | Automatic: first stored position outside the departure airport's boundary |
 | Arrival | Pilot or automatic | Automatic: inside the destination boundary below 50 kt |
 | On-block | Pilot | Not detected |
-| Offboarding, close | Pilot | Close captures the actual fuel burn; blocked until any delay is settled and any emergency is resolved |
+| Offboarding, close | Pilot, or GSX for starting offboarding | Close captures the actual fuel burn; blocked until any delay is settled and any emergency is resolved |
 
 - Each automatic report happens at most once, only from its own state, and is flagged as automatic in the timeline. Detection needs an airport boundary; without one, the pilot reports manually.
+- Starting boarding or offboarding records its source. It's **GSX** when the pilot requested it through GSX, **override** when the pilot started it themselves while their switches had GSX set to do it, and **manual** otherwise. GSX can only start what the pilot's switches allow. Steps from before this was recorded name no source; the pilot started all of them.
 - Every lifecycle event is stored and appears straight away on any open screen following the flight.
 - In the app, the pilot confirms each of these steps in a dialog before it's sent: start boarding, the off-block, takeoff, arrival and on-block reports, and start and finish offboarding. The dialog names the phase the flight moves to and warns when automatic detection is already watching for that event. Check-in, finish-boarding and close open their own forms instead, with no second confirmation.
 - A reported actual time is the moment the pilot confirms. There's no typed actual time; only predicted times are typed.
