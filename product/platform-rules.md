@@ -66,7 +66,7 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
   | Actual | The lifecycle reports, manual or automatic |
 
 - Wherever the app shows an event's time it takes the first that exists: actual, predicted, estimated, scheduled. Countdowns run to that same time, so a page never shows two different arrival times.
-- The pilot enters predicted times from the link under the countdown on the flight page. The form shows only the events not reported yet, filled with the current times, and saves only the times the pilot changes. Times must stay in order, so an arrival later than on-block needs the on-block moved too.
+- The pilot enters predicted times with the button on the Predicted timesheet card, in the Flight progress tab of Briefing. The form shows only the events not reported yet, filled with the current times, and saves only the times the pilot changes. Times must stay in order, so an arrival later than on-block needs the on-block moved too.
 - Scheduled and estimated times carry distinct icons (a calendar for scheduled, a timer for estimated), each with a tooltip and a screen-reader label.
 
 ## Delays
