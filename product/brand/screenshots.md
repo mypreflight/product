@@ -50,6 +50,7 @@ Release posts about a redesign compare the previous release with the new one:
 | GSX switches | Account page, GSX section | Integration on, both drawings mid-loop | Phone | Dark |
 | Automatic detection | Flight page, Briefing, progress tab | After takeoff, with automatic off-block and takeoff shown in the timeline | Tablet | Light |
 | Live map tracking | Flight page, Tracking | In cruise with the whole route fitted below the cards and live telemetry in the bottom bar | Tablet | Dark |
+| Fix card | Flight page, Tracking | A planned oceanic route with the card open on an oceanic fix, so the FIR reads in full | Desktop | Dark |
 | Globe maps | Flight page, Briefing, route tab | A long-haul ETOPS flight with its filed route and ETP rings on the globe | Desktop | Dark |
 | Pilots in the air now | Public map | Several ongoing public flights | Desktop | Dark |
 | Public flight page | Public map, one flight | A public flight in cruise, scheduled vs actual off-block visible | Phone | Light |
