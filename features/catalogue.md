@@ -59,6 +59,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Live map tracking | Your aircraft moving on the map with live telemetry | Live | Tracking, maps and flight pages |
 | Globe maps | Every route map on a round earth or flat, your choice per map | Live | Tracking, maps and flight pages |
 | FIR boundaries | The flight information regions you fly through, named along each border as on an enroute chart | Live | Tracking, maps and flight pages |
+| Fix card | Click a fix on the Tracking map to read its plan: position, FIR, fuel and the wind at each level. Arrows step along the route and centre the map on each fix | Live | Tracking, maps and flight pages |
 | Briefing and Tracking views | Your flight data at the gate and a full-page live map from off-block on, each with its own link | Live | Tracking, maps and flight pages |
 | Predicted times | Type in the times your FMC shows or ATC gave you; they replace your estimates across the flight and on the public map | Live | — |
 | Pilots in the air now | Public map of ongoing flights | Live | Tracking, maps and flight pages |
