@@ -69,7 +69,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Diversions | Divert, ending the flight at the diversion airport | Live | Emergencies |
 | Delays | Allocate a late off-block to delay codes | Live | — |
 | Discord rich presence | Show your flight as your Discord activity | Live | — |
-| Pilot dashboard | Your current flight on a globe, your next and last flight, and your last 7 days in block time | Live | — |
+| Pilot dashboard | Your current flight on a globe, or between flights the airport and stand you are at and your time on the ground; your next and last flight, and your last 7 days in block time | Live | — |
 | Current flight summary | Richer current-flight card on the dashboard | Planned | — |
 
 ## Pilot profile and collectibles
