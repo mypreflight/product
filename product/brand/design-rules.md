@@ -2,7 +2,7 @@
 
 Rules that make dozens of views, modals and components look like one app.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-02
 
 Colours, fonts and the logo live in `identity.md`.
 
@@ -139,8 +139,9 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 - **Maps under cards:** a map that runs behind floating cards centres within the part left visible below them. In cruise the Tracking view fits the whole filed route and the aircraft into that space.
 - **Recentring:** corrections from data arriving or layout settling are instant; the map glides only when what it follows changes (a new phase, a different follow choice). Panning stops following and switches Map options to Manual; the map stays where the pilot left it and never returns on a timer. Zooming keeps following, at the zoom the pilot chose.
 - **Projection:** every route map draws on a globe or flat (Mercator), and opens on the globe. Each map remembers the pilot's choice, and switching keeps the same place and zoom. The dashboard's current flight card, and the on-the-ground card that takes its place between flights, are always a globe. The globe always fills most of the map and never shrinks to a small ball; it stops zooming in at apron level.
-- **Map options:** projection and mode first. Auto follows the flight phase; Manual adds what to follow, flight data (great circle, filed route, ETP rings: shown, dimmed or hidden, greyed out when the flight has none) and static data (runways, terminals, gates, stands: all, assigned or off).
-- **Route labels:** fix names sit beside their fix at half strength and turn solid when the pilot points at the fix or the name. Each ETP ring carries its value and airport, for example "60 min (EKCH)".
+- **Map options:** projection and mode first. Auto follows the flight phase; Manual adds what to follow, flight data (great circle, filed route, ETP rings: shown, dimmed or hidden, greyed out when the flight has none) and static data (runways, terminals, gates, stands: all, assigned or off). Airspace (FIR boundaries: shown, dimmed or hidden) is hidden by default and, like flight data, doesn't follow the flight phase.
+- **Route labels:** fix names sit beside their fix at 70% strength with a crisp halo, so they read above the basemap's place names, and turn solid when the pilot points at the fix or the name. Each ETP ring carries its value and airport, for example "60 min (EKCH)".
 - **Pseudo-fixes:** top of climb, top of descent and equal-time points are not fixes, so their names are in brackets: "(TOC)", "(TOD)", "(ETP)". The ETOPS plan's entry, equal-time, critical and exit points are drawn exactly like fixes, as "(ETP IN)", "(ETP)", "(CP)" and "(ETP OUT)".
 - **ETOPS colour:** the ETOPS layer (rings, their titles and the ETP names) has its own blue, apart from the grey fixes and the indigo route: sky in light mode, a muted steel blue in dark mode, where a bright sky glares.
-- **Tiles:** VersaTiles Positrino, Positrino Dark in dark mode, on every map, flat and globe, with English labels. One basemap for both projections beats apron detail: the vector data stops at zoom 14 and is drawn larger above it, and our own runways, terminals, gates and stands carry the apron. CARTO raster tiles are the fallback when VersaTiles can't be reached.
+- **FIR boundaries:** grey dash-dot lines, so they don't read as the basemap's evenly dashed state borders. Zoomed out, each FIR shows its ICAO code in its middle, large and quiet. Zoomed in, the code (bold) and name run along the boundary on the FIR's own side, as on an enroute chart, so a shared border carries both names, for example "EGGX SHANWICK OCEANIC" facing "LPPO SANTA MARIA OCEANIC". While FIRs show, the basemap's own labels are hidden. On the globe the boundaries run through the poles.
+- **Tiles:** VersaTiles Positrino, Positrino Dark in dark mode, on every map, flat and globe, with English labels. One basemap for both projections beats apron detail: the vector data stops at zoom 14 and is drawn larger above it, and our own runways, terminals, gates and stands carry the apron. CARTO raster tiles are the fallback when VersaTiles can't be reached. In light mode the basemap's place names are drawn quieter than our own labels.

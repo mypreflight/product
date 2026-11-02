@@ -2,7 +2,7 @@
 
 Every dataset MyPreflight uses or plans to use, with licence and refresh method.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-02
 
 ## Rules
 
@@ -22,6 +22,7 @@ Last reviewed: 2026-10-20
 | METAR, TAF | Weather briefing | aviationweather.gov | **Open:** confirm terms | While any flight using the airport is active (checked in through taxiing in) | Live (raw text) |
 | ATIS, METAR, TAF | Weather briefing, second source | SayIntentions | **Open:** confirm terms | Same as above | Live (raw text) |
 | NOTAMs | Briefing | SimBrief OFP | SimBrief terms | Import time only | Live (raw) |
+| FIR boundaries and names | Airspace layer on the flight maps | VATSpy Data Project, VATSIM's controller map, corrected by hand where VATSIM splits or names a FIR differently from the real one | CC BY-SA 4.0: attribution, and our adapted copy carries the same licence | Checked weekly; a refresh is proposed when VATSpy changes, usually each AIRAC cycle | Live |
 | Map tiles | Every map, flat and globe | VersaTiles Positrino and Positrino Dark, built from OpenStreetMap; CARTO raster basemaps as the fallback | Attribution required (OpenStreetMap, VersaTiles, ESA WorldCover; CARTO when the fallback shows) | Live tiles from VersaTiles' free public service | Live |
 | Passenger counts | Boarding, deboarding | GSX Pro API through the Transponder | GSX terms | Live | Partial |
 | US procedures (SIDs, STARs, approaches) | Route drawing | FAA CIFP | Free, US public data | Per AIRAC cycle | Planned, raised priority |
@@ -47,3 +48,4 @@ Last reviewed: 2026-10-20
 - Free NOTAM API covering Europe (the FAA NOTAM API is US-centric).
 - Open noise abatement and curfew database.
 - Free procedure database outside the US (Navigraph is unlikely to share data for free).
+- Official ICAO FIR boundaries: ICAO sells them (from about USD 3,000), not under an open licence.
