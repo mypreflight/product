@@ -2,7 +2,7 @@
 
 Every MyPreflight feature and its build status, taken from what's actually built, not from the brief.
 
-Last reviewed: 2026-11-02
+Last reviewed: 2026-11-03
 
 ## How to read this
 
@@ -53,7 +53,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Automatic takeoff | Detected when you leave the departure airport's boundary | Live | Flight lifecycle |
 | Automatic landing | Detected inside the destination boundary below 50 kt | Live | Flight lifecycle |
 | Actual fuel burn | Type the fuel you burned when you close the flight | Live | Flight lifecycle |
-| Actual fuel at fixes | While in cruise, type the fuel on board at any fix of the flight plan and read it beside the plan | Live | Flight lifecycle |
+| Actual fuel at fixes | While in cruise, report the fuel on board at any fix from the fix card or the nav log, and read it against the plan, with a warning below the minimum. The fuel card lists every report | Live | Flight lifecycle |
 | Transponder | One portable .exe that feeds your position from MSFS 2024 | Live | Transponder |
 | Auto standby | The Transponder switches on at boarding and off at on-block | Live | Transponder |
 | Transponder updates | One key saves the new version to Downloads, checksum verified | Live | Transponder |

@@ -2,7 +2,7 @@
 
 What happens from SimBrief import to a finished flight, step by step.
 
-Last reviewed: 2026-11-02
+Last reviewed: 2026-11-03
 
 | # | Step | How it works |
 | --- | --- | --- |
@@ -28,7 +28,7 @@ Reported GPS positions are never exactly the same, as in the real world, so a pa
 
 The full flight plan is already shown well.
 
-While the flight is in cruise, the pilot can enter the actual fuel on board at any fix of the flight plan, e.g. at the oceanic boundary between Shanwick and New York Oceanic. It's typed by hand, for the same reason as the fuel burn at the end of the flight. The figure shows beside the planned fuel for that fix. The pilot can correct it until the flight lands, and it stays on the flight afterwards.
+While the flight is in cruise, the pilot can enter the actual fuel on board at any fix of the flight plan, e.g. at the oceanic boundary between Shanwick and New York Oceanic. It's typed by hand, for the same reason as the fuel burn at the end of the flight. The figure shows beside the planned fuel for that fix, with the difference from it. A figure below the plan is tinted a pale amber and one above it a pale green. Below the minimum fuel for that fix it turns red with a warning sign. The pilot can correct it until the flight lands, and it stays on the flight afterwards. The flight's fuel card lists every report with its difference from the plan, on the flight page, in the flight's history and for operations.
 
 Coming: trend monitoring raises a high-priority warning when figures look dangerous (a possible fuel leak). The pilot in command always decides.
 
