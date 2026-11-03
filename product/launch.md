@@ -2,7 +2,7 @@
 
 Where MyPreflight stands, what's left before launch, and how we'll measure the beta.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-03
 
 ## Status
 
@@ -29,7 +29,7 @@ Order of work: polish, then a round of first-user feedback, then new features.
 
 - [ ] Onboarding
 - [ ] Transponder download page
-- [ ] Security audit (Oskar does it himself)
+- [ ] Security audit (Oskar does it himself). Already in place: everything MyPreflight and the Transponder are built from is checked every day for known security issues, and updates are reviewed before they ship.
 - [ ] UI polish: one consistent look across dozens of views, modals and components; high-value information shown well (e.g. cargo types and cold-chain details are currently shown poorly); mobile improvements in places; small, easy sign-up bugs
 - [ ] Outstanding map history (faster) and flight page
 - [ ] In-flight live view

@@ -2,7 +2,7 @@
 
 The Windows connector that streams flight data from the sim: what it does, how it updates, and how connection problems are shown.
 
-Last reviewed: 2026-11-01
+Last reviewed: 2026-11-03
 
 ## Name and idea
 
@@ -20,6 +20,7 @@ The same kinds of fields a real transponder sends: position, ground speed, verti
 - One portable .exe. No installer, by choice.
 - Console app running beside the sim, about 20 MB of RAM. Deliberately lightweight, so the sim isn't affected. This is a major selling point.
 - Runs on the sim PC.
+- Everything it's built from is checked every day for known security issues, and an update to any of it is reviewed before it ships. Nothing it relies on can change without that review.
 - Sign-in through the browser only. See below.
 
 ## Sign-in
