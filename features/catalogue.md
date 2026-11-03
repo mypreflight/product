@@ -42,6 +42,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Planned route | The route drawn fix by fix | Partial | Tracking, maps and flight pages |
 | ETOPS briefing | Entry, exit and equal-time points with diversion airports | Partial | — |
 | Oceanic tracks | The North Atlantic tracks your flight was planned against | Partial | — |
+| Pacific tracks | Today's Pacific tracks, westbound from Oakland and eastbound from Fukuoka, with every fix placed on the map | Partial | — |
 | Discord briefing | Your briefing and loadsheets as Discord DMs | Live | Discord bot |
 
 ## Flying and tracking
