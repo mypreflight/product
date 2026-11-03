@@ -2,7 +2,7 @@
 
 What happens from SimBrief import to a finished flight, step by step.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-02
 
 | # | Step | How it works |
 | --- | --- | --- |
@@ -26,11 +26,11 @@ Reported GPS positions are never exactly the same, as in the real world, so a pa
 
 ## Live view
 
-The full flight plan is already shown well. Coming:
+The full flight plan is already shown well.
 
-- Planned vs actual fuel at the next waypoint, e.g. at the oceanic boundary between Shanwick and New York Oceanic, with the pilot entering current fuel.
-- Trend monitoring raises a high-priority warning when figures look dangerous (a possible fuel leak). The pilot in command always decides.
-- It needs waypoint coordinates; open-source nav data such as the VATSIM map uses may help.
+While the flight is in cruise, the pilot can enter the actual fuel on board at any fix of the flight plan, e.g. at the oceanic boundary between Shanwick and New York Oceanic. It's typed by hand, for the same reason as the fuel burn at the end of the flight. The figure shows beside the planned fuel for that fix. The pilot can correct it until the flight lands, and it stays on the flight afterwards.
+
+Coming: trend monitoring raises a high-priority warning when figures look dangerous (a possible fuel leak). The pilot in command always decides.
 
 ## When the manual off-block button is used
 

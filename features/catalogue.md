@@ -53,6 +53,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Automatic takeoff | Detected when you leave the departure airport's boundary | Live | Flight lifecycle |
 | Automatic landing | Detected inside the destination boundary below 50 kt | Live | Flight lifecycle |
 | Actual fuel burn | Type the fuel you burned when you close the flight | Live | Flight lifecycle |
+| Actual fuel at fixes | While in cruise, type the fuel on board at any fix of the flight plan and read it beside the plan | Live | Flight lifecycle |
 | Transponder | One portable .exe that feeds your position from MSFS 2024 | Live | Transponder |
 | Auto standby | The Transponder switches on at boarding and off at on-block | Live | Transponder |
 | Transponder updates | One key saves the new version to Downloads, checksum verified | Live | Transponder |
@@ -135,7 +136,7 @@ None of these is built. Don't advertise them.
 | Auto-finish of stale flights after about 24 hours | `../product/flight-lifecycle.md` |
 | Plain-language METAR and TAF with icons | `../product/decisions.md` → Weather |
 | A map of all of a pilot's past flights together | `../product/overview.md` → day one |
-| In-flight fuel checks at waypoints and trend warnings | `../product/flight-lifecycle.md` → Live view |
+| In-flight fuel trend warnings | `../product/flight-lifecycle.md` → Live view |
 | Mid-flight monitoring alerts (sim crash, tracking lost) | `../product/decisions.md` → Flight monitoring alerts |
 | Web Push notifications | `../product/decisions.md` → Flight monitoring alerts |
 | GSX Pro passenger counts | `../product/transponder.md` |
