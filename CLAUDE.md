@@ -21,7 +21,7 @@ Reading this by URL? Every path below resolves under `https://raw.githubusercont
 | Working on how the product looks | `product/brand/design-rules.md`, `product/brand/identity.md` |
 | Touching accounts, privacy, emails or moderation | `product/accounts-and-privacy.md` |
 | Working on pricing, competitors or the launch | `product/business.md`, `product/competition.md`, `product/launch.md` |
-| Writing a social post, release note or marketing copy | `product/brand/voice.md`, `product/brand/marketing.md`, `product/brand/screenshots.md`, `features/catalogue.md` |
+| Writing a social post, release note, changelog entry or marketing copy | `product/brand/voice.md`, `product/brand/marketing.md`, `product/brand/screenshots.md`, `features/catalogue.md` |
 | Proposing something new | `ideas-parking-lot.md` first; it may already be there |
 
 ## Rules for every agent

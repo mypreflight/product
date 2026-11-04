@@ -2,7 +2,7 @@
 
 Which screens to capture for which feature, in what state.
 
-Last reviewed: 2026-11-03
+Last reviewed: 2026-11-04
 
 ## Rules
 
@@ -31,6 +31,15 @@ Release posts about a redesign compare the previous release with the new one:
 - A dashed amber ring marks what changed in the Before crop, a solid indigo ring in the After crop.
 - When a crop shows a value typed for the shot, the footer says so, and that nothing was submitted. Open dialogs and cancel; never move a demo flight on.
 - Alternate light and dark across the set.
+
+## Changelog entries
+
+The website's changelog uses the captures behind the before and after graphics, not the rendered slides:
+
+- The same before and after pair, cropped to the part of the screen that changed, so a reader can switch between them in place. Both crops are the same region, at 2× scale.
+- Both themes, one file each.
+- A new screen with nothing before it shows only the after. A change with nothing to see gets no screenshot.
+- The footer rules above apply: say when the shots use seeded demo data, a shifted clock or a typed value.
 
 ## Shot list
 
