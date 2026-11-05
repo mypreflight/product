@@ -39,7 +39,7 @@ The website's changelog uses the captures behind the before and after graphics, 
 - The same before and after pair, cropped to the part of the screen that changed, so a reader can switch between them in place. Both crops are the same region, at 2× scale.
 - Both themes, one file each.
 - A new screen with nothing before it shows only the after. A change with nothing to see gets no screenshot.
-- The footer rules above apply: say when the shots use seeded demo data, a shifted clock or a typed value.
+- Unlike the graphics, an entry says nothing about demo data or the shifted clock. It notes only a value typed for the shot or a cancelled dialog.
 
 ## Shot list
 
