@@ -2,7 +2,7 @@
 
 Channels, cadence, post types and release comms.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-04
 
 ## Starting point
 
@@ -53,7 +53,7 @@ Oskar reviews every post and refines the agent instructions until the text doesn
 
 - **Discord #releases:** every feature announced with screenshots, sometimes a full showcase. A redesign gets one before and after graphic per change, each with a one- or two-sentence caption; see `screenshots.md`.
 - **In-app "What's new":** planned; not built yet.
-- **Public changelog:** planned. Until then, every version gets release notes on GitHub.
+- **Public changelog:** the website keeps a changelog. Every Live feature, and every fix a pilot would notice, gets an entry, published in the same work that ships it. An entry says in a few plain sentences what a pilot can now do. Where a screen changed, it shows real before and after captures; see `screenshots.md`. A change with nothing new to see gets a text-only entry. Every version also gets release notes on GitHub.
 - **Screens to capture per feature:** see `screenshots.md`.
 
 ## Why automate
