@@ -72,7 +72,8 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 ## Surfaces and spacing
 
 - **Flat Surface Rule.** Panels are separated by a 1 px border and a one-step tonal change, never a drop shadow. The only sanctioned shadow is a modal lifting off its backdrop. The faint card shadow still in the app is legacy.
-- Radii: cards 16 px; modals and inner data panels 12 px; buttons and inputs 8 px; pills full.
+- **Page in a panel.** From tablet width up, the sidebar and a thin frame around the window are one surface, white in light mode and the cards' dark gray in dark mode, and the page sits in a rounded panel inside it, on the gray the cards always sat on. The frame is 8 px wide, and the panel has a 1 px edge. A map that fills the page, on the Tracking view or expanded, fills the panel and follows its corners. Phones have no frame: the page fills the screen.
+- Radii: cards and the page panel 16 px; modals and inner data panels 12 px; buttons and inputs 8 px; pills full.
 - Padding: cards 20 px, inner panels 16 px; containers 16, 20 or 24 px by density; 16 px gap between blocks.
 - Empty state: a quiet dashed placeholder on Gray 50, with a hint that says what will appear and when (e.g. "Close your first flight and your statistics will appear here.").
 - Between flights: a dashboard card that still has something true to show keeps its working shape instead of a placeholder. The current flight card shows the airport the pilot is at, the stand, the aircraft and a running time on the ground. The next flight card reads "Awaiting dispatch", with the departure filled in when it is known and dashed slots for what Operations has yet to decide. The placeholder stays for when the pilot's location is unknown.
