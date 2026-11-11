@@ -2,7 +2,7 @@
 
 Every MyPreflight feature and its build status, taken from what's actually built, not from the brief.
 
-Last reviewed: 2026-11-03
+Last reviewed: 2026-11-04
 
 ## How to read this
 
@@ -123,6 +123,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Installable app | Add MyPreflight to your home screen as an app | Live | Flight monitoring alerts (PWA only) |
 | Light and dark | Follows your system theme | Live | Accessibility and theming |
 | Website | mypreflight.io marketing page with FAQ | Live | — |
+| Changelog | Every change a pilot will notice, newest first, with the screen before and after it | Live | — |
 
 ## In the brief, not built yet
 
@@ -144,7 +145,7 @@ None of these is built. Don't advertise them.
 | MSFS 2020 support in the Transponder (it reads MSFS 2024 only) | `../product/overview.md` |
 | Transponder download page | `../product/transponder.md` |
 | Public pilot profiles, following, view counts | `../product/decisions.md` → Social |
-| In-app "What's new" and a public changelog | `../product/brand/marketing.md` |
+| In-app "What's new" | `../product/brand/marketing.md` |
 | "For flight simulation use only" label in the app | `../product/overview.md` → Hard lines |
 | Automatic creation of unknown aircraft | `../product/decisions.md` → Aircraft |
 | Payments and paid features | `../product/business.md` |
