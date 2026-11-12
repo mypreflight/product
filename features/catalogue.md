@@ -67,7 +67,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Pilots in the air now | Public map of ongoing flights | Live | Tracking, maps and flight pages |
 | Public flight page | Share a flight by link; map with a data panel, the live position while it flies and the whole path once it has landed | Live | Tracking, maps and flight pages |
 | Flight visibility | Public, link-only or hidden | Live | Tracking, maps and flight pages |
-| Flight history | Every finished flight on its map: the track flown over the filed route, a vertical profile against the planned altitude, each block time against schedule and the fuel burned against the planned trip, with the briefing it was flown on one click away. The list previews each flight before you open it | Live | Tracking, maps and flight pages |
+| Flight history | Every finished flight on its map: the track flown over the filed route, a vertical profile against the planned altitude, each block time against schedule and the fuel burned against the planned trip, with the briefing it was flown on one click away. The list sits beside a globe of all your flights in grey, loads ten at a time and lights the flight you point at in indigo; opening one flies the globe to it | Live | Tracking, maps and flight pages |
 | Live updates | Lifecycle events pushed to open screens | Live | Tracking, maps and flight pages |
 | Emergencies | Declare, update and resolve an emergency | Live | Emergencies |
 | Diversions | Divert, ending the flight at the diversion airport | Live | Emergencies |

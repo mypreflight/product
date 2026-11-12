@@ -58,6 +58,7 @@ Release posts about a redesign compare the previous release with the new one:
 | Pilots in the air now | Public map | Several ongoing public flights | Desktop | Dark |
 | Public flight page | Public map, one flight | A public flight in cruise, scheduled vs actual off-block visible | Phone | Light |
 | Flight history | Flight history, one flight | Closed long-haul flight with its full track | Tablet | Dark |
+| Flight history list | Flight history | Ten or more closed flights across several continents, one pointed at so its line is indigo | Desktop | Dark |
 | Gate, stand and runway | Flight page, Briefing (stand and runway box) | Stand and runway assigned at a well-mapped airport (e.g. Frankfurt) | Phone | Light |
 | Weather | Airport library, one airport (weather) | Airport monitored by an active flight; ATIS from SayIntentions | Phone | Dark |
 | NOTAMs | Airport library, one airport (NOTAMs) | Airport from a recent import | Tablet | Light |
