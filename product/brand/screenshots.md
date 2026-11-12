@@ -20,7 +20,7 @@ Run the app with its demo data. Sign in as the demo pilot or the demo operations
 
 Set-up for most shots: an imported SimBrief flight on a wide-body, long-haul sector (e.g. London Heathrow to New York JFK on an A350 or 777), with a cabin layout and hold variant assigned to the aircraft, and a preliminary loadsheet written so manifests exist.
 
-The demo flights are dated January and June 2025. Captured on today's date, every time carries a date and the countdowns run to thousands of hours. Set the browser's clock to the flight's own day instead, and say so in the caption ("Seeded demo flights, shown on the day they fly").
+The demo flights are dated January and June 2026. Captured on today's date, every time carries a date and the countdowns run to thousands of hours. Set the browser's clock to the flight's own day instead, and say so in the caption ("Seeded demo flights, shown on the day they fly").
 
 The demo Pacific tracks follow the real clock instead: whatever today is, every track in both directions is in force from a few hours ago until about half a day ahead. With the browser's clock moved to a demo flight's day, none of them is in force and the map shows no tracks, so capture them on today's clock.
 
