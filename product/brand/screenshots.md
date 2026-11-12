@@ -22,7 +22,7 @@ Set-up for most shots: an imported SimBrief flight on a wide-body, long-haul sec
 
 The demo flights are dated January and June 2026. Captured on today's date, every time carries a date and the countdowns run to thousands of hours. Set the browser's clock to the flight's own day instead, and say so in the caption ("Seeded demo flights, shown on the day they fly").
 
-The demo Pacific tracks follow the real clock instead: whatever today is, every track in both directions is in force from a few hours ago until about half a day ahead. With the browser's clock moved to a demo flight's day, none of them is in force and the map shows no tracks, so capture them on today's clock.
+The demo Pacific and North Atlantic tracks follow the real clock instead: whatever today is, every track of both systems, in both directions, is in force from a few hours ago until about half a day ahead. With the browser's clock moved to a demo flight's day, none of them is in force and the map shows no tracks, so capture them on today's clock.
 
 ## Before and after graphics
 
