@@ -42,7 +42,6 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Planned route | The route drawn fix by fix | Partial | Tracking, maps and flight pages |
 | ETOPS briefing | Entry, exit and equal-time points with diversion airports | Partial | — |
 | Oceanic tracks | The North Atlantic tracks your flight was planned against | Partial | — |
-| Pacific tracks | Today's Pacific tracks, westbound from Oakland and eastbound from Fukuoka, with every fix placed on the map | Partial | — |
 | Discord briefing | Your briefing and loadsheets as Discord DMs | Live | Discord bot |
 
 ## Flying and tracking
@@ -61,6 +60,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Live map tracking | Your aircraft moving on the map with live telemetry | Live | Tracking, maps and flight pages |
 | Globe maps | Every route map on a round earth or flat, your choice per map | Live | Tracking, maps and flight pages |
 | FIR boundaries | The flight information regions you fly through, named along each border as on an enroute chart | Live | Tracking, maps and flight pages |
+| Pacific tracks | The Pacific tracks in force now, westbound from Oakland and eastbound from Fukuoka, on the Tracking, public flight and Operations maps, flat or globe. Each shows its name, its direction and its fixes. Turn them on in Map options | Partial | Tracking, maps and flight pages |
 | Fix card | Click a fix on the Tracking map to read its plan: position, FIR, fuel and the wind at each level. Arrows step along the route and centre the map on each fix | Live | Tracking, maps and flight pages |
 | Briefing and Tracking views | Your flight data at the gate and a full-page live map from off-block on, each with its own link | Live | Tracking, maps and flight pages |
 | Predicted times | Type in the times your FMC shows or ATC gave you; they replace your estimates across the flight and on the public map | Live | — |
