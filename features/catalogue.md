@@ -121,6 +121,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Feature | In user language | Status | Decision |
 | --- | --- | --- | --- |
 | Installable app | Add MyPreflight to your home screen as an app | Live | Flight monitoring alerts (PWA only) |
+| App updates | When a new version is ready, the installed app says so: Reload switches to it, What's new opens the changelog on the website | Live | — |
 | Light and dark | Follows your system theme | Live | Accessibility and theming |
 | Website | mypreflight.io marketing page with FAQ | Live | — |
 
