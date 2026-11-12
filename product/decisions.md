@@ -72,7 +72,7 @@ Last reviewed: 2026-10-20
 
   Default is private today and will change to public, with a UI component explaining the options.
 - Public flight page: flight-tracker layout with the map in the centre and a data panel overlaid on the left. Shows departure and arrival airports, scheduled vs actual off-block (the distinction matters), and current position. While the flight is in the air the path follows the live position; once it has landed the page shows the whole path the flight flew, as flight history does. Great-circle line and the route through flight-plan fixes are in progress. Wanted: richer route and flight content, maybe the cargo.
-- Visitors see everything on a public flight. Some resources still don't show to visitors; that's a known bug.
+- Visitors see everything on a public flight. Some resources still don't show to visitors; that's a known bug. A link-only flight's path is no longer one of them: anyone with the link sees the path it flew.
 - Map flight history is the flagship feature. It's live for beta users and looks good; it must load faster and become outstanding.
 - A live "pilots in the air now" view exists.
 
