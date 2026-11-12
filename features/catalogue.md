@@ -2,7 +2,7 @@
 
 Every MyPreflight feature and its build status, taken from what's actually built, not from the brief.
 
-Last reviewed: 2026-11-03
+Last reviewed: 2026-11-12
 
 ## How to read this
 
@@ -60,14 +60,14 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Live map tracking | Your aircraft moving on the map with live telemetry | Live | Tracking, maps and flight pages |
 | Globe maps | Every route map on a round earth or flat, your choice per map | Live | Tracking, maps and flight pages |
 | FIR boundaries | The flight information regions you fly through, named along each border as on an enroute chart | Live | Tracking, maps and flight pages |
-| Pacific tracks | The Pacific tracks in force now, westbound from Oakland and eastbound from Fukuoka, on the Tracking, public flight and Operations maps, flat or globe. Each shows its name, its direction and its fixes. Turn them on in Map options | Partial | Tracking, maps and flight pages |
-| Fix card | Click a fix on the Tracking map to read its plan: position, FIR, fuel and the wind at each level. Arrows step along the route and centre the map on each fix | Live | Tracking, maps and flight pages |
+| Pacific tracks | The Pacific tracks in force now, westbound from Oakland and eastbound from Fukuoka, on the Tracking, flight history, public flight and Operations maps, flat or globe. Each shows its name, its direction and its fixes. Turn them on in Map options | Partial | Tracking, maps and flight pages |
+| Fix card | Click a fix on the Tracking or flight history map to read its plan: position, FIR, fuel and the wind at each level. Arrows step along the route and centre the map on each fix | Live | Tracking, maps and flight pages |
 | Briefing and Tracking views | Your flight data at the gate and a full-page live map from off-block on, each with its own link | Live | Tracking, maps and flight pages |
 | Predicted times | Type in the times your FMC shows or ATC gave you; they replace your estimates across the flight and on the public map | Live | — |
 | Pilots in the air now | Public map of ongoing flights | Live | Tracking, maps and flight pages |
 | Public flight page | Share a flight by link; map with a data panel | Live | Tracking, maps and flight pages |
 | Flight visibility | Public, link-only or hidden | Live | Tracking, maps and flight pages |
-| Flight history | Every finished flight with its track on a map | Live | Tracking, maps and flight pages |
+| Flight history | Every finished flight on its map: the track flown over the filed route, a vertical profile against the planned altitude, each block time against schedule and the fuel burned against the planned trip, with the briefing it was flown on one click away. The list previews each flight before you open it | Live | Tracking, maps and flight pages |
 | Live updates | Lifecycle events pushed to open screens | Live | Tracking, maps and flight pages |
 | Emergencies | Declare, update and resolve an emergency | Live | Emergencies |
 | Diversions | Divert, ending the flight at the diversion airport | Live | Emergencies |

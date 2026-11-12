@@ -73,7 +73,7 @@ Last reviewed: 2026-10-20
   Default is private today and will change to public, with a UI component explaining the options.
 - Public flight page: flight-tracker layout with the map in the centre and a data panel overlaid on the left. Shows departure and arrival airports, scheduled vs actual off-block (the distinction matters), and current position. Great-circle line and the route through flight-plan fixes are in progress. Wanted: richer route and flight content, maybe the cargo.
 - Visitors see everything on a public flight. Some resources still don't show to visitors; that's a known bug.
-- Map flight history is the flagship feature. It's live for beta users and looks good; it must load faster and become outstanding.
+- Map flight history is the flagship feature. A finished flight opens like the Tracking view stopped at on-block, and says plainly that it is in the past: the list it came from, the date it was flown and that it is closed. Its History view is the map with the track flown over the filed route, each block time against schedule, block and air time, the fuel burned against the planned trip, and a vertical profile of altitude and ground speed with the planned altitude. Pointing at the profile puts the aircraft where it was at that moment. Its Documents view holds the briefing the flight was flown on: route, fuel and crew, passengers, cargo, OFP, runway analysis, events and the delay report. It must still load faster.
 - A live "pilots in the air now" view exists.
 
 ## Social and public profile
