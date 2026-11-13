@@ -2,7 +2,7 @@
 
 Every dataset MyPreflight uses or plans to use, with licence and refresh method.
 
-Last reviewed: 2026-11-03
+Last reviewed: 2026-11-12
 
 ## Rules
 
@@ -23,7 +23,8 @@ Last reviewed: 2026-11-03
 | ATIS, METAR, TAF | Weather briefing, second source | SayIntentions | **Open:** confirm terms | Same as above | Live (raw text) |
 | NOTAMs | Briefing | SimBrief OFP | SimBrief terms | Import time only | Live (raw) |
 | Pacific oceanic tracks (PACOTS) | The Pacific tracks published now, westbound from Oakland and eastbound from Fukuoka | FAA NOTAM Management Service, with a key the FAA issued to MyPreflight | **Open:** confirm terms. **Open:** the key reaches the FAA's pre-production service only; ask the FAA for production access before pilots rely on the tracks | Read again at most every 15 minutes; the FAA allows one read every 3 minutes | Partial |
-| Positions of oceanic track fixes | Placing each fix of a Pacific track on the map | FAA aeronautical data: designated points and navaids, current for US airspace, and an archive last edited in 2016 for the rest, Japan included. A fix none of them holds is shown as unplaced, never guessed | US public data | Each look-up kept for a day | Partial |
+| North Atlantic oceanic tracks (NAT) | The North Atlantic tracks published now, eastbound from Gander and westbound from Shanwick, with the flight levels of each and the message's remarks, the TMI among them | The FAA's public North Atlantic track page, which needs no key | **Open:** confirm terms; the page publishes none | Read with the Pacific tracks, at most every 15 minutes. When it can't be read, the Pacific tracks still show | Partial |
+| Positions of oceanic track fixes | Placing each fix of a Pacific or North Atlantic track on the map | FAA aeronautical data: designated points and navaids, current for US airspace, and an archive last edited in 2016 for the rest, Japan and most North Atlantic entry and exit points included. A fix none of them holds is shown as unplaced, never guessed; some North Atlantic entry and exit points are newer than the archive, so those tracks end at their last coordinate | US public data | Each look-up kept for a day | Partial |
 | FIR boundaries and names | Airspace layer on the flight maps, and FIR names in the fix card | VATSpy Data Project, VATSIM's controller map, corrected by hand where VATSIM splits or names a FIR differently from the real one, or leaves out an upper area a flight plan can name | CC BY-SA 4.0: attribution, and our adapted copy carries the same licence | Checked weekly; a refresh is proposed when VATSpy changes, usually each AIRAC cycle | Live |
 | Map tiles | Every map, flat and globe | VersaTiles Positrino and Positrino Dark, built from OpenStreetMap; CARTO raster basemaps as the fallback | Attribution required (OpenStreetMap, VersaTiles, ESA WorldCover; CARTO when the fallback shows) | Live tiles from VersaTiles' free public service | Live |
 | Passenger counts | Boarding, deboarding | GSX Pro API through the Transponder | GSX terms | Live | Partial |

@@ -60,6 +60,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Live map tracking | Your aircraft moving on the map with live telemetry | Live | Tracking, maps and flight pages |
 | Globe maps | Every route map on a round earth or flat, your choice per map | Live | Tracking, maps and flight pages |
 | FIR boundaries | The flight information regions you fly through, named along each border as on an enroute chart | Live | Tracking, maps and flight pages |
+| North Atlantic tracks | The North Atlantic tracks in force now, eastbound from Gander and westbound from Shanwick, on the same maps as the Pacific tracks, flat or globe. Each shows its name, its direction and its fixes. Turn them on in Map options, separately from the Pacific tracks | Partial | Tracking, maps and flight pages |
 | Pacific tracks | The Pacific tracks in force now, westbound from Oakland and eastbound from Fukuoka, on the Tracking, flight history, public flight and Operations maps, flat or globe. Each shows its name, its direction and its fixes. Turn them on in Map options | Partial | Tracking, maps and flight pages |
 | Fix card | Click a fix on the Tracking or flight history map to read its plan: position, FIR, fuel and the wind at each level. Arrows step along the route and centre the map on each fix | Live | Tracking, maps and flight pages |
 | Briefing and Tracking views | Your flight data at the gate and a full-page live map from off-block on, each with its own link | Live | Tracking, maps and flight pages |
