@@ -2,7 +2,7 @@
 
 The rules the built platform follows outside the briefing: roles, the flight's states, automatic detection, delays, data review, Discord, accounts and collectibles.
 
-Last reviewed: 2026-11-01
+Last reviewed: 2026-11-16
 
 This file describes what is built. The decisions behind it live in `decisions.md`; where the two disagree, the decision wins and the gap is a bug or open work.
 
@@ -54,7 +54,8 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 
   New flights default to Private. Operations change the mode.
 
-- The pilot's flight page has two views, each with its own link. **Briefing** shows the data tabs, each with its own link too; **Tracking** shows a full-page live map behind the flight and phase cards. A general link to the flight opens Briefing before off-block and Tracking from off-block on, including after landing. When off-block is reported while the page is open on Briefing, it moves to Tracking by itself; otherwise the view stays where the pilot put it. Older links still work and lead to the new views.
+- The pilot's flight page has two views, each with its own link. **Briefing** has three phases, each with its own link too: Preflight, the crossing (Oceanic when the plan flies a North Atlantic track, En route otherwise) and Arrival. Without a phase it opens on the one the flight is in: Preflight until airborne, the crossing in cruise until the planned top of descent, then Arrival; finished phases are marked done. **Tracking** shows a full-page live map behind the flight and phase cards. A general link to the flight opens Briefing before off-block and Tracking from off-block on, including after landing. When off-block is reported while the page is open on Briefing, it moves to Tracking by itself; otherwise the view stays where the pilot put it. Older links still work and lead to the new views, and links to the briefing's old tabs to the phase or document that holds their content now.
+- Long documents open in a side panel over the view, each with its own link, and Back closes it. The nav log, OFP, runway analysis, NOTOC and PIL open from the phase's heading. A bar under both views opens the cabin and manifest, cargo, timesheet, activity log, delay report and, once there is one, the emergencies and diversions, and holds Declare emergency, which works from off-block to on-block, and Report diversion, from off-block until landing. On a phone the bar's contents end the page.
 
 ## Flight times
 
@@ -68,7 +69,7 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
   | Actual | The lifecycle reports, manual or automatic |
 
 - Wherever the app shows an event's time it takes the first that exists: actual, predicted, estimated, scheduled. Countdowns run to that same time, so a page never shows two different arrival times.
-- The pilot enters predicted times with the button on the Predicted timesheet card, in the Flight progress tab of Briefing. The form shows only the events not reported yet, filled with the current times, and saves only the times the pilot changes. Times must stay in order, so an arrival later than on-block needs the on-block moved too.
+- The pilot enters predicted times with the button on the Predicted timesheet card, in the flight's timesheet. The form shows only the events not reported yet, filled with the current times, and saves only the times the pilot changes. Times must stay in order, so an arrival later than on-block needs the on-block moved too.
 - Scheduled and estimated times carry distinct icons (a calendar for scheduled, a timer for estimated), each with a tooltip and a screen-reader label.
 
 ## Delays
@@ -133,7 +134,7 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 
 - Messages go to the captain, the pilot who checked in, never to whoever triggered them. A flight nobody checked in for sends no DMs.
 - Each DM type has its own switch, all on by default; the two delay messages share one switch.
-- Every message links into the app. The briefing and both loadsheets open the flight's Briefing view, both delay messages open its Delays tab, and the community announcements open the flight on the public map.
+- Every message links into the app. The briefing and both loadsheets open the flight's Briefing view, both delay messages open its delay report, and the community announcements open the flight on the public map.
 - **Rich presence** shows the current flight as the pilot's Discord activity through the Transponder. It's off by default, because it publishes what the pilot is doing.
 - DMs only reach pilots who share the server with the bot. Linking can join the server in the same step. The account page shows membership, or "unknown" when it can't be established.
 - We keep no ongoing access to a pilot's Discord account.

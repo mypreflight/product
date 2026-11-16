@@ -25,6 +25,7 @@ Every item in this section is labelled **Idea**.
 - Official AIP charts through a source like ChartFox or MSFS 2024's Lido charts. Terms unknown.
 - Keep historic airlines such as Alitalia; some simmers want to fly them.
 - Airline-specific loadsheet and flight-plan layouts, given format input.
+- Oceanic clearance in the Oceanic briefing: request a track, level and Mach before the entry point and keep the clearance with the flight. The flight has nowhere to store a clearance yet.
 
 ### Tracking and events
 

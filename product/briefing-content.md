@@ -2,7 +2,7 @@
 
 What the briefing contains today and the rules it follows.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-16
 
 This file describes what is built. The decisions behind it live in `decisions.md`; where the two disagree, the decision wins and the gap is a bug or open work.
 
@@ -38,6 +38,7 @@ This file describes what is built. The decisions behind it live in `decisions.md
 - Seated against the cabin layout revision **pinned** at that moment, so a later redraw of the cabin doesn't move anyone.
 - Passengers are spread across cabins in proportion to each cabin's share of the seats.
 - About 85% of passengers carry no special service request. The rest carry real IATA SSR codes: infant, the three wheelchair categories (ramp, steps, cabin), unaccompanied minor, blind, deaf and others. An infant occupies a seat.
+- The passenger information list (PIL) shows only the passengers with a special service request, filterable by code, each code spelled out.
 - At finish-boarding the manifest is reconciled against the final loadsheet, per cabin class:
   - surplus passengers become **no-shows** who keep their seat and stay on the list;
   - a shortfall is seated in free seats;
