@@ -103,8 +103,10 @@ The rule behind it all: cargo comes from the departure's context, never at rando
 
 ## Weather
 
-- Raw ATIS, METAR and TAF per airport and per source: aviationweather.gov (METAR, TAF) and SayIntentions (ATIS, METAR, TAF). Each pilot picks a default source.
-- An airport is monitored from check-in until on-block of any flight using it, and refreshed on a schedule. A failure at one source doesn't affect the other.
+- Raw ATIS, METAR and TAF per airport and per source: aviationweather.gov (METAR, TAF) and SayIntentions (ATIS, METAR, TAF). Each pilot picks one of these two as their default source.
+- Three more sources give ATIS only: the FAA's real digital ATIS for US airports, real digital ATIS that aircraft requested over datalink worldwide (atis.guru), and VATSIM controllers' ATIS. An airport with a separate arrival and departure ATIS keeps both, and each ATIS carries the time its source published it. An ATIS a source stops publishing disappears, such as when a VATSIM controller logs off.
+- **Open:** how the app shows the three ATIS-only sources. Pilots can't see them yet.
+- An airport is monitored from check-in until on-block of any flight using it, and refreshed on a schedule. A failure at one source doesn't affect the others.
 - Weather is public. An airport with nothing stored shows an empty list, not an error.
 
 ## NOTAMs

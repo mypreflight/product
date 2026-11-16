@@ -38,6 +38,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Baggage | Bags derived from the payload, loaded with the cargo | Live | Passengers and cargo |
 | Crew roster | First officer, purser and cabin crew from SimBrief | Live | SimBrief import |
 | Weather | Raw ATIS, METAR and TAF from two sources, your choice | Live | Weather and NOTAMs |
+| Real-world and VATSIM ATIS | Real digital ATIS for US airports and many others, and VATSIM ATIS when a controller is online, arrival and departure apart | Partial (no screens yet) | Weather and NOTAMs |
 | NOTAMs | The NOTAMs from your OFP, per airport | Live | Weather and NOTAMs |
 | Gate, stand and runway | Change gate, stand and departure or arrival runway, like an EFB | Live | Airports |
 | Planned route | The route drawn fix by fix | Partial | Tracking, maps and flight pages |
