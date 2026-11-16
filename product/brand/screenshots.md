@@ -52,13 +52,14 @@ Release posts about a redesign compare the previous release with the new one:
 | Flight progress | Flight page, Briefing (phase card: lifecycle track and next-step panel) | Boarding finished or taxiing out, automatic detection available | Phone | Dark |
 | GSX switches | Account page, GSX section | Integration on, both drawings mid-loop | Phone | Dark |
 | Automatic detection | Flight page, Activity log | After takeoff, with automatic off-block and takeoff shown in the timeline | Tablet | Light |
-| Live map tracking | Flight page, Tracking | In cruise with the whole route fitted below the cards and live telemetry in the bottom bar | Tablet | Dark |
+| Live map tracking | Flight page, Tracking | In cruise with the whole route fitted between the cards and the vertical profile, the plan's descent still ahead of the flown line | Tablet | Dark |
 | Fix card | Flight page, Tracking | A planned oceanic route with the card open on an oceanic fix, so the FIR reads in full | Desktop | Dark |
 | Actual fuel at fixes | Flight page, Tracking (fix card), and Briefing, Oceanic (position and fuel reports) | In cruise, fuel reported at a few fixes: one below the plan, one above it and one below the minimum | Desktop | Dark |
 | Globe maps | Flight history, one flight, Documents (route) | A closed long-haul ETOPS flight with its filed route and ETP rings on the globe | Desktop | Dark |
 | Pilots in the air now | Public map | Several ongoing public flights | Desktop | Dark |
 | Public flight page | Public map, one flight | A public flight in cruise, scheduled vs actual off-block visible | Phone | Light |
 | Flight history | Flight history, one flight | Closed long-haul flight with its full track | Tablet | Dark |
+| Vertical profile | Flight history, one flight | A closed long-haul flight zoomed into its descent, a moment marked so the aircraft sits on the map and the reading shows a descent rate | Desktop | Light |
 | Flight history list | Flight history | Ten or more closed flights across several continents, one pointed at so its line is indigo | Desktop | Dark |
 | Gate, stand and runway | Flight page, Briefing, Preflight (stand and runway box) | Stand and runway assigned at a well-mapped airport (e.g. Frankfurt) | Phone | Light |
 | Weather | Airport library, one airport (weather) | Airport monitored by an active flight; ATIS from SayIntentions | Phone | Dark |
