@@ -2,7 +2,7 @@
 
 Every MyPreflight feature and its build status, taken from what's actually built, not from the brief.
 
-Last reviewed: 2026-11-12
+Last reviewed: 2026-11-16
 
 ## How to read this
 
@@ -27,7 +27,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Fuel ladder | Fuel build-up from taxi to total, with tank gauge | Live | SimBrief import |
 | Passenger manifest | Named passengers seated in the real cabin, with no-shows | Live | Passengers and cargo |
 | Special assistance | Infants, wheelchairs, unaccompanied minors, by real IATA codes | Live | Passengers and cargo |
-| Seat maps | The airline's real seat map, seat by seat | Live | Passengers and cargo |
+| Seat maps | The airline's real seat map, seat by seat | Partial | Passengers and cargo |
 | Cabin layout assignment | Operations pick the layout each aircraft flies | Live | Passengers and cargo |
 | Cargo manifest | Shipments with waybills, origins and onward connections | Live | Passengers and cargo |
 | Origin-aware cargo | Tulips from Amsterdam, salmon from Keflavik, in season | Live | Passengers and cargo |

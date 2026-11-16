@@ -2,7 +2,7 @@
 
 Current product decisions, grouped by area, with the reason and Oskar's examples. Everything here is decided unless marked **Open:**.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-16
 
 ## SimBrief import and briefing
 
@@ -21,7 +21,7 @@ Last reviewed: 2026-10-20
   - Fallback order: parent or similar airline layout (e.g. Lufthansa City uses the Lufthansa A321), then a generic type layout, with a notice that it's a close match, not exact.
   - Capacity follows the airline's real configuration: a Ryanair 737 MAX 8 carries more passengers than a LOT one.
 - Loadsheets are loosely modelled on Lufthansa's. There's no industry standard; Lufthansa itself uses about five formats across its systems. Airline-specific layouts (the way SimBrief offers LIDO-style per-airline flight plans) would need format input and are low value for now.
-- **Open:** confirm AeroLOPA's licence terms for our use.
+- **Open:** confirm AeroLOPA's licence terms for our use, and get access to seat positions. As of November 2026 AeroLOPA no longer publishes them openly, so a layout we haven't stored yet can't be shown.
 
 ## Aircraft and airframe continuity
 
