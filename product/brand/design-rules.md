@@ -44,7 +44,7 @@ Use the app's defined button and badge styles. No one-offs.
 | Gray | Automatic, neutral |
 | Indigo | Performing flight |
 
-Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated text, always with a word.
+Badges are pills: uppercase, bold, 12 px, a tint background with saturated text, always with a word.
 
 ## Colour
 
@@ -66,8 +66,10 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
   | Headline (panel sections) | 700, 20 px |
   | Title (cards, groups) | 600, 16 px |
   | Body | 400, 14 px; prose capped at 65–75 characters a line |
-  | Label | 700, 11 px, uppercase, 0.08em tracking |
+  | Label | 700, 12 px, uppercase, 0.08em tracking |
   | Data | Mono 500, 14 px, tabular |
+
+- Every size is a step on one standard scale: 12, 14, 16, 18, 20, 24 and 30 px, and larger steps for display figures. Nothing sits between two steps.
 
 ## Surfaces and spacing
 
@@ -122,6 +124,8 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 - **Vertical profile.** A flight's altitude over time in UTC, filled in indigo, with its ground speed as a grey line and the planned altitude from the nav log as a dashed indigo line, so the climb, any step and the descent read against the plan. Taxi out and taxi in are shaded. Altitude is in flight levels on the left, ground speed in knots on the right. It sits under the map on flight history and, for a flight in progress, on the Tracking view, where the plan is drawn from the expected takeoff and the flown part grows as positions arrive. Pointing at it, or stepping with the arrow keys, marks that moment and moves the aircraft on the map there, with its telemetry beside the chart; leaving it shows the highest altitude and ground speed on a finished flight and the latest reading on a live one. The reading keeps its width, so marking a moment never moves the layout.
 - **Zooming the profile.** The time axis zooms, so a nine-hour flight's climb or descent can fill the chart. The wheel or a trackpad pinch over the chart zooms around the pointer, two fingers pinch on a touch screen, and dragging or a sideways scroll pans a zoomed chart. Three joined buttons beside the reading zoom out, zoom in and show the whole flight again, each disabled when it would do nothing. With the chart focused, + and − zoom around the marked moment, 0 shows the whole flight, and the arrow keys pan the chart along with the marked moment. The narrowest view is five minutes. A chart showing the whole flight never holds the page's scroll.
 - **Briefing by phase.** The briefing reads in the order the flight happens: one tab per phase, opened on the current one, marked Now, with the finished ones marked Done. A phase page sets its cards in up to three columns that follow the width, so a large monitor shows three, a laptop two and a phone one. Long documents open in a panel that slides in from the right over the view the pilot is on; Back or Escape closes it and returns focus to what opened it.
+- **Airport card.** Each end of the flight is one card, two columns wide: Departure airport on Preflight, Arrival airport on Arrival. The weather sits on the left: the source switch, the METAR, the TAF with each change group on its own line, and the ATIS. The stand and runway sit on the right in the order the aircraft meets them: stand, then runway, at departure; runway, then stand, at arrival. Designators are large mono figures, and each figure reads value first with a small lowercase caption under it. An empty value reads "Not assigned" beside a dashed outline, and once it can no longer change, the card says since when ("Cannot assign after check-in"). The columns stack when the card is narrow.
+- **Picking on the airport map.** Stands and runways are picked from a list beside the airport map, and a pick on either side selects. A picked runway shows the departure path from its far end, or the approach to it. Picking a stand from the list glides the map to it, and a stand with no position says "Not on map". On a phone the stand search sits above the map, and the map hides while a search is typed, so the matches sit right under the field.
 - **Documents.** The NOTOC also renders as a printable document, legible without colour, carrying the standard hazard marks.
 - **Bad example to fix:** cargo types and cold-chain details are currently shown poorly. High-value information gets prominent, clear treatment.
 
