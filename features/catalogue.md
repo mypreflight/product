@@ -59,6 +59,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Auto standby | The Transponder switches on at boarding and off at on-block | Live | Transponder |
 | Transponder updates | One key saves the new version to Downloads, checksum verified | Live | Transponder |
 | Live map tracking | Your aircraft moving on the map with live telemetry | Live | Tracking, maps and flight pages |
+| Vertical profile | Your altitude and ground speed over time against the planned altitude, under the Tracking view's map as you fly and on every finished flight. Point at a moment to put the aircraft there on the map, and zoom in on any part of the flight, down to five minutes | Live | Tracking, maps and flight pages |
 | Globe maps | Every route map on a round earth or flat, your choice per map | Live | Tracking, maps and flight pages |
 | FIR boundaries | The flight information regions you fly through, named along each border as on an enroute chart | Live | Tracking, maps and flight pages |
 | North Atlantic tracks | The North Atlantic tracks in force now, eastbound from Gander and westbound from Shanwick, on the same maps as the Pacific tracks, flat or globe. Each shows its name, its direction and its fixes. Turn them on in Map options, separately from the Pacific tracks | Partial | Tracking, maps and flight pages |
@@ -75,7 +76,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Diversions | Divert, ending the flight at the diversion airport | Live | Emergencies |
 | Delays | Allocate a late off-block to delay codes | Live | — |
 | Discord rich presence | Show your flight as your Discord activity | Live | — |
-| Pilot dashboard | Your current flight on a globe, or between flights the airport and stand you are at and your time on the ground; your next and last flight, and your last 7 days in block time | Live | — |
+| Pilot dashboard | Your current flight on a globe, or between flights the airport and stand you are at and your time on the ground; your next flight, your last three, each one click from its flight history, and your last 7 days in block time | Live | — |
 | Current flight summary | Richer current-flight card on the dashboard | Planned | — |
 
 ## Pilot profile and collectibles
