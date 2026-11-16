@@ -21,12 +21,13 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Feature | In user language | Status | Decision |
 | --- | --- | --- | --- |
 | SimBrief import | Create a flight from your latest SimBrief plan | Live | SimBrief import |
+| Briefing by phase | The briefing in three tabs that follow the flight, Preflight, Oceanic (En route without a North Atlantic track) and Arrival, opening on the one you're in. The nav log, OFP, runway analysis, NOTOC and PIL open in a side panel | Live | — |
 | OFP viewer | Read the full SimBrief OFP in the app | Live | SimBrief import |
-| Runway analysis | SimBrief's runway analysis page, in its own tab | Live | SimBrief import |
+| Runway analysis | SimBrief's runway analysis page, one click from the briefing | Live | SimBrief import |
 | Loadsheets | Preliminary revisions and a final loadsheet, never overwritten | Live | Passengers and cargo |
 | Fuel ladder | Fuel build-up from taxi to total, with tank gauge | Live | SimBrief import |
 | Passenger manifest | Named passengers seated in the real cabin, with no-shows | Live | Passengers and cargo |
-| Special assistance | Infants, wheelchairs, unaccompanied minors, by real IATA codes | Live | Passengers and cargo |
+| Special assistance | Infants, wheelchairs, unaccompanied minors, by real IATA codes; the PIL lists them, filtered by code | Live | Passengers and cargo |
 | Seat maps | The airline's real seat map, seat by seat | Partial | Passengers and cargo |
 | Cabin layout assignment | Operations pick the layout each aircraft flies | Live | Passengers and cargo |
 | Cargo manifest | Shipments with waybills, origins and onward connections | Live | Passengers and cargo |
@@ -53,7 +54,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Automatic takeoff | Detected when you leave the departure airport's boundary | Live | Flight lifecycle |
 | Automatic landing | Detected inside the destination boundary below 50 kt | Live | Flight lifecycle |
 | Actual fuel burn | Type the fuel you burned when you close the flight | Live | Flight lifecycle |
-| Actual fuel at fixes | While in cruise, report the fuel on board at any fix from the fix card or the nav log, with the time it was read, and read it against the plan, with a warning below the minimum. The fuel card lists every report | Live | Flight lifecycle |
+| Actual fuel at fixes | While in cruise, report the fuel on board at any fix from the fix card, the nav log or the briefing's Oceanic or En route tab, with the time it was read, and read it against the plan, with a warning below the minimum. The fuel card lists every report | Live | Flight lifecycle |
 | Transponder | One portable .exe that feeds your position from MSFS 2024 | Live | Transponder |
 | Auto standby | The Transponder switches on at boarding and off at on-block | Live | Transponder |
 | Transponder updates | One key saves the new version to Downloads, checksum verified | Live | Transponder |
@@ -63,7 +64,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | North Atlantic tracks | The North Atlantic tracks in force now, eastbound from Gander and westbound from Shanwick, on the same maps as the Pacific tracks, flat or globe. Each shows its name, its direction and its fixes. Turn them on in Map options, separately from the Pacific tracks | Partial | Tracking, maps and flight pages |
 | Pacific tracks | The Pacific tracks in force now, westbound from Oakland and eastbound from Fukuoka, on the Tracking, flight history, public flight and Operations maps, flat or globe. Each shows its name, its direction and its fixes. Turn them on in Map options | Partial | Tracking, maps and flight pages |
 | Fix card | Click a fix on the Tracking or flight history map to read its plan: position, FIR, fuel and the wind at each level. Arrows step along the route and centre the map on each fix | Live | Tracking, maps and flight pages |
-| Briefing and Tracking views | Your flight data at the gate and a full-page live map from off-block on, each with its own link | Live | Tracking, maps and flight pages |
+| Briefing and Tracking views | Your briefing at the gate and a full-page live map from off-block on, each with its own link. A bar under both holds the cabin, cargo and records documents and the emergency and diversion buttons | Live | Tracking, maps and flight pages |
 | Predicted times | Type in the times your FMC shows or ATC gave you; they replace your estimates across the flight and on the public map | Live | — |
 | Pilots in the air now | Public map of ongoing flights | Live | Tracking, maps and flight pages |
 | Public flight page | Share a flight by link; map with a data panel, the live position while it flies and the whole path once it has landed | Live | Tracking, maps and flight pages |
@@ -122,8 +123,9 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Feature | In user language | Status | Decision |
 | --- | --- | --- | --- |
 | Installable app | Add MyPreflight to your home screen as an app | Live | Flight monitoring alerts (PWA only) |
-| App updates | When a new version is ready, the installed app says so: Reload switches to it, What's new opens the changelog on the website | Live | — |
-| Light and dark | Follows your system theme | Live | Accessibility and theming |
+| App updates | When a new version is ready, the installed app says so: Reload switches to it, What's new opens the changelog on the website. The sidebar shows the version you're on, with the same link | Live | — |
+| Account menu | Settings, the Discord community, the theme and Sign out behind the button with your initials, top right on a tablet or computer | Live | — |
+| Light and dark | Follows your system theme, or pick Light or Dark in the account menu | Live | Accessibility and theming |
 | Website | mypreflight.io marketing page with FAQ | Live | — |
 
 ## In the brief, not built yet

@@ -2,7 +2,7 @@
 
 Rules that make dozens of views, modals and components look like one app.
 
-Last reviewed: 2026-11-03
+Last reviewed: 2026-11-16
 
 Colours, fonts and the logo live in `identity.md`.
 
@@ -73,6 +73,7 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 
 - **Flat Surface Rule.** Panels are separated by a 1 px border and a one-step tonal change, never a drop shadow. The only sanctioned shadow is a modal lifting off its backdrop. The faint card shadow still in the app is legacy.
 - **Page in a panel.** From tablet width up, the sidebar and a thin frame around the window are one surface, white in light mode and the cards' dark gray in dark mode, and the page sits in a rounded panel inside it, on the gray the cards always sat on. The frame is 8 px wide, and the panel has a 1 px edge. A map that fills the page, on the Tracking view or expanded, fills the panel and follows its corners. Phones have no frame: the page fills the screen.
+- **Bars around the page.** From tablet width up, a top bar above the page panel holds the page's own context on the left and the account button, with the pilot's initials, on the right. On a flight page the context is the flight on one line: fin, flight number, airports, cities with block time, registration and aircraft, and the Briefing and Tracking switch. The account menu holds Settings, the Discord community, a Light, Dark and Auto switch and Sign out. A bottom bar under the panel holds the page's actions and takes no room when the page has none. The sidebar ends in the page's readings (on a flight page, AOC and ADS-B), the app version and What's new. Phones keep their bottom navigation, and a page's bar contents sit at its end.
 - Radii: cards and the page panel 16 px; modals and inner data panels 12 px; buttons and inputs 8 px; pills full.
 - Padding: cards 20 px, inner panels 16 px; containers 16, 20 or 24 px by density; 16 px gap between blocks.
 - Empty state: a quiet dashed placeholder on Gray 50, with a hint that says what will appear and when (e.g. "Close your first flight and your statistics will appear here.").
@@ -119,6 +120,7 @@ Badges are pills: uppercase, bold, 11–12 px, a tint background with saturated 
 - **Entry in a dense panel.** Where figures are packed tight, a form doesn't sit inline. A small outline button below the figures opens a modal. The button names the action ("Report", then "Update" once a figure exists), and the modal's title names the feature, then the object ("Fuel Report / CMK fix"). When a section's figures come from somewhere the pilot might not assume, its heading names the source ("Fuel · Flight plan").
 - **GSX drawing.** Each automatic GSX switch carries a schematic plan view of the aircraft at the gate: nose left, jet bridge on the left front door. Boarding fills the cabin from the rear as passengers reach their rows, and deboarding empties it from the front. It moves in indigo only while the switch takes effect, and otherwise holds still in gray.
 - **Vertical profile.** A finished flight's altitude over time in UTC, filled in indigo, with its ground speed as a grey line and the planned altitude from the nav log as a dashed indigo line, so the climb, any step and the descent read against the plan. Taxi out and taxi in are shaded. Altitude is in flight levels on the left, ground speed in knots on the right. Pointing at it, or stepping with the arrow keys, marks that moment and moves the aircraft on the map there, with its telemetry beside the chart; leaving it shows the highest altitude and ground speed instead.
+- **Briefing by phase.** The briefing reads in the order the flight happens: one tab per phase, opened on the current one, marked Now, with the finished ones marked Done. A phase page sets its cards in up to three columns that follow the width, so a large monitor shows three, a laptop two and a phone one. Long documents open in a panel that slides in from the right over the view the pilot is on; Back or Escape closes it and returns focus to what opened it.
 - **Documents.** The NOTOC also renders as a printable document, legible without colour, carrying the standard hazard marks.
 - **Bad example to fix:** cargo types and cold-chain details are currently shown poorly. High-value information gets prominent, clear treatment.
 
