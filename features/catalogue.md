@@ -40,7 +40,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Weather | Raw ATIS, METAR and TAF from two sources, your choice | Live | Weather and NOTAMs |
 | Real-world and VATSIM ATIS | Real digital ATIS for US airports and many others, and VATSIM ATIS when a controller is online, arrival and departure apart | Partial (no screens yet) | Weather and NOTAMs |
 | NOTAMs | The NOTAMs from your OFP, per airport | Live | Weather and NOTAMs |
-| Gate, stand and runway | Change gate, stand and departure or arrival runway, like an EFB | Live | Airports |
+| Gate, stand and runway | One card per airport in the briefing, its weather beside the stand and the runway, with the stand's position for aligning the IRS. Change gate, stand and departure or arrival runway, like an EFB, picking stands and runways on the airport map | Live | Airports |
 | Planned route | The route drawn fix by fix | Partial | Tracking, maps and flight pages |
 | ETOPS briefing | Entry, exit and equal-time points with diversion airports | Partial | — |
 | Oceanic tracks | The North Atlantic tracks your flight was planned against | Partial | — |

@@ -61,7 +61,8 @@ Release posts about a redesign compare the previous release with the new one:
 | Flight history | Flight history, one flight | Closed long-haul flight with its full track | Tablet | Dark |
 | Vertical profile | Flight history, one flight | A closed long-haul flight zoomed into its descent, a moment marked so the aircraft sits on the map and the reading shows a descent rate | Desktop | Light |
 | Flight history list | Flight history | Ten or more closed flights across several continents, one pointed at so its line is indigo | Desktop | Dark |
-| Gate, stand and runway | Flight page, Briefing, Preflight (stand and runway box) | Stand and runway assigned at a well-mapped airport (e.g. Frankfurt) | Phone | Light |
+| Gate, stand and runway | Flight page, Briefing, Preflight (Departure airport card) | Stand and runway assigned at a well-mapped airport (e.g. Frankfurt), weather loaded | Phone | Light |
+| Picking a stand | Flight page, Briefing, Preflight, Change on the parking stand | A well-mapped airport (e.g. Frankfurt), a stand picked on the map | Desktop | Dark |
 | Weather | Airport library, one airport (weather) | Airport monitored by an active flight; ATIS from SayIntentions | Phone | Dark |
 | NOTAMs | Airport library, one airport (NOTAMs) | Airport from a recent import | Tablet | Light |
 | Airport library | Airport library, one airport (parking positions) | A flagship-grade airport with terminals, stands and gates | Tablet | Dark |

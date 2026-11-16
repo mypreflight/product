@@ -39,6 +39,7 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 - While automatic detection is watching for off-block, takeoff or arrival, the app keeps the manual report behind "See details", together with the conditions detection relies on. When detection is unavailable, both show straight away, because the pilot has to report by hand.
 - While GSX is set to start boarding or offboarding, the app doesn't offer the button. It names the step, says GSX will report it, and keeps a manual start behind "Didn't work? Troubleshoot", together with a link to the GSX switches. GSX can fail to start the step and the app can't tell, so the pilot must always have a way forward.
 - Cargo flights load and unload instead of boarding and offboarding. Their finished states read "Loading cargo finished" and "Unloading cargo finished".
+- The departure runway can be changed until off-block and the arrival runway until arrival. The stands follow the check-in row above. A diverting flight can't change its arrival stand or runway.
 
 ## Tracking
 
