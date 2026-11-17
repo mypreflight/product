@@ -50,6 +50,7 @@ Last reviewed: 2026-11-16
 - NOTAMs are imported raw (formatted from the SimBrief OFP) at import time only, so they can be 6 to 8 hours old when the flight arrives.
 - Plain-language NOTAM translation is wanted: "RWY 14 CLSD" becomes "Runway 14 is closed". NOTAMs are free-form human shorthand, so deterministic rules can't cover them all; it needs AI and would be a paid add-on because of token cost. It's core to what pilots brief, so its priority may rise.
 - No free NOTAM API has been found. The FAA NOTAM API is US-centric and limited for Europe.
+- Each ATIS says which of the airport's runways are in use for arrivals and which for departures. Fixed rules read the ATIS text first. Only an ATIS the rules can't settle goes to a small AI model, which may pick only from the airport's own runways. On the live feeds in November 2026 that was about 1 ATIS in 25. Oskar decided this exception to determinism first in November 2026: ATIS is free-form controller shorthand, so rules alone get the odd one wrong. Asking only about the unclear ones costs cents a day. Each ATIS is read once, so its runways don't change while the ATIS stays the same.
 - **Open:** a free NOTAM source, a free METAR source, and how high to prioritise NOTAM translation.
 
 ## SIDs, STARs and procedures

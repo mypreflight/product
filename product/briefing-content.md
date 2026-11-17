@@ -105,7 +105,8 @@ The rule behind it all: cargo comes from the departure's context, never at rando
 
 - Raw ATIS, METAR and TAF per airport and per source: aviationweather.gov (METAR, TAF) and SayIntentions (ATIS, METAR, TAF). Each pilot picks one of these two as their default source.
 - Three more sources give ATIS only: the FAA's real digital ATIS for US airports, real digital ATIS that aircraft requested over datalink worldwide (atis.guru), and VATSIM controllers' ATIS. An airport with a separate arrival and departure ATIS keeps both, and each ATIS carries the time its source published it. An ATIS a source stops publishing disappears, such as when a VATSIM controller logs off.
-- **Open:** how the app shows the three ATIS-only sources. Pilots can't see them yet.
+- Each ATIS, from any source, carries the runways in use for arrivals and for departures, always runways the airport has. A runway the ATIS names only as closed, out of service, for holding short, for the wind or in its NOTAMs doesn't count. A runway put in use without saying for what counts for both on a combined ATIS, and for its own side on a separate arrival or departure ATIS. METAR and TAF carry no runways.
+- **Open:** how the app shows the three ATIS-only sources and the runways in use. Pilots can't see them yet.
 - METAR and TAF are kept without the METAR or TAF word in front, which only repeats what the report is. A SPECI, and an amendment or correction marker, stay.
 - An airport is monitored from check-in until on-block of any flight using it, and refreshed on a schedule. A failure at one source doesn't affect the others.
 - Weather is public. An airport with nothing stored shows an empty list, not an error.
