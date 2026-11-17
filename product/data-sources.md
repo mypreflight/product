@@ -15,7 +15,7 @@ Last reviewed: 2026-11-16
 
 | Data | Used for | Source | Licence / attribution | Refresh | Status |
 | --- | --- | --- | --- | --- | --- |
-| Flight plans | Import, OFP, weights, times, runway, crew roster, waypoints, ETOPS points | SimBrief API (the pilot's own account) | SimBrief terms | Per import | Live |
+| Flight plans | Import, OFP, weights, times, runway, crew roster, waypoints, ETOPS points, the registration and type of an aircraft new to the fleet | SimBrief API (the pilot's own account) | SimBrief terms | Per import | Live |
 | Airports, runways, terminals, stands, gates, boundaries | Briefing, maps, automatic takeoff and landing detection | OpenStreetMap | ODbL, attribution required | On demand: operations pull a proposal per airport and apply the changes they accept. | Live |
 | Basic airport records | Creating an airport a SimBrief import mentions but we don't hold yet; operations look-up by IATA code | SkyLink API | **Open:** confirm terms | Once, when the airport is created; OpenStreetMap enrichment follows | Live |
 | Seat maps | Manifests, seating, cabin capacity | AeroLOPA | **Open:** confirm licence. **Open:** get access to seat positions, which AeroLOPA no longer publishes openly (noticed in November 2026) | Catalogue mirrored when operations sync it; seat data fetched on first use and stored as revisions, refreshed on request. Layouts already stored still show; a layout not stored yet can't be fetched, and a refresh is refused, until we have that access | Partial |
