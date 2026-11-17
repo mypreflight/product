@@ -38,7 +38,9 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Baggage | Bags derived from the payload, loaded with the cargo | Live | Passengers and cargo |
 | Crew roster | First officer, purser and cabin crew from SimBrief | Live | SimBrief import |
 | Weather | Raw ATIS, METAR and TAF from two sources, your choice | Live | Weather and NOTAMs |
-| Real-world and VATSIM ATIS | Real digital ATIS for US airports and many others, and VATSIM ATIS when a controller is online, arrival and departure apart, each with the runways in use for arrivals and departures | Partial (no screens yet) | Weather and NOTAMs |
+| Real-world ATIS | Real digital ATIS for US airports and many others, arrival and departure apart, next to SayIntentions' ATIS. Pick either as your default, and switch in the briefing | Live | Weather and NOTAMs |
+| Runways in use and runway wind | The runway card and the runway picker mark the runways the ATIS has in use for your departure or arrival, with its information letter, and give the wind along and across each runway | Live | Weather and NOTAMs |
+| VATSIM ATIS | The ATIS of VATSIM controllers online at the airport | Partial (collected, not shown) | Weather and NOTAMs |
 | NOTAMs | The NOTAMs from your OFP, per airport | Live | Weather and NOTAMs |
 | Gate, stand and runway | One card per airport in the briefing, its weather beside the stand and the runway, with the stand's position for aligning the IRS. Change gate, stand and departure or arrival runway, like an EFB, picking stands and runways on the airport map | Live | Airports |
 | Planned route | The route drawn fix by fix | Partial | Tracking, maps and flight pages |
