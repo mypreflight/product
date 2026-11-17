@@ -13,7 +13,7 @@ Each account has exactly one role.
 | Role | Does |
 | --- | --- |
 | Pilot | Checks in, boards, reports off-block, takeoff, arrival and on-block, fills the final loadsheet, closes the flight, declares emergencies and diversions, files delay reports, proposes data corrections. |
-| Operations | Dispatch. Creates and imports flights (including from SimBrief), writes preliminary loadsheets, manages operators, fleet, rotations, airports and cabin layouts, decides delays, reviews data proposals. |
+| Operations | Dispatch. Creates and imports flights (including from SimBrief), writes preliminary loadsheets, manages operators, fleet, rotations, airports and cabin layouts, confirms aircraft that imports added, decides delays, reviews data proposals. |
 | Admin | Creates and edits users, reviews data proposals. |
 
 ## Flight states

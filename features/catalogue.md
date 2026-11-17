@@ -105,6 +105,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Suggest a correction | Propose a fix to an airport, stand, gate, terminal or runway | Live | Airports |
 | Review queue | Operations and admins accept or reject proposals | Live | Airports |
 | Fleet and operators | Manage airlines, aircraft, hold variants | Live | Aircraft and airframe continuity |
+| Aircraft from imports | A registration in your plan that isn't in the fleet is added automatically, unconfirmed until operations confirm it | Partial | Aircraft and airframe continuity |
 | Technical logbook | Report and triage aircraft defects | Planned | Emergencies (MEL) |
 | Loadsheet history | Keep every loadsheet revision and let the crew accept the last | Partial | — |
 
@@ -154,5 +155,5 @@ None of these is built. Don't advertise them.
 | Public pilot profiles, following, view counts | `../product/decisions.md` → Social |
 | In-app "What's new" and a public changelog | `../product/brand/marketing.md` |
 | "For flight simulation use only" label in the app | `../product/overview.md` → Hard lines |
-| Automatic creation of unknown aircraft | `../product/decisions.md` → Aircraft |
+| Creating unknown aircraft from open data | `../product/decisions.md` → Aircraft |
 | Payments and paid features | `../product/business.md` |
