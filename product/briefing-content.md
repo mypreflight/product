@@ -106,16 +106,19 @@ The rule behind it all: cargo comes from the departure's context, never at rando
 - Raw ATIS, METAR and TAF per airport and per source: aviationweather.gov (METAR, TAF) and SayIntentions (ATIS, METAR, TAF). Each pilot picks one of these two as their default source.
 - Three more sources give ATIS only: the FAA's real digital ATIS for US airports, real digital ATIS that aircraft requested over datalink worldwide (atis.guru), and VATSIM controllers' ATIS. An airport with a separate arrival and departure ATIS keeps both, and each ATIS carries the time its source published it. An ATIS a source stops publishing disappears, such as when a VATSIM controller logs off.
 - Each ATIS, from any source, carries the runways in use for arrivals and for departures, always runways the airport has. A runway the ATIS names only as closed, out of service, for holding short, for the wind or in its NOTAMs doesn't count. A runway put in use without saying for what counts for both on a combined ATIS, and for its own side on a separate arrival or departure ATIS. METAR and TAF carry no runways.
-- **Open:** how the app shows the three ATIS-only sources and the runways in use. Pilots can't see them yet.
+- Each pilot also picks an ATIS source in their account, apart from the METAR and TAF source: SayIntentions (the default), VATSIM, the FAA's digital ATIS or atis.guru. Each airport opens its ATIS on that source. When that source has no ATIS for the airport, it opens on the first one that does, and the pilot can switch to any source with an ATIS there.
+- The airport library still shows only the two METAR and TAF sources, with the SayIntentions ATIS.
 - METAR and TAF are kept without the METAR or TAF word in front, which only repeats what the report is. A SPECI, and an amendment or correction marker, stay.
 - An airport is monitored from check-in until on-block of any flight using it, and refreshed on a schedule. A failure at one source doesn't affect the others.
 - Weather is public. An airport with nothing stored shows an empty list, not an error.
 
 ## Airport, stand and runway
 
-- Preflight opens with the departure airport and Arrival with the arrival airport: its weather on one side, the stand and runway on the other. The weather is the METAR and TAF from the source the pilot picks and the SayIntentions ATIS.
+- Preflight opens with the departure airport and Arrival with the arrival airport: its weather on one side, the stand and runway on the other. The weather is the METAR and TAF from the source the pilot picks, and the ATIS from their ATIS source: the departure ATIS at the departure airport and the arrival ATIS at the arrival airport, where the airport publishes them apart.
 - The stand shows its terminal and the airlines that use it, whether it's at a gate or remote, how passengers board, the parking guidance, the services, de-icing, noise sensitivity with its hours, and its position in degrees and decimal minutes, for aligning the IRS.
 - The runway shows its surface and lighting, magnetic heading, length with any displaced threshold, width, and elevation in feet.
+- Under it, the runways the shown ATIS puts in use for that end, and whether the assigned runway is one of them.
+- The runway picker, in the briefing and for operations, marks the runways the ATIS puts in use for that end, and can switch between the sources with an ATIS there.
 
 ## NOTAMs
 
