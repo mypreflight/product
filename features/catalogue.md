@@ -105,7 +105,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Suggest a correction | Propose a fix to an airport, stand, gate, terminal or runway | Live | Airports |
 | Review queue | Operations and admins accept or reject proposals | Live | Airports |
 | Fleet and operators | Manage airlines, aircraft, hold variants | Live | Aircraft and airframe continuity |
-| Aircraft from imports | A registration in your plan that isn't in the fleet is added automatically, unconfirmed until operations confirm it | Partial | Aircraft and airframe continuity |
+| Aircraft from imports | A registration in your plan that isn't in the fleet is added automatically, unconfirmed until operations confirm it | Live | Aircraft and airframe continuity |
 | Technical logbook | Report and triage aircraft defects | Planned | Emergencies (MEL) |
 | Loadsheet history | Keep every loadsheet revision and let the crew accept the last | Partial | — |
 
