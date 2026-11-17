@@ -2,7 +2,7 @@
 
 Rules that make dozens of views, modals and components look like one app.
 
-Last reviewed: 2026-11-16
+Last reviewed: 2026-11-18
 
 Colours, fonts and the logo live in `identity.md`.
 
@@ -62,7 +62,7 @@ Badges are pills: uppercase, bold, 12 px, a tint background with saturated text,
 
   | Role | Weight, size |
   | --- | --- |
-  | Display (flight and page titles) | 700, 30 px |
+  | Display (flight titles, and page titles on phones) | 700, 30 px |
   | Headline (panel sections) | 700, 20 px |
   | Title (cards, groups) | 600, 16 px |
   | Body | 400, 14 px; prose capped at 65–75 characters a line |
@@ -75,7 +75,7 @@ Badges are pills: uppercase, bold, 12 px, a tint background with saturated text,
 
 - **Flat Surface Rule.** Panels are separated by a 1 px border and a one-step tonal change, never a drop shadow. The only sanctioned shadow is a modal lifting off its backdrop. The faint card shadow still in the app is legacy.
 - **Page in a panel.** From tablet width up, the sidebar and a thin frame around the window are one surface, white in light mode and the cards' dark gray in dark mode, and the page sits in a rounded panel inside it, on the gray the cards always sat on. The frame is 8 px wide, and the panel has a 1 px edge. A map that fills the page, on the Tracking view or expanded, fills the panel and follows its corners. Phones have no frame: the page fills the screen.
-- **Bars around the page.** From tablet width up, a top bar above the page panel holds the page's own context on the left and the account button, with the pilot's initials, on the right. On a flight page the context is the flight on one line: fin, flight number, airports, cities with block time, registration and aircraft, and the Briefing and Tracking switch. On a finished flight it is the way back to Flight history, the same line without the block time, the date it was flown, the Closed badge and the History and Documents switch; the cities give way first when the line runs short. On the dashboard it is the greeting. The account menu holds Settings, the Discord community, a Light, Dark and Auto switch and Sign out. A bottom bar under the panel holds the page's actions and takes no room when the page has none. The sidebar ends in the page's readings (on a flight page, AOC and ADS-B), the app version and What's new. Phones keep their bottom navigation; a page keeps its own header at its top, and its bottom bar contents sit at its end.
+- **Bars around the page.** From tablet width up, a top bar above the page panel holds the page's own context on the left and the account button, with the pilot's initials, on the right. On a flight page the context is the flight on one line: fin, flight number, airports, cities with block time, registration and aircraft, and the Briefing and Tracking switch. On a finished flight it is the way back to Flight history, the same line without the block time, the date it was flown, the Closed badge and the History and Documents switch; the cities give way first when the line runs short. On the dashboard it is the greeting. On every other page it is the page's title, or its path when the page sits inside another (see Path), with the page's own buttons at the right end beside the account button. Everything in the top bar is set at 14 px, the title and the last step of a path semibold, and its buttons are the small size. The account menu holds Settings, the Discord community, a Light, Dark and Auto switch and Sign out. A bottom bar under the panel holds the page's actions and takes no room when the page has none. The sidebar ends in the page's readings (on a flight page, AOC and ADS-B), the app version and What's new. Phones keep their bottom navigation; a page keeps its own header at its top, its title at display size or its path, and its bottom bar contents sit at its end.
 - Radii: cards and the page panel 16 px; modals and inner data panels 12 px; buttons and inputs 8 px; pills full.
 - Padding: cards 20 px, inner panels 16 px; containers 16, 20 or 24 px by density; 16 px gap between blocks.
 - Empty state: a quiet dashed placeholder on Gray 50, with a hint that says what will appear and when (e.g. "Close your first flight and your statistics will appear here.").
@@ -98,7 +98,7 @@ Badges are pills: uppercase, bold, 12 px, a tint background with saturated text,
 ## Layout
 
 - Phone and tablet layouts are checked for every view; the app is a second screen beside the sim.
-- Lists work from a 390 px viewport without horizontal scrolling. Secondary lines hide on small screens; nothing else does.
+- Lists work from a 390 px viewport without horizontal scrolling. Secondary lines hide on small screens; nothing else does. A table with too little room for all its columns drops its least needed ones (a fleet's livery and cabin layout) rather than scroll sideways, and brings them back when the room returns, such as when the sidebar folds away.
 - A whole row is a real link (new tab, copy address and modified clicks all work), with in-row controls as the exception.
 - Lists are exposed as lists, and each row has one accessible name (e.g. callsign, route, status), not four unlabelled fragments.
 
@@ -114,6 +114,8 @@ Badges are pills: uppercase, bold, 12 px, a tint background with saturated text,
   | Route | `FRA → MUC` | Airport names |
   | Trailing | Block time (finished) or status (upcoming, live) | Air time (`air 1:32`) |
 
+- **Path.** A page inside another names every step from the list down to it: Operators › American Airlines › Fleet › N767CX, Airports › EPWA › Runways, Airports library › EPWA › Gates, Rotations › BOS-PHL-BOS 2026-01-01. A flight's path starts with the list that holds it at that moment: Flight plans before check-in, Current flights until it closes, Flight history after. Every step but the last links back up, so pages carry no back buttons of their own; on a phone the header's back arrow does that too.
+- **Dense table.** Operations tables (fleet, rotations, cabin layouts, cargo holds, delay reviews) keep their rows tight: 12 by 10 px cells, at most two lines a row, the column keys in micro-caps on a gray band, identifiers at 14 px, and a chevron at the end of the row instead of a "View details" column. A fleet row reads the registration over the aircraft type, the state, the SELCAL, the wake and approach category over cruise speed and ceiling ("Heavy · D" over "Mach 0.84 · 43,000 ft"), the base as its code over its name, the livery and the cabin layout. A 14-aircraft fleet shows 13 rows at once on a 1440 by 900 screen.
 - **Loadsheet form.** An operational weight build-up (dry operating → zero fuel → take-off → landing) with limit-aware validation, shared by the preliminary and final flows. The final flow opens with what changed since the preliminary loadsheet, as before → after with the difference ("Passengers 296 → 294 −2"), updating as the pilot types.
 - **Lifecycle track.** The flight page shows the flight's six phases on one track, each with the time it began: check-in, boarding, taxi out, cruise, taxi in and offboarding. Cruise is always the widest, because it is the longest part of every flight; the others share the rest equally, so the track keeps its shape. The current phase is highlighted and fills as it progresses. A closed flight shows every phase done.
 - **Next-step panel.** The next action on the flight page is a question with one button ("Is boarding complete?", "Airborne?"). While automation is watching, the panel says what for, and the manual button steps down to an outline. When GSX is set to start the step, the panel names it with no question and no button ("Board passengers"), and the manual start waits behind "Didn't work? Troubleshoot".
