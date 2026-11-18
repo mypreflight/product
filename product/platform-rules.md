@@ -43,9 +43,10 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 
 ## Pilot imports
 
-- A pilot imports the latest plan in their own SimBrief account from the dashboard, while they have no flight in progress. Before importing they see that plan's callsign, route, departure time, aircraft and when it was generated, so they can tell it's the one they just made.
+- A pilot imports the latest plan in their own SimBrief account from the dashboard, while they have no flight in progress and nothing is scheduled for them. Before importing they see that plan line by line: the callsign, the airports as IATA codes with their cities, the scheduled off-block and on-block with the block time between them, and the aircraft with its picture, so they can tell it's the one they just made.
 - The import builds the flight and its briefing the same way an Operations import does, marks it ready and checks the pilot in with the plan's estimated times. The flight is theirs from the start, so it never shows up as another pilot's next flight.
 - A pilot with a flight in progress can't import another; they close it first.
+- A flight checked in but not boarded within 24 hours of check-in is removed, together with what check-in started for it (the pilot's current flight, the pending travel, the aircraft's checked-in state). Any repositioning to the departure airport stays, since that move happened. This applies to every check-in, imported or dispatched.
 - An Operations import is unchanged: the flight waits as created until Operations mark it ready, and any pilot can then check in.
 
 ## Tracking
@@ -108,8 +109,8 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 ## Pilot dashboard
 
 - **Current flight:** a map strip across the top shows the route. While the aircraft is taxiing or airborne it adds the flown track and the aircraft's position, and opening the map goes to the flight's Tracking view. Below it, the flight number, the route and the reference time share one row. Between the airports, a gauge fills for the great-circle distance flown, up to the live position, with the distance flown and to go and the block time against schedule beneath it. Before departure it shows the total distance, after arrival the distance flown; in flight without a position it shows the total and never guesses where the aircraft is. Then come the flight's phase and the pilot's next step. The card shows off-block until off-block, then on-block. A time that isn't actual is marked Est. or Sched., and carries a date when it isn't today in UTC. A missed event says how late it is ("Off-block overdue: 41m", or "overdue since 01JAN 2025" after a day).
-- **Next scheduled flight:** the earliest ready flight by scheduled off-block, leaving out the current flight.
-- **Recent flights:** the last three finished flights, latest actual on-block first, each with its airline, flight number, airports and the day it was flown, and each opening its flight history. Before the first one closes, the card says there are none yet.
+- **Next scheduled flight:** the pilot's earliest ready flight by scheduled off-block in a rotation Operations released to them, leaving out the current flight. With none, and no flight in progress, the card offers the SimBrief import, or asks for a SimBrief ID first. Ready flights outside the pilot's rotations don't show.
+- **Recent flights:** the last three flights the pilot finished, latest actual on-block first, each with its airline, flight number, airports and the day it was flown, and each opening its flight history. Until the first one closes, the card is left out and the next flight card takes its place across both columns.
 - **Your activity:** lifetime block time to the minute, fuel burned and distance flown, and one bar per day for the last 7 days, scaled to the busiest day.
 - A card that fails to load says so and asks for a reload. It never falls back to an empty state.
 

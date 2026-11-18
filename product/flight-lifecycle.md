@@ -18,7 +18,7 @@ Last reviewed: 2026-11-18
 | 10 | On-block | The pilot reports it (chocks on) and confirms it in a dialog. It isn't reliably detectable, and a real tablet wouldn't know either. |
 | 11 | Disembark | The pilot is prompted to disembark. With the GSX integration on, requesting deboarding through GSX starts it, and it finishes when GSX completes it. Live passenger counts come from the GSX Pro API through the Transponder, like crew counting passengers off (not fully wired yet). |
 | 12 | Finish | The pilot enters the actual fuel burn by hand. This is deliberate realism: a real EFB has no link to aircraft systems, even though the sim could provide the number. |
-| 13 | Not finished | Unfinished flights are penalised (laziness, skipping the post-flight steps). Planned: auto-finish about 24 hours after the scheduled time, so stale flights don't show as live. |
+| 13 | Not finished | Unfinished flights are penalised (laziness, skipping the post-flight steps). A flight checked in but not boarded within 24 hours is removed, so the pilot can import the next one. Planned: auto-finish a flight left unfinished after boarding about 24 hours after the scheduled time, so stale flights don't show as live. |
 
 ## Why 3 knots
 
