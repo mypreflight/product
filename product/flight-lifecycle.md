@@ -2,11 +2,11 @@
 
 What happens from SimBrief import to a finished flight, step by step.
 
-Last reviewed: 2026-11-03
+Last reviewed: 2026-11-18
 
 | # | Step | How it works |
 | --- | --- | --- |
-| 1 | Import | The pilot imports a SimBrief flight. The briefing is generated: manifest, cargo, loadsheet, seat map, weather, NOTAMs, gate, stand, runway. |
+| 1 | Import | The pilot imports their latest SimBrief plan and is checked in with its estimated times, without waiting for Operations. The briefing is generated: manifest, cargo, loadsheet, seat map, weather, NOTAMs, gate, stand, runway. |
 | 2 | Boarding | The Transponder is not expected to run yet. Real aircraft have it off while passengers board. The exception is a pilot using the GSX integration: the Transponder has to be running to see them request boarding through GSX, and it starts boarding when they do. |
 | 3 | Doors closed | The pilot starts the Transponder once the doors are closed and boarding is finished, before pushback. This mirrors the real Mode S procedure, and the product teaches users how it works. |
 | 4 | Off-block | Detected automatically from the first position report with ground speed above **3 knots**; below that the aircraft counts as standing. See "Why 3 knots" below. The pilot can also report off-block by hand and confirm it in a dialog; the time recorded is the moment they confirm. There's no typed time. |
@@ -18,7 +18,7 @@ Last reviewed: 2026-11-03
 | 10 | On-block | The pilot reports it (chocks on) and confirms it in a dialog. It isn't reliably detectable, and a real tablet wouldn't know either. |
 | 11 | Disembark | The pilot is prompted to disembark. With the GSX integration on, requesting deboarding through GSX starts it, and it finishes when GSX completes it. Live passenger counts come from the GSX Pro API through the Transponder, like crew counting passengers off (not fully wired yet). |
 | 12 | Finish | The pilot enters the actual fuel burn by hand. This is deliberate realism: a real EFB has no link to aircraft systems, even though the sim could provide the number. |
-| 13 | Not finished | Unfinished flights are penalised (laziness, skipping the post-flight steps). Planned: auto-finish about 24 hours after the scheduled time, so stale flights don't show as live. |
+| 13 | Not finished | Unfinished flights are penalised (laziness, skipping the post-flight steps). A flight checked in but not boarded within 24 hours is removed, so the pilot can import the next one. Planned: auto-finish a flight left unfinished after boarding about 24 hours after the scheduled time, so stale flights don't show as live. |
 
 ## Why 3 knots
 

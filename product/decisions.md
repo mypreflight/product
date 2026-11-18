@@ -2,7 +2,7 @@
 
 Current product decisions, grouped by area, with the reason and Oskar's examples. Everything here is decided unless marked **Open:**.
 
-Last reviewed: 2026-11-16
+Last reviewed: 2026-11-18
 
 ## SimBrief import and briefing
 
@@ -30,7 +30,7 @@ Last reviewed: 2026-11-16
 - The sim livery and callsign don't have to match the selected registration. The Transponder does nothing on a mismatch.
 - Each pilot has a per-airframe history, so continuity matters. If a tail's next departure isn't where it last landed (landed in Zurich, next flight departs Frankfurt), the pilot pays a points fee for the implied repositioning flight, because that ferry flight is a loss for the airline. Realistic continuity is rewarded.
 - Missing registrations are requested through the data-request feature. This is a known weak spot.
-- An imported plan whose registration isn't in the fleet adds the aircraft to the plan's airline, with the aircraft type from SimBrief, marked unconfirmed. Operations check it and confirm it with a separate "Confirm correctness" action. This prepares for pilots importing their own plans without an operations account.
+- An imported plan whose registration isn't in the fleet adds the aircraft to the plan's airline, with the aircraft type from SimBrief, marked unconfirmed. Operations check it and confirm it with a separate "Confirm correctness" action. Pilots import their own plans, so most new aircraft arrive this way.
 - A plan that flies a registration already in the fleet as a different type is refused, because the registration in SimBrief is typed in by the pilot.
 - Direction: take new aircraft from open data rather than SimBrief, the way unknown airports are created from OpenStreetMap.
 - **Open:** research the OpenSky Network aircraft database as that source.
