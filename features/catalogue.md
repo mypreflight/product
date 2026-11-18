@@ -2,7 +2,7 @@
 
 Every MyPreflight feature and its build status, taken from what's actually built, not from the brief.
 
-Last reviewed: 2026-11-16
+Last reviewed: 2026-11-18
 
 ## How to read this
 
@@ -20,7 +20,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 
 | Feature | In user language | Status | Decision |
 | --- | --- | --- | --- |
-| SimBrief import | Create a flight from your latest SimBrief plan | Live | SimBrief import |
+| SimBrief import | Import your latest SimBrief plan yourself and fly it straight away, checked in with its estimated times | Live | SimBrief import |
 | Briefing by phase | The briefing in three tabs that follow the flight, Preflight, Oceanic (En route without a North Atlantic track) and Arrival, opening on the one you're in. The nav log, OFP, runway analysis, NOTOC and PIL open in a side panel | Live | — |
 | OFP viewer | Read the full SimBrief OFP in the app | Live | SimBrief import |
 | Runway analysis | SimBrief's runway analysis page, one click from the briefing | Live | SimBrief import |

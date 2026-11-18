@@ -2,7 +2,7 @@
 
 The rules the built platform follows outside the briefing: roles, the flight's states, automatic detection, delays, data review, Discord, accounts and collectibles.
 
-Last reviewed: 2026-11-16
+Last reviewed: 2026-11-18
 
 This file describes what is built. The decisions behind it live in `decisions.md`; where the two disagree, the decision wins and the gap is a bug or open work.
 
@@ -12,7 +12,7 @@ Each account has exactly one role.
 
 | Role | Does |
 | --- | --- |
-| Pilot | Checks in, boards, reports off-block, takeoff, arrival and on-block, fills the final loadsheet, closes the flight, declares emergencies and diversions, files delay reports, proposes data corrections. |
+| Pilot | Imports their own SimBrief plans, checks in, boards, reports off-block, takeoff, arrival and on-block, fills the final loadsheet, closes the flight, declares emergencies and diversions, files delay reports, proposes data corrections. |
 | Operations | Dispatch. Creates and imports flights (including from SimBrief), writes preliminary loadsheets, manages operators, fleet, rotations, airports and cabin layouts, confirms aircraft that imports added, decides delays, reviews data proposals. |
 | Admin | Creates and edits users, reviews data proposals. |
 
@@ -22,8 +22,8 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 
 | Transition | Who | Notes |
 | --- | --- | --- |
-| Mark ready | Operations | Needs a preliminary loadsheet |
-| Check in | Pilot | Records the pilot's estimated off-block, takeoff, arrival and on-block times; acknowledges the preliminary NOTOC; starts weather monitoring; sends the Discord briefing. The departure stand can't be set or changed after check-in; the arrival stand can until on-block. |
+| Mark ready | Operations, or automatically when a pilot imports their own plan | Needs a preliminary loadsheet |
+| Check in | Pilot, or automatically when they import their own plan | Records the pilot's estimated off-block, takeoff, arrival and on-block times; acknowledges the preliminary NOTOC; starts weather monitoring; sends the Discord briefing. An import takes the estimated times from the plan. The departure stand can be set or changed until boarding starts; the arrival stand until on-block. |
 | Start / finish boarding | Pilot, or GSX for the start | Finish-boarding writes the final loadsheet and reconciles manifests |
 | Off-block | Pilot or automatic | Automatic: first stored position above 3 kt while boarding is finished |
 | Takeoff | Pilot or automatic | Automatic: first stored position outside the departure airport's boundary |
@@ -40,6 +40,13 @@ Created → Ready → Checked in → Boarding started → Boarding finished → 
 - While GSX is set to start boarding or offboarding, the app doesn't offer the button. It names the step, says GSX will report it, and keeps a manual start behind "Didn't work? Troubleshoot", together with a link to the GSX switches. GSX can fail to start the step and the app can't tell, so the pilot must always have a way forward.
 - Cargo flights load and unload instead of boarding and offboarding. Their finished states read "Loading cargo finished" and "Unloading cargo finished".
 - The departure runway can be changed until off-block and the arrival runway until arrival. The stands follow the check-in row above. A diverting flight can't change its arrival stand or runway.
+
+## Pilot imports
+
+- A pilot imports the latest plan in their own SimBrief account from the dashboard, while they have no flight in progress. Before importing they see that plan's callsign, route, departure time, aircraft and when it was generated, so they can tell it's the one they just made.
+- The import builds the flight and its briefing the same way an Operations import does, marks it ready and checks the pilot in with the plan's estimated times. The flight is theirs from the start, so it never shows up as another pilot's next flight.
+- A pilot with a flight in progress can't import another; they close it first.
+- An Operations import is unchanged: the flight waits as created until Operations mark it ready, and any pilot can then check in.
 
 ## Tracking
 
