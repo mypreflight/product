@@ -132,6 +132,7 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Account menu | Settings, the Discord community, the theme and Sign out behind the button with your initials, top right on a tablet or computer | Live | — |
 | Light and dark | Follows your system theme, or pick Light or Dark in the account menu | Live | Accessibility and theming |
 | Website | mypreflight.io marketing page with FAQ | Live | — |
+| Changelog | Every change a pilot will notice, newest first, with the screen before and after it | Live | — |
 
 ## In the brief, not built yet
 
@@ -153,7 +154,7 @@ None of these is built. Don't advertise them.
 | MSFS 2020 support in the Transponder (it reads MSFS 2024 only) | `../product/overview.md` |
 | Transponder download page | `../product/transponder.md` |
 | Public pilot profiles, following, view counts | `../product/decisions.md` → Social |
-| In-app "What's new" and a public changelog | `../product/brand/marketing.md` |
+| In-app "What's new" | `../product/brand/marketing.md` |
 | "For flight simulation use only" label in the app | `../product/overview.md` → Hard lines |
 | Creating unknown aircraft from open data | `../product/decisions.md` → Aircraft |
 | Payments and paid features | `../product/business.md` |
