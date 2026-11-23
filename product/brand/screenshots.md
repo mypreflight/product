@@ -50,9 +50,9 @@ The website's changelog uses the captures behind the before and after graphics, 
 | Passenger manifest | Flight page, Cabin and manifest | Seated wide-body, a few SSR passengers (infant, wheelchair, unaccompanied minor), a couple of no-shows after finish-boarding | Tablet | Light |
 | Seat maps | Flight page, Cabin and manifest (cabin drawing) | Layout whose geometry matches; premium cabins visible | Tablet | Dark |
 | Cargo manifest | Flight page, Cargo | Belly cargo with a perishable shipment (salmon out of Keflavik, or tulips out of Amsterdam in season), containers in positions | Tablet | Light |
-| Cold chain | Flight page, Cargo (advisories) | A temperature-controlled shipment with a connection, so the risk reason reads in full | Phone | Dark |
+| Cold chain | Flight page, Briefing, Preflight loadsheet | A temperature-controlled shipment with a connection, so the risk reason reads in full | Phone | Dark |
 | Cargo in the hold | Flight page, Cargo (hold drawing) | Containerised wide-body, some positions empty | Desktop | Light |
-| NOTOC | Finish-boarding modal (final loadsheet), and its document view | At least one dangerous goods consignment plus a notifiable load | Desktop | Light |
+| NOTOC | Briefing, NOTOC side panel, and its downloaded PDF | At least one dangerous goods consignment, dry ice, a notifiable load and a special category passenger | Desktop | Light |
 | Fuel ladder | Flight page, Briefing, Preflight | SimBrief fuel breakdown with an ETOPS or extra-fuel addition | Phone | Light |
 | Loadsheet | Flight page, Briefing, Preflight | Preliminary and final both present | Tablet | Dark |
 | OFP viewer | Flight page, Briefing, OFP | SimBrief OFP, first page visible | Tablet | Light |
