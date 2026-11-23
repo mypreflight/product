@@ -2,11 +2,11 @@
 
 What happens from SimBrief import to a finished flight, step by step.
 
-Last reviewed: 2026-11-03
+Last reviewed: 2026-11-18
 
 | # | Step | How it works |
 | --- | --- | --- |
-| 1 | Import | The pilot imports a SimBrief flight. The briefing is generated: manifest, cargo, loadsheet, seat map, weather, NOTAMs, gate, stand, runway. |
+| 1 | Import | The pilot imports their latest SimBrief plan and is checked in with its estimated times, without waiting for Operations. The briefing is generated: manifest, cargo, loadsheet, seat map, weather, NOTAMs, gate, stand, runway. |
 | 2 | Boarding | The Transponder is not expected to run yet. Real aircraft have it off while passengers board. The exception is a pilot using the GSX integration: the Transponder has to be running to see them request boarding through GSX, and it starts boarding when they do. |
 | 3 | Doors closed | The pilot starts the Transponder once the doors are closed and boarding is finished, before pushback. This mirrors the real Mode S procedure, and the product teaches users how it works. |
 | 4 | Off-block | Detected automatically from the first position report with ground speed above **3 knots**; below that the aircraft counts as standing. See "Why 3 knots" below. The pilot can also report off-block by hand and confirm it in a dialog; the time recorded is the moment they confirm. There's no typed time. |
@@ -18,7 +18,7 @@ Last reviewed: 2026-11-03
 | 10 | On-block | The pilot reports it (chocks on) and confirms it in a dialog. It isn't reliably detectable, and a real tablet wouldn't know either. |
 | 11 | Disembark | The pilot is prompted to disembark. With the GSX integration on, requesting deboarding through GSX starts it, and it finishes when GSX completes it. Live passenger counts come from the GSX Pro API through the Transponder, like crew counting passengers off (not fully wired yet). |
 | 12 | Finish | The pilot enters the actual fuel burn by hand. This is deliberate realism: a real EFB has no link to aircraft systems, even though the sim could provide the number. |
-| 13 | Not finished | Unfinished flights are penalised (laziness, skipping the post-flight steps). Planned: auto-finish about 24 hours after the scheduled time, so stale flights don't show as live. |
+| 13 | Not finished | Unfinished flights are penalised (laziness, skipping the post-flight steps). A flight checked in but not boarded within 24 hours is removed, so the pilot can import the next one. Planned: auto-finish a flight left unfinished after boarding about 24 hours after the scheduled time, so stale flights don't show as live. |
 
 ## Why 3 knots
 
@@ -28,7 +28,7 @@ Reported GPS positions are never exactly the same, as in the real world, so a pa
 
 The full flight plan is already shown well.
 
-While the flight is in cruise, the pilot can enter the actual fuel on board at any fix of the flight plan, e.g. at the oceanic boundary between Shanwick and New York Oceanic. It's typed by hand, for the same reason as the fuel burn at the end of the flight. The figure shows beside the planned fuel for that fix, with the difference from it. A figure below the plan is tinted a pale amber and one above it a pale green. Below the minimum fuel for that fix it turns red with a warning sign. The pilot can correct it until the flight lands, and it stays on the flight afterwards. The flight's fuel card lists every report with its difference from the plan, on the flight page, in the flight's history and for operations.
+While the flight is in cruise, the pilot can enter the actual fuel on board at any fix of the flight plan, e.g. at the oceanic boundary between Shanwick and New York Oceanic. It's typed by hand, for the same reason as the fuel burn at the end of the flight, together with the time it was read, in UTC. The time starts at the current minute, so a pilot who reports over the fix leaves it, and one who reports later types when they read it; it can't be before takeoff or in the future. The figure shows beside the planned fuel for that fix, with the difference from it. A figure below the plan is tinted a pale amber and one above it a pale green. Below the minimum fuel for that fix it turns red with a warning sign. The pilot can correct the figure and the time until the flight lands, and it stays on the flight afterwards. The flight's fuel card lists every report with the time it was read and its difference from the plan, on the flight page, in the flight's history and for operations.
 
 Coming: trend monitoring raises a high-priority warning when figures look dangerous (a possible fuel leak). The pilot in command always decides.
 

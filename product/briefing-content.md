@@ -2,7 +2,7 @@
 
 What the briefing contains today and the rules it follows.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-16
 
 This file describes what is built. The decisions behind it live in `decisions.md`; where the two disagree, the decision wins and the gap is a bug or open work.
 
@@ -38,6 +38,7 @@ This file describes what is built. The decisions behind it live in `decisions.md
 - Seated against the cabin layout revision **pinned** at that moment, so a later redraw of the cabin doesn't move anyone.
 - Passengers are spread across cabins in proportion to each cabin's share of the seats.
 - About 85% of passengers carry no special service request. The rest carry real IATA SSR codes: infant, the three wheelchair categories (ramp, steps, cabin), unaccompanied minor, blind, deaf and others. An infant occupies a seat.
+- The passenger information list (PIL) shows only the passengers with a special service request, filterable by code, each code spelled out.
 - At finish-boarding the manifest is reconciled against the final loadsheet, per cabin class:
   - surplus passengers become **no-shows** who keep their seat and stay on the list;
   - a shortfall is seated in free seats;
@@ -102,9 +103,23 @@ The rule behind it all: cargo comes from the departure's context, never at rando
 
 ## Weather
 
-- Raw ATIS, METAR and TAF per airport and per source: aviationweather.gov (METAR, TAF) and SayIntentions (ATIS, METAR, TAF). Each pilot picks a default source.
-- An airport is monitored from check-in until on-block of any flight using it, and refreshed on a schedule. A failure at one source doesn't affect the other.
+- Raw ATIS, METAR and TAF per airport and per source: aviationweather.gov (METAR, TAF) and SayIntentions (ATIS, METAR, TAF). Each pilot picks one of these two as their default source.
+- Three more sources give ATIS only: the FAA's real digital ATIS for US airports, real digital ATIS that aircraft requested over datalink worldwide (atis.guru), and VATSIM controllers' ATIS. An airport with a separate arrival and departure ATIS keeps both, and each ATIS carries the time its source published it. An ATIS a source stops publishing disappears, such as when a VATSIM controller logs off.
+- Each ATIS, from any source, carries the runways in use for arrivals and for departures, always runways the airport has. A runway the ATIS names only as closed, out of service, for holding short, for the wind or in its NOTAMs doesn't count. A runway put in use without saying for what counts for both on a combined ATIS, and for its own side on a separate arrival or departure ATIS. METAR and TAF carry no runways.
+- Pilots pick the ATIS from SayIntentions or Real. Real is the newer of the FAA's and atis.guru's ATIS for that airport and end, so it isn't a third choice of its own. Each pilot sets a default in Settings, next to the weather source, and can switch in the briefing and the runway picker. VATSIM ATIS is collected but not offered.
+- The ATIS information letter is read from the ATIS text, such as "information Kilo" or "INFO K".
+- METAR and TAF are kept without the METAR or TAF word in front, which only repeats what the report is. A SPECI, and an amendment or correction marker, stay.
+- An airport is monitored from check-in until on-block of any flight using it, and refreshed on a schedule. A failure at one source doesn't affect the others.
 - Weather is public. An airport with nothing stored shows an empty list, not an error.
+
+## Airport, stand and runway
+
+- Preflight opens with the departure airport and Arrival with the arrival airport: its weather on one side, the stand and runway on the other. The weather is the METAR and TAF from the source the pilot picks and the ATIS from the ATIS source they pick, for that end: the departure ATIS at departure, the arrival ATIS at arrival, or the airport's single ATIS.
+- The stand shows its terminal and the airlines that use it, whether it's at a gate or remote, how passengers board, the parking guidance, the services, de-icing, noise sensitivity with its hours, and its position in degrees and decimal minutes, for aligning the IRS.
+- The runway shows its surface and lighting, magnetic heading, length with any displaced threshold, width, and elevation in feet.
+- Chips sit next to the runway. The ATIS chip carries the information letter: green with ARR, DEP or both when the ATIS has the runway in use for this end, amber naming the runways it uses instead when it doesn't (such as DEP 09). It's left out when the ATIS names no runway for this end.
+- The wind chip gives the METAR wind from the pilot's weather source, worked out against the runway's true heading, in knots: along the runway, an arrow down for a headwind and up for a tailwind, which turns the chip amber; and across it, an arrow showing the side it blows from. A calm or variable wind says so.
+- The runway picker lists every runway as its designator, its chips, then its length, width, surface and course, under the ATIS source, the provider and time of the ATIS, and the METAR wind. Operations get the same picker on the flight page.
 
 ## NOTAMs
 

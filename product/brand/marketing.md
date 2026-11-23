@@ -52,6 +52,7 @@ Oskar reviews every post and refines the agent instructions until the text doesn
 ## Release comms
 
 - **Discord #releases:** every feature announced with screenshots, sometimes a full showcase. A redesign gets one before and after graphic per change, each with a one- or two-sentence caption; see `screenshots.md`.
+  The post and its graphics are written together with the changelog entry they announce and live with the website. Approving that website change is Oskar's review of the post: once it is live, the post goes to #releases on its own, ending with a link to the changelog and without link previews. A post is about what pilots can now do, so one release can be one post with several graphics, and small fixes get none.
 - **In-app "What's new":** planned; not built yet.
 - **Public changelog:** the website keeps a changelog. Every Live feature, and every fix a pilot would notice, gets an entry, published in the same work that ships it. An entry says in a few plain sentences what a pilot can now do. Where a screen changed, it shows real before and after captures; see `screenshots.md`. A change with nothing new to see gets a text-only entry. Every version also gets release notes on GitHub.
 - **Screens to capture per feature:** see `screenshots.md`.

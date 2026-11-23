@@ -2,7 +2,7 @@
 
 Current product decisions, grouped by area, with the reason and Oskar's examples. Everything here is decided unless marked **Open:**.
 
-Last reviewed: 2026-10-20
+Last reviewed: 2026-11-18
 
 ## SimBrief import and briefing
 
@@ -21,7 +21,7 @@ Last reviewed: 2026-10-20
   - Fallback order: parent or similar airline layout (e.g. Lufthansa City uses the Lufthansa A321), then a generic type layout, with a notice that it's a close match, not exact.
   - Capacity follows the airline's real configuration: a Ryanair 737 MAX 8 carries more passengers than a LOT one.
 - Loadsheets are loosely modelled on Lufthansa's. There's no industry standard; Lufthansa itself uses about five formats across its systems. Airline-specific layouts (the way SimBrief offers LIDO-style per-airline flight plans) would need format input and are low value for now.
-- **Open:** confirm AeroLOPA's licence terms for our use.
+- **Open:** confirm AeroLOPA's licence terms for our use, and get access to seat positions. As of November 2026 AeroLOPA no longer publishes them openly, so a layout we haven't stored yet can't be shown.
 
 ## Aircraft and airframe continuity
 
@@ -30,7 +30,9 @@ Last reviewed: 2026-10-20
 - The sim livery and callsign don't have to match the selected registration. The Transponder does nothing on a mismatch.
 - Each pilot has a per-airframe history, so continuity matters. If a tail's next departure isn't where it last landed (landed in Zurich, next flight departs Frankfurt), the pilot pays a points fee for the implied repositioning flight, because that ferry flight is a loss for the airline. Realistic continuity is rewarded.
 - Missing registrations are requested through the data-request feature. This is a known weak spot.
-- Today the import fails with an error if the selected aircraft doesn't exist. Direction: create unknown aircraft automatically from open data, the way unknown airports are created from OpenStreetMap.
+- An imported plan whose registration isn't in the fleet adds the aircraft to the plan's airline, with the aircraft type from SimBrief, marked unconfirmed. Operations check it and confirm it with a separate "Confirm correctness" action. Pilots import their own plans, so most new aircraft arrive this way.
+- A plan that flies a registration already in the fleet as a different type is refused, because the registration in SimBrief is typed in by the pilot.
+- Direction: take new aircraft from open data rather than SimBrief, the way unknown airports are created from OpenStreetMap.
 - **Open:** research the OpenSky Network aircraft database as that source.
 
 ## Airports
@@ -50,6 +52,7 @@ Last reviewed: 2026-10-20
 - NOTAMs are imported raw (formatted from the SimBrief OFP) at import time only, so they can be 6 to 8 hours old when the flight arrives.
 - Plain-language NOTAM translation is wanted: "RWY 14 CLSD" becomes "Runway 14 is closed". NOTAMs are free-form human shorthand, so deterministic rules can't cover them all; it needs AI and would be a paid add-on because of token cost. It's core to what pilots brief, so its priority may rise.
 - No free NOTAM API has been found. The FAA NOTAM API is US-centric and limited for Europe.
+- Each ATIS says which of the airport's runways are in use for arrivals and which for departures. Fixed rules read the ATIS text first. Only an ATIS the rules can't settle goes to a small AI model, which may pick only from the airport's own runways. On the live feeds in November 2026 that was about 1 ATIS in 25. Oskar decided this exception to determinism first in November 2026: ATIS is free-form controller shorthand, so rules alone get the odd one wrong. Asking only about the unclear ones costs cents a day. Each ATIS is read once, so its runways don't change while the ATIS stays the same.
 - **Open:** a free NOTAM source, a free METAR source, and how high to prioritise NOTAM translation.
 
 ## SIDs, STARs and procedures
@@ -71,9 +74,9 @@ Last reviewed: 2026-10-20
   | Public | Everyone; it appears on the public map |
 
   Default is private today and will change to public, with a UI component explaining the options.
-- Public flight page: flight-tracker layout with the map in the centre and a data panel overlaid on the left. Shows departure and arrival airports, scheduled vs actual off-block (the distinction matters), and current position. Great-circle line and the route through flight-plan fixes are in progress. Wanted: richer route and flight content, maybe the cargo.
-- Visitors see everything on a public flight. Some resources still don't show to visitors; that's a known bug.
-- Map flight history is the flagship feature. It's live for beta users and looks good; it must load faster and become outstanding.
+- Public flight page: flight-tracker layout with the map in the centre and a data panel overlaid on the left. Shows departure and arrival airports, scheduled vs actual off-block (the distinction matters), and current position. While the flight is in the air the path follows the live position; once it has landed the page shows the whole path the flight flew, as flight history does. Great-circle line and the route through flight-plan fixes are in progress. Wanted: richer route and flight content, maybe the cargo.
+- Visitors see everything on a public flight. Some resources still don't show to visitors; that's a known bug. A link-only flight's path is no longer one of them: anyone with the link sees the path it flew.
+- Map flight history is the flagship feature. The list of finished flights is narrow and sits over a globe that draws every one of them; opening one flies the globe to it as its page arrives. A finished flight opens like the Tracking view stopped at on-block, and says plainly that it is in the past: the list it came from, the date it was flown and that it is closed. Its History view is the map with the track flown over the filed route, each block time against schedule, block and air time, the fuel burned against the planned trip, and a vertical profile of altitude and ground speed with the planned altitude. Pointing at the profile puts the aircraft where it was at that moment. Its Documents view holds the briefing the flight was flown on: route, fuel and crew, passengers, cargo, OFP, runway analysis, events and the delay report. It must still load faster.
 - A live "pilots in the air now" view exists.
 
 ## Social and public profile
