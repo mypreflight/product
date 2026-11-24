@@ -104,6 +104,7 @@ The rule behind it all: cargo comes from the departure's context, never at rando
   - **Special category passengers:** seat, code and remarks, including where a battery-powered wheelchair and its battery travel.
   - **Certification:** the loading supervisor's and the captain's acceptance.
 - The final notification reports what changed since the preliminary one.
+- Notifications issued on the earlier form, before November 2026, are no longer shown: the flight reads as having none until a new one is issued.
 - Acknowledged through actions the pilot already takes: check-in acknowledges the preliminary one, finish-boarding the final one.
 - An emergency declaration fills its DG classes from the cargo manifest when the pilot gives none.
 - The app shows it digitally, and downloads it as a PDF laid out column for column like the paper form, landscape A4, black on white, carrying the flight's operator where a paper form names its owner.
