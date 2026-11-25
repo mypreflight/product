@@ -81,7 +81,7 @@ The rule behind it all: cargo comes from the departure's context, never at rando
   - Loads needing a heated or ventilated compartment go only into one.
   - A heavy or outsized piece goes only into a device it fits, floor and height, without being tipped on its side: a coffin on a pallet or loose in the bulk hold, never in an LD3; horse stalls only in a main-deck container. Loose pieces must pass the bulk door.
   - A compartment holds one temperature regime unless the container controls its own.
-  - The manifest reports each segregation conflict per compartment.
+  - The manifest reports each segregation conflict per compartment. The cargo page's load checks list each one with both loads in words and the waybills carrying them.
 - **Weights:** shipments plus unit tares equal the loadsheet's cargo tonnage exactly.
 - **Reconciliation at finish-boarding:** surplus shipments are offloaded in ascending offload priority (ordinary freight first; some freight is never offloaded) and kept on the manifest with a reason. Shortfalls are filled under every generation rule.
 - **Hold layouts** are curated per airframe type as named variants with one default. Operations may assign a variant per aircraft; otherwise the default applies.
