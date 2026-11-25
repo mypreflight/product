@@ -103,7 +103,8 @@ The rule behind it all: cargo comes from the departure's context, never at rando
   - **Special load:** live animals, human remains, perishables and temperature-controlled loads, pharma, valuables, heavy and outsized pieces, and the rest that must be notified, each with packages, weight, ULD and position and supplementary information: handling remarks, the temperature to keep, the container or packing, the hold conditions and the heaviest piece (never heavier than the shipment's own pieces).
   - **Special category passengers:** seat, code and remarks, including where a battery-powered wheelchair and its battery travel.
   - **Certification:** the loading supervisor's and the captain's acceptance.
-- The final notification reports what changed since the preliminary one.
+- The final notification reports what changed since the preliminary one, including each load that moved, from the position it left to the one it holds now.
+- Positions are written the way the hold layout writes them: compartment, row and side on the lower deck (12R), a letter and side on the main deck (CL), and P for a position spanning the width. The same position reads the same on the hold diagram, the cargo manifest and the NOTOC.
 - Notifications issued on the earlier form, before November 2026, are no longer shown: the flight reads as having none until a new one is issued.
 - Acknowledged through actions the pilot already takes: check-in acknowledges the preliminary one, finish-boarding the final one.
 - An emergency declaration fills its DG classes from the cargo manifest when the pilot gives none.
