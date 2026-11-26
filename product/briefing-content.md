@@ -108,7 +108,8 @@ The rule behind it all: cargo comes from the departure's context, never at rando
 - Notifications issued on the earlier form, before November 2026, are no longer shown: the flight reads as having none until a new one is issued.
 - Acknowledged through actions the pilot already takes: check-in acknowledges the preliminary one, finish-boarding the final one.
 - An emergency declaration fills its DG classes from the cargo manifest when the pilot gives none.
-- The app shows it digitally, and downloads it as a PDF laid out column for column like the paper form, landscape A4, black on white, carrying the flight's operator where a paper form names its owner.
+- The app shows it digitally. The dangerous goods, special load and special category passengers sections each show how many entries they hold and fold to a one-line summary: dangerous goods by name, special loads by handling code, passengers by service request with their seat count. A NOTOC with no dangerous goods says plainly that none are loaded.
+- It downloads as a PDF laid out column for column like the paper form: landscape A4, black on white, with a 10 mm margin on every side so it prints whole. A long NOTOC continues onto further sheets, each naming the notification, flight, date, registration and port of loading, and a table repeats its heading there. Its instructions and certifications name the flight's operator where a paper form names its owner, and the top left of its first page carries the MyPreflight logo in dark grey where a paper form carries its owner's mark.
 
 ## Weather
 
