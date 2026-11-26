@@ -131,6 +131,12 @@ The rule behind it all: cargo comes from the departure's context, never at rando
 - The first officer, purser and cabin crew come from the SimBrief roster as operator-owned background characters. They never sign in. Importing a roster again creates no duplicates.
 - Operations can also assign crew from the operator's pool.
 
+## OFP and runway analysis
+
+- Both are SimBrief's own text, kept as SimBrief laid it out, column for column, and sized to fill the briefing panel's width. Only a line wider than SimBrief's usual width scrolls sideways.
+- Each opens with its name, Operational flight plan or Takeoff and landing report, and the release or report number and the time SimBrief issued it, where the text states them.
+- Download PDF saves SimBrief's own PDF of the plan, under SimBrief's file name, not a copy the app makes. SimBrief keeps it only for a while, and the app says so when it's gone. The runway analysis has no PDF of its own: SimBrief's OFP PDF carries it, so it offers the same one.
+
 ## Discord briefing
 
 At check-in the captain gets a Discord DM with:
