@@ -71,7 +71,7 @@ The rule behind it all: cargo comes from the departure's context, never at rando
   3. Then its continent.
   4. Then the general pool.
 
-  Seasonal commodities appear only in their months, by scheduled departure date.
+  Seasonal commodities appear only in their months, by scheduled departure date. A commodity the destination's continent doesn't want is drawn a quarter as often, so flowers fly into Europe more than into Oceania.
 - **Dangerous goods** stay under a tenth of the selection weight, and a flight carrying passengers holds at most two DG consignments.
 - **Shipments** carry an 11-digit air waybill (3-digit carrier prefix, 7-digit serial, check digit = serial mod 7), a shipper and a consignee. A shipment may be one leg of a longer journey, with its onward carrier and connection time.
 - **Load units** are real ULDs (IATA type code, serial, owner code, tare) placed in positions the aircraft's hold variant actually has. Bulk-loaded aircraft carry loose lots. Density decides whether a container fills by volume or by weight first.
@@ -79,27 +79,37 @@ The rule behind it all: cargo comes from the departure's context, never at rando
   - Cargo-aircraft-only shipments are refused on a flight carrying passengers.
   - Incompatible loads are kept apart, e.g. radioactive material away from live animals, dry ice away from live animals, infectious substances away from foodstuffs.
   - Loads needing a heated or ventilated compartment go only into one.
+  - A heavy or outsized piece goes only into a device it fits, floor and height, without being tipped on its side: a coffin on a pallet or loose in the bulk hold, never in an LD3; horse stalls only in a main-deck container. Loose pieces must pass the bulk door.
   - A compartment holds one temperature regime unless the container controls its own.
-  - The manifest reports each segregation conflict per compartment.
+  - The manifest reports each segregation conflict per compartment. The cargo page's load checks list each one with both loads in words and the waybills carrying them.
 - **Weights:** shipments plus unit tares equal the loadsheet's cargo tonnage exactly.
 - **Reconciliation at finish-boarding:** surplus shipments are offloaded in ascending offload priority (ordinary freight first; some freight is never offloaded) and kept on the manifest with a reason. Shortfalls are filled under every generation rule.
 - **Hold layouts** are curated per airframe type as named variants with one default. Operations may assign a variant per aircraft; otherwise the default applies.
 
 ## Cold chain
 
-- Every temperature-controlled shipment declares its temperature range, its solution (active container, passive shipper or dry ice) and its endurance in hours.
+- Every temperature-controlled shipment declares its temperature range, its solution (active container, passive shipper or dry ice) and its endurance in hours. Frozen loads packed in dry ice carry that dry ice, and it counts towards the compartment's dry ice.
 - Exposure is computed across the whole journey: build-up, flight, connection and onward flight. The ambient temperature at an exposed airport counts where it's known.
 - The result is a risk level with a plain-language explanation of why.
 - **Advisory only.** It never blocks loading, a loadsheet, release or boarding.
+- Shown on the loadsheet, beside the load in each compartment, for the stage the loadsheet switch shows. Not on the NOTOC, which carries only what the paper form carries.
 
 ## Notification to captain (NOTOC)
 
 - Issued at each loadsheet stage: when the preliminary loadsheet is written and when boarding finishes. Issued even when no dangerous goods are aboard, saying so.
-- Reports every DG shipment in full (UN number, proper shipping name, class, packing group, quantities, position), the emergency drill derived from the hazard class, other notifiable loads (live animals, human remains, temperature-controlled pharma, valuables, heavy pieces), the cold-chain assessment and a load summary.
-- The final notification reports what changed since the preliminary one.
+- Carries what the IATA-style paper form carries, and nothing else:
+  - **Header:** operator, flight number and date, port of loading, aircraft registration and type, who prepared it and who supervised loading (names from the departure station, the same on every issue of a flight), and an emergency telephone number from a range reserved for fiction.
+  - **Dangerous goods**, one row each: air waybill, proper shipping name, class or division (with the compatibility group for explosives), UN number, subsidiary risk, packages, net quantity, packing group, handling code, cargo-aircraft-only, ULD and position, unloading airport and the emergency response code, which opens the drill derived from the hazard class. Radioactive material shows its package category and transport index instead of a net quantity. Dry ice is one row per compartment with its total. Category B biological samples and lithium batteries in small equipment are left off, as the regulations allow.
+  - **Special load:** live animals, human remains, perishables and temperature-controlled loads, pharma, valuables, heavy and outsized pieces, and the rest that must be notified, each with packages, weight, ULD and position and supplementary information: handling remarks, the temperature to keep, the container or packing, the hold conditions and the heaviest piece (never heavier than the shipment's own pieces).
+  - **Special category passengers:** seat, code and remarks, including where a battery-powered wheelchair and its battery travel.
+  - **Certification:** the loading supervisor's and the captain's acceptance.
+- The final notification reports what changed since the preliminary one, including each load that moved, from the position it left to the one it holds now.
+- Positions are written the way the hold layout writes them: compartment, row and side on the lower deck (12R), a letter and side on the main deck (CL), and P for a position spanning the width. The same position reads the same on the hold diagram, the cargo manifest and the NOTOC.
+- Notifications issued on the earlier form, before November 2026, are no longer shown: the flight reads as having none until a new one is issued.
 - Acknowledged through actions the pilot already takes: check-in acknowledges the preliminary one, finish-boarding the final one.
 - An emergency declaration fills its DG classes from the cargo manifest when the pilot gives none.
-- The app shows it as a panel and as a printable document that's legible without colour.
+- The app shows it digitally. The dangerous goods, special load and special category passengers sections each show how many entries they hold and fold to a one-line summary: dangerous goods by name, special loads by handling code, passengers by service request with their seat count. A NOTOC with no dangerous goods says plainly that none are loaded.
+- It downloads as a PDF laid out column for column like the paper form: landscape A4, black on white, with a 10 mm margin on every side so it prints whole. A long NOTOC continues onto further sheets, each naming the notification, flight, date, registration and port of loading, and a table repeats its heading there. Its instructions and certifications name the flight's operator where a paper form names its owner, and the top left of its first page carries the MyPreflight logo in dark grey where a paper form carries its owner's mark.
 
 ## Weather
 
