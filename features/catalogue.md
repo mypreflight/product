@@ -27,14 +27,14 @@ Before advertising anything, check its status here. Only **Live** features go in
 | Loadsheets | Preliminary revisions and a final loadsheet, never overwritten | Live | Passengers and cargo |
 | Fuel ladder | Fuel build-up from taxi to total, with tank gauge | Live | SimBrief import |
 | Passenger manifest | Named passengers seated in the real cabin, with no-shows | Live | Passengers and cargo |
-| Special assistance | Infants, wheelchairs, unaccompanied minors, by real IATA codes; the PIL lists them, filtered by code | Live | Passengers and cargo |
+| Special assistance | Infants, wheelchairs (battery-powered ones too), unaccompanied minors, stretchers, medical cases, deportees and inadmissible passengers, by real IATA codes; the PIL lists them, filtered by code, and the NOTOC notifies the captain | Live | Passengers and cargo |
 | Seat maps | The airline's real seat map, seat by seat | Partial | Passengers and cargo |
 | Cabin layout assignment | Operations pick the layout each aircraft flies | Live | Passengers and cargo |
 | Cargo manifest | Shipments with waybills, origins and onward connections | Live | Passengers and cargo |
-| Origin-aware cargo | Tulips from Amsterdam, salmon from Keflavik, in season | Live | Passengers and cargo |
+| Origin-aware cargo | Tulips from Amsterdam, salmon from Keflavik, in season, weighted towards what the destination wants; big pieces only go where they fit | Live | Passengers and cargo |
 | Cargo in the hold | Containers and pallets drawn in the aircraft's real hold | Live | Passengers and cargo |
-| Cold chain | Will the salmon stay cold? Risk with a plain-language reason | Live | Passengers and cargo |
-| NOTOC | Notification to captain with dangerous goods and drills, printable | Live | Passengers and cargo |
+| Cold chain | Will the salmon stay cold? Risk with a plain-language reason, on the loadsheet beside the load in each compartment | Live | Passengers and cargo |
+| NOTOC | Notification to captain as the real form carries it: header, dangerous goods with drills, special load, special category passengers and certification; download it as the paper form in PDF | Live | Passengers and cargo |
 | Baggage | Bags derived from the payload, loaded with the cargo | Live | Passengers and cargo |
 | Crew roster | First officer, purser and cabin crew from SimBrief | Live | SimBrief import |
 | Weather | Raw ATIS, METAR and TAF from two sources, your choice | Live | Weather and NOTAMs |
