@@ -22,8 +22,8 @@ Before advertising anything, check its status here. Only **Live** features go in
 | --- | --- | --- | --- |
 | SimBrief import | Import your latest SimBrief plan yourself and fly it straight away, checked in with its estimated times | Live | SimBrief import |
 | Briefing by phase | The briefing in three tabs that follow the flight, Preflight, Oceanic (En route without a North Atlantic track) and Arrival, opening on the one you're in. The nav log, OFP, runway analysis, NOTOC and PIL open in a side panel | Live | — |
-| OFP viewer | Read the full SimBrief OFP in the app | Live | SimBrief import |
-| Runway analysis | SimBrief's runway analysis page, one click from the briefing | Live | SimBrief import |
+| OFP viewer | Read the full SimBrief OFP in the app across the briefing panel, with its release and issue time, and download SimBrief's own PDF | Live | SimBrief import |
+| Runway analysis | SimBrief's takeoff and landing report, one click from the briefing, with its issue time and SimBrief's PDF | Live | SimBrief import |
 | Loadsheets | Preliminary revisions and a final loadsheet, never overwritten | Live | Passengers and cargo |
 | Fuel ladder | Fuel build-up from taxi to total, with tank gauge | Live | SimBrief import |
 | Passenger manifest | Named passengers seated in the real cabin, with no-shows | Live | Passengers and cargo |
